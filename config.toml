@@ -1,0 +1,43 @@
+
+baseurl = "https://godotmisogi.github.io/bloggy/public/"
+relativeURLs = false
+languageCode = "en-us"
+title = "Bloggy"
+paginate = 5
+
+[taxonomies]
+	tag = "tags"
+	tutorial = "tutorials"
+
+[params]
+	showglobe = true
+	
+	analytics = "code-here"
+
+	github = "https://github.com/GodotMisogi"
+	twitter = "https://twitter.com/ArjitSeth"
+	linkedin = "https://www.linkedin.com/view?id=549011114"
+	email = "arjitseth@gmail.com"
+	
+	header = "What's Going On"
+	profilepic = "img/Logo.png"
+	
+	title = "GOOD VIBRATIONS"
+	subtitle = "ARJIT SETH"
+	author = "Arjit Seth"
+	disqusShortname = "godotmisogi"
+	
+	[[params.navlinks]]
+	name = "About"
+	url = "about"
+	
+	[[params.navlinks]]
+	name = "Blog"
+	url = ""
+	
+	[[params.navlinks]]
+	name = "Tutorials"
+	url = "tutorial/"
+
+[blackfriday]
+	extensions = ["hardLineBreak"]
