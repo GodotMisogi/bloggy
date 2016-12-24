@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on GOOD VIBRATIONS</title>
-    <link>https://godotmisogi.github.io/bloggy/public/post/index.xml</link>
+    <link>https://godotmisogi.github.io/bloggy/post/index.xml</link>
     <description>Recent content in Posts on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Dec 2016 12:30:48 +0530</lastBuildDate>
-    <atom:link href="https://godotmisogi.github.io/bloggy/public/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Calculus of Variations - Induced Drag</title>
-      <link>https://godotmisogi.github.io/bloggy/public/post/calculus-of-variations-induced-drag/</link>
+      <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
       <pubDate>Sat, 24 Dec 2016 12:30:48 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/public/post/calculus-of-variations-induced-drag/</guid>
+      <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
       <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I saw a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
 
 &lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
