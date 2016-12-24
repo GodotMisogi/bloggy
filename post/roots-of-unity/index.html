@@ -15,21 +15,22 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="">
-    <meta property="og:title" content="GOOD VIBRATIONS">
+    <meta property="og:title" content="The Roots of Unity">
     
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-12-25">
     
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://godotmisogi.github.io/bloggy/">
+    <meta property="og:url" content="https://godotmisogi.github.io/bloggy/post/roots-of-unity/">
     <meta property="og:site_name" content="GOOD VIBRATIONS">
     
     <meta name="generator" content="Hugo 0.18" />
-    <title>GOOD VIBRATIONS &middot; GOOD VIBRATIONS</title>
+    <title>The Roots of Unity &middot; GOOD VIBRATIONS</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="https://godotmisogi.github.io/bloggy/css/style.css">
-    <link href="https://godotmisogi.github.io/bloggy/index.xml" rel="alternate" type="application/rss+xml" title="GOOD VIBRATIONS" />
+    <link href="" rel="alternate" type="application/rss+xml" title="GOOD VIBRATIONS" />
 
     
     
@@ -100,69 +101,73 @@
 			<div class="row">
 				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
 
-<header>
-	
-	
-		<h1>What I&#39;m Thinking</h1>
-	
-</header>
+<main>
+	<header>
+		<h1>The Roots of Unity</h1>
+	</header>
 
+	<article>
+		<p>During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&rsquo;t have the problem statement anymore, I&rsquo;ll outline the major points of the task:</p>
 
-	<div class="panel panel-default">
-	<div class="panel-header">
-		<h3>
-			<a href="https://godotmisogi.github.io/bloggy/post/roots-of-unity/">The Roots of Unity</a>
-			<br>
-			<small>
-				25 December 2016
-			</small>
-		</h3>
-	</div>
-	<div class="panel-body">
-		During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&rsquo;t have the problem statement anymore, I&rsquo;ll outline the major points of the task:
- Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.
- Plot these solutions on the Argand plane.
- Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.
-		
-			... <a href="https://godotmisogi.github.io/bloggy/post/roots-of-unity/">Read More</a>
-		
-	</div>
-	<div class="panel-footer">
-		
-	</div>
+<ul>
+<li>Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.<br /></li>
+<li>Plot these solutions on the Argand plane.<br /></li>
+<li>Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.<br /></li>
+<li>Investigate the exercise, devise a conjecture and prove it.<br />
+<br /></li>
+</ul>
+
+<p>When I first read through this exercise, I didn&rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&rsquo;ll start by solving the above points sequentially:</p>
+
+<ol>
+<li><p>The solutions to $z^n - 1 = 0$ are the roots of unity over the complex plane, obtained most easily through Euler&rsquo;s form:<br />
+$$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&hellip;,n-1 $$</p></li>
+
+<li><p>As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, for $z^5 - 1 = 0$:<br />
+<img src="/img/RootsOfUnity.png" alt="5th Roots of Unity" /></p></li>
+
+<li></li>
+
+<li><p>The easiest observation is:<br />
+$$ \sum^{n-1}_{k = 0} z_k = 0 $$<br />
+The roots of unity can be factorised into the following irreducible form over the field of real numbers:<br />
+$$ z^n - 1 = (z-1)\sum^{n-1}_{i = 0} z^i $$<br />
+And can be factorised over the complex field as:<br />
+$$ z^n - 1 = \prod_{k=0}^{n-1}(z-z_k) = (z-1)\prod_{k=1}^{n-1}(z-z_k) $$<br />
+A conjecture based on trial and error is:<br />
+$$ \prod_{k=1}^{n-1}|z_k - z_0| = \prod_{k=1}^{n-1}|1-z_k| = n$$<br />
+To prove this, notice that:<br />
+$$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$<br />
+For the equalities to be sensible at $z=1$, one must perform analytic continuation:<br />
+$$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$<br />
+The first equality proves the conjecture. The last equality is evaluated using L&rsquo;Hopital&rsquo;s rule, also proving the conjecture:<br />
+$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$</p></li>
+</ol>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://godotmisogi.github.io/bloggy/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
 </div>
 
 
-	<div class="panel panel-default">
-	<div class="panel-header">
-		<h3>
-			<a href="https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/">Calculus of Variations - Induced Drag</a>
-			<br>
-			<small>
-				24 December 2016
-			</small>
-		</h3>
-	</div>
-	<div class="panel-body">
-		While reading through John D. Anderson Jr.&rsquo;s derivation of minimum induced drag, I saw a cool application of the calculus of variations in one of the equations to deduce the required condition.
-The equation that determines the downwash at a point is:
-$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \frac{1}{4\pi}\int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&rsquo;,y)\;\mathrm{d}y$$
-This effectively implies that the downwash can be expressed as a functional of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point.
-		
-			... <a href="https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/">Read More</a>
-		
-	</div>
-	<div class="panel-footer">
-		
-	</div>
-</div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'godotmisogi';
+    var disqus_identifier = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/roots-of-unity\/';
+    var disqus_title = 'The Roots of Unity';
+    var disqus_url = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/roots-of-unity\/';
 
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-
-<div class="text-center center-block">
-	
-    
-</div>
 
 						</div>
 					</div>
