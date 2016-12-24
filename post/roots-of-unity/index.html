@@ -117,18 +117,20 @@
 <br /></li>
 </ul>
 
-<p>When I first read through this exercise, I didn&rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&rsquo;ll start by solving the above points sequentially:</p>
+<p>When I first read through this exercise, I didn&rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&rsquo;ll start by solving the above points sequentially -</p>
 
-<ol>
+<ul>
 <li><p>The solutions to $z^n - 1 = 0$ are the roots of unity over the complex plane, obtained most easily through Euler&rsquo;s form:<br />
 $$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&hellip;,n-1 $$</p></li>
 
-<li><p>As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, for $z^5 - 1 = 0$:<br />
-<img src="/img/RootsOfUnity.png" alt="5th Roots of Unity" /></p></li>
+<li><p>As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions:</p></li>
+</ul>
 
-<li></li>
+<p><img src="../Roots.svg" alt="5th Roots of Unity" /></p>
 
-<li><p>The easiest observation is:<br />
+<ul>
+<li>The tree diagram follows:<br /></li>
+<li>The easiest observation is:<br />
 $$ \sum^{n-1}_{k = 0} z_k = 0 $$<br />
 The roots of unity can be factorised into the following irreducible form over the field of real numbers:<br />
 $$ z^n - 1 = (z-1)\sum^{n-1}_{i = 0} z^i $$<br />
@@ -140,9 +142,9 @@ To prove this, notice that:<br />
 $$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$<br />
 For the equalities to be sensible at $z=1$, one must perform analytic continuation:<br />
 $$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$<br />
-The first equality proves the conjecture. The last equality is evaluated using L&rsquo;Hopital&rsquo;s rule, also proving the conjecture:<br />
-$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$</p></li>
-</ol>
+The first equality proves the conjecture. The last equality is evaluated using L&rsquo;Hôpital&rsquo;s rule, also proving the conjecture:<br />
+$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$<br /></li>
+</ul>
 
 	</article>
 </main>
