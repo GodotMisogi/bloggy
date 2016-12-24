@@ -6,8 +6,55 @@
     <description>Recent content in Posts on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Dec 2016 12:30:48 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 25 Dec 2016 02:43:36 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Roots of Unity</title>
+      <link>https://godotmisogi.github.io/bloggy/post/roots-of-unity/</link>
+      <pubDate>Sun, 25 Dec 2016 02:43:36 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/post/roots-of-unity/</guid>
+      <description>&lt;p&gt;During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&amp;rsquo;t have the problem statement anymore, I&amp;rsquo;ll outline the major points of the task:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Plot these solutions on the Argand plane.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Investigate the exercise, devise a conjecture and prove it.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When I first read through this exercise, I didn&amp;rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&amp;rsquo;ll start by solving the above points sequentially -&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The solutions to $z^n - 1 = 0$ are obtained most easily through Euler&amp;rsquo;s form:&lt;br /&gt;
+$$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&amp;hellip;,n-1 $$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions and tree diagram:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Roots2.svg&#34;&gt;&lt;/div&gt;&lt;br /&gt;
+&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The easiest observation is:&lt;br /&gt;
+$$ \sum^{n-1}_{k = 0} z_k = 0 $$&lt;br /&gt;
+The roots of unity can be factorised into the following irreducible form over the field of real numbers:&lt;br /&gt;
+$$ z^n - 1 = (z-1)\sum^{n-1}_{i = 0} z^i $$&lt;br /&gt;
+And can be factorised over the complex field as:&lt;br /&gt;
+$$ z^n - 1 = \prod_{k=0}^{n-1}(z-z_k) = (z-1)\prod_{k=1}^{n-1}(z-z_k) $$&lt;br /&gt;
+A conjecture based on trial and error is:&lt;br /&gt;
+$$ \prod_{k=1}^{n-1}|z_k - z_0| = \prod_{k=1}^{n-1}|1-z_k| = n$$&lt;br /&gt;
+To prove this, notice that:&lt;br /&gt;
+$$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$&lt;br /&gt;
+For the equalities to be sensible at $z=1$, one must perform analytic continuation:&lt;br /&gt;
+$$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$&lt;br /&gt;
+The first equality proves the conjecture. The last equality is evaluated using L&amp;rsquo;Hôpital&amp;rsquo;s rule, also proving the conjecture:&lt;br /&gt;
+$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Calculus of Variations - Induced Drag</title>
