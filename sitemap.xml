@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://godotmisogi.github.io/bloggy/about/</loc>
+    <lastmod>2016-12-26T01:45:08+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://godotmisogi.github.io/bloggy/post/roots-of-unity/</loc>
     <lastmod>2016-12-25T02:43:36+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</loc>
-    <lastmod>2016-12-24T12:30:48+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://godotmisogi.github.io/bloggy/</loc>
-    <lastmod>2016-12-25T02:43:36+05:30</lastmod>
+    <lastmod>2016-12-26T01:45:08+05:30</lastmod>
     <priority>0</priority>
   </url>
   

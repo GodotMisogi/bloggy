@@ -6,8 +6,34 @@
     <description>Recent content on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Dec 2016 02:43:36 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 26 Dec 2016 01:45:08 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>https://godotmisogi.github.io/bloggy/about/</link>
+      <pubDate>Mon, 26 Dec 2016 01:45:08 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/about/</guid>
+      <description>&lt;p&gt;Hello! I&amp;rsquo;m Arjit Seth, a student currently in my 3rd year of aeronautical engineering at Manipal Institute of Technology in India.&lt;/p&gt;
+
+&lt;p&gt;My major interests (which inspired me to start this blog) are physics, mathematics, aerodynamics and music. I enjoy writing music, solving puzzles, chatting on ##math and ##physics on IRC, figuring out odd time signatures in music, attempting amateur design and a lot more!&lt;/p&gt;
+
+&lt;p&gt;My current exploits which I&amp;rsquo;m probably going to blog about:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Learning Quantum Mechanics, Quantum Field Theory and General Relativity.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Performing computational fluid dynamics analyses.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Implementing flight dynamics control systems in multirotors and R/C aircraft.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Learning Group Theory, Topology and Graph Theory.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Programming physics and aerodynamics simulations in various languages.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Developing music production skills for various genres.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A more comprehensive overview is available in my &lt;a href=&#34;../Arjit Resume.pdf&#34; target=&#34;_blank&#34;&gt;résumé&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The Roots of Unity</title>
@@ -53,28 +79,6 @@ $$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \fra
 The first equality proves the conjecture. The last equality is evaluated using L&amp;rsquo;Hôpital&amp;rsquo;s rule, also proving the conjecture:&lt;br /&gt;
 $$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Calculus of Variations - Induced Drag</title>
-      <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
-      <pubDate>Sat, 24 Dec 2016 12:30:48 +0530</pubDate>
-      
-      <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
-      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I saw a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
-
-&lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
-
-&lt;p&gt;$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \frac{1}{4\pi}\int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;This effectively implies that the downwash can be expressed as a &lt;em&gt;functional&lt;/em&gt; of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. The Euler-Lagrange equations thus take the following form:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&amp;rsquo;}}\right) = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Since there is no explicit $\Gamma$ dependence, the E-L equations simply become: $\partial{\mathcal{L}}/\partial{\Gamma&amp;rsquo;} = c$. This results in the following expression:&lt;/p&gt;
-
-&lt;p&gt;$$ y = y_0 - \frac{1}{c} = k$$&lt;/p&gt;
 </description>
     </item>
     
