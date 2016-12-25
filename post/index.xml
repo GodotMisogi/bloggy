@@ -10,7 +10,7 @@
     <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Calculus of Variations - Induced Drag</title>
+      <title>Calculus of Variations - Induced Drag Over a Wing</title>
       <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
       <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
       
@@ -79,7 +79,7 @@
 
 &lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda = 0 $$&lt;/p&gt;
 
-&lt;p&gt;The first time is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
+&lt;p&gt;The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
 
 &lt;p&gt;$$ w = \frac{\lambda}{4\pi} = w_0 $$&lt;/p&gt;
 
