@@ -18,7 +18,7 @@
     <meta property="og:title" content="Calculus of Variations - Induced Drag">
     
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2016-12-24">
+    <meta property="article:published_time" content="2016-12-26">
     
     <meta property="og:description" content="">
     <meta property="og:url" content="https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/">
@@ -111,15 +111,71 @@
 
 <p>The equation that determines the downwash at a point is:</p>
 
-<p>$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \frac{1}{4\pi}\int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&rsquo;,y)\;\mathrm{d}y$$</p>
+<p>$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&rsquo;,y)\;\mathrm{d}y$$</p>
 
-<p>This effectively implies that the downwash can be expressed as a <em>functional</em> of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. The Euler-Lagrange equations thus take the following form:</p>
+<p>This effectively implies that the downwash can be expressed as a <em>functional</em> of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:</p>
 
-<p>$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&rsquo;}}\right) = 0 $$</p>
+<p>$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(x)\;\mathrm{d}x = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&rsquo;,x)\;\mathrm{d}x$$</p>
 
-<p>Since there is no explicit $\Gamma$ dependence, the E-L equations simply become: $\partial{\mathcal{L}}/\partial{\Gamma&rsquo;} = c$. This results in the following expression:</p>
+<p>The Euler-Lagrange equations thus take the following form:</p>
 
-<p>$$ y = y_0 - \frac{1}{c} = k$$</p>
+<p>$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&rsquo;}}\right) + \lambda\left[\frac{\partial{\mathcal{G}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{G}}}{\partial{\Gamma&rsquo;}}\right)\right]= 0 $$</p>
+
+<p>Substituting the expressions:</p>
+
+<p>$$ \frac{1}{4\pi(y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$</p>
+
+<p>This doesn&rsquo;t contain any useful information about the downwash. Let&rsquo;s try something else.</p>
+
+<p>Trying to minimise the induced drag formula directly as given by Anderson:</p>
+
+<p>$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$</p>
+
+<p>Performing a variation on the coefficient of induced drag, we get:</p>
+
+<p>$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y} + \delta\Gamma&rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$</p>
+
+<p>Performing integration by parts on the second expression, keeping in mind that the first term of the evaluation disappears because the circulation at the endpoints (the boundary conditions of this problem) is zero:</p>
+
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right)\;\mathrm{d}y\;\mathrm{d}x$$</p>
+
+<p>A little rearranging provides the more useful form:</p>
+
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\;\mathrm{d}y\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x$$</p>
+
+<p>A change of variables $y-x = q$ is required to evaluate the last integral:</p>
+
+<p>$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q$$</p>
+
+<p>Feynman&rsquo;s favourite trick, differentiating under the integral sign:</p>
+
+<p>$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q $$</p>
+
+<p>Mapping the variables back:</p>
+
+<p>$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(x)}{y-x}\;\mathrm{d}x$$</p>
+
+<p>Solving the original integral:</p>
+
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&rsquo;(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$</p>
+
+<p>Switching the variables of integration in the second expression, we get:</p>
+
+<p>$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$</p>
+
+<p>Combining this with the constrant, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:</p>
+
+<p>$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda\right] = 0 $$</p>
+
+<p>This results in:</p>
+
+<p>$$ \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda = 0 $$</p>
+
+<p>The first time is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:</p>
+
+<p>$$ w = \frac{\lambda}{4\pi} = w_0 $$</p>
+
+<p>The same result as seen in Anderson, more rigorously!</p>
 
 	</article>
 </main>
