@@ -139,13 +139,15 @@ $$ z^n - 1 = \prod_{k=0}^{n-1}(z-z_k) = (z-1)\prod_{k=1}^{n-1}(z-z_k) $$<br />
 A conjecture based on trial and error is:<br />
 $$ \prod_{k=1}^{n-1}|z_k - z_0| = \prod_{k=1}^{n-1}|1-z_k| = n$$<br />
 This states that the product of the distances between each root from a selected root is equal to the number of roots.<br />
-To prove this, notice that:<br />
+<br /></li>
+</ul>
+
+<p>To prove this, notice that:<br />
 $$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$<br />
 For the equalities to be sensible at $z=1$, one must perform analytic continuation:<br />
 $$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$<br />
 The first equality proves the conjecture. The last equality is evaluated using L&rsquo;Hôpital&rsquo;s rule, also proving the conjecture:<br />
-$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$<br /></li>
-</ul>
+$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$</p>
 
 	</article>
 </main>
