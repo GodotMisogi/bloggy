@@ -49,7 +49,7 @@
 
 &lt;p&gt;A little rearranging provides the more useful form:&lt;/p&gt;
 
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\;\mathrm{d}y\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x$$&lt;/p&gt;
+&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x\;\mathrm{d}y$$&lt;/p&gt;
 
 &lt;p&gt;A change of variables $y-x = q$ is required to evaluate the last integral:&lt;/p&gt;
 
