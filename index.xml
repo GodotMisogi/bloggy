@@ -6,64 +6,8 @@
     <description>Recent content on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2016 13:01:39 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 26 Dec 2016 01:55:24 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Dubby Pendy - A Double Pendulum Simulator</title>
-      <link>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
-      <pubDate>Tue, 27 Dec 2016 13:01:39 +0530</pubDate>
-      
-      <guid>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
-      <description>&lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_19.html&#34;&gt;The Principle of Least Action&lt;/a&gt; chapter in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_toc.html&#34;&gt;Vol. 2 of The Feynman Lectures on Physics&lt;/a&gt;. I was introduced to a different perspective other than Newton&amp;rsquo;s three axioms to view the physical world, perhaps a more general one.&lt;/p&gt;
-
-&lt;p&gt;A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum. I saw a &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;Wolfram Science animation&lt;/a&gt; of the system, but it didn&amp;rsquo;t have the right &lt;code&gt;a e s t h e t i c&lt;/code&gt; for me, and I wanted to write one of my own to investigate the system for various initial conditions and its chaotic behaviour.&lt;/p&gt;
-
-&lt;p&gt;The following shows the double pendulum system:&lt;/p&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../DubbyPendy.svg&#34; width=&#34;80%&#34;&gt;&lt;/div&gt;
-
-&lt;p&gt;The Lagrangian of the system is:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathcal{L} = T - V $$&lt;br /&gt;
-$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$&lt;br /&gt;
-$$ V = -(m_1 + m_2)gl_1\cos \theta_1 - m_2gl_2\cos\theta_2 $$&lt;/p&gt;
-
-&lt;p&gt;After a very long &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;derivation&lt;/a&gt;, Hamilton&amp;rsquo;s equations can be obtained:&lt;/p&gt;
-
-&lt;p&gt;$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{p_{\theta_1}} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$&lt;br /&gt;
-$$ \dot{p_{\theta_2}} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$&lt;br /&gt;
-$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l_2 m_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}{2l_1^2 l_2^2[m_1 + m_2\sin^2(\theta_1-\theta_2)]^2}\sin[2(\theta_1 - \theta_2)] $$&lt;/p&gt;
-
-&lt;p&gt;These are very formidable-looking equations, and it is almost impossible to determine the particle trajectories by solving these equations analytically! So how does one solve it for practical purposes? Numerical methods and programming. I used Lua to program the simulator, including the &lt;a href=&#34; https://love2d.org&#34;&gt;LÖVE&lt;/a&gt; framework for the graphics.&lt;/p&gt;
-
-&lt;p&gt;Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&amp;rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function directSum(a, b)
-	local c = {}
-	for i,v in pairs(a) do
-		c[i] = a[i] + b[i]
-	end
-	return c
-end
-
-function scalarMultiply(scalar, table)
-	local output = {}
-	for i,v in pairs(table) do
-		output[i] = scalar*table[i]
-	end
-	return output
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../DubbyPendy.gif&#34; width=&#34;100%&#34;&gt;&lt;/div&gt;
-</description>
-    </item>
     
     <item>
       <title>Calculus of Variations - Induced Drag Over a Wing</title>
