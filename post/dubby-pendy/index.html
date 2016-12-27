@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="Dubby Pendy - A Double Pendulum Simulator">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-12-27">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://godotmisogi.github.io/bloggy/post/dubby-pendy/">
+    <meta property="og:site_name" content="GOOD VIBRATIONS">
+    
+    <meta name="generator" content="Hugo 0.18" />
+    <title>Dubby Pendy - A Double Pendulum Simulator &middot; GOOD VIBRATIONS</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    
+    <link rel="stylesheet" href="https://godotmisogi.github.io/bloggy/css/style.css">
+    <link href="" rel="alternate" type="application/rss+xml" title="GOOD VIBRATIONS" />
+
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://godotmisogi.github.io/bloggy/">GOOD VIBRATIONS</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://godotmisogi.github.io/bloggy/about">About</a></li>
+				
+					<li><a href="https://godotmisogi.github.io/bloggy/">Blog</a></li>
+				
+					<li><a href="https://godotmisogi.github.io/bloggy/tutorial/">Tutorials</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		
+<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h1 class="text-center"><a href="https://godotmisogi.github.io/bloggy/">GOOD VIBRATIONS</a></h1>
+		
+		
+		
+			<small class="text-center center-block">ARJIT SETH</small>
+		
+		
+		
+			<img id="profile-pic" src="https://godotmisogi.github.io/bloggy//img/Logo.png" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			<a href="https://twitter.com/ArjitSeth"><i class="fa fa-twitter fa-2x"></i></a>
+			<a href="https://www.linkedin.com/in/arjit-seth"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="https://github.com/GodotMisogi"><i class="fa fa-github fa-2x"></i></a>
+			<a href="mailto:arjitseth@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://godotmisogi.github.io/bloggy/about">About</a>
+			
+				<a href="https://godotmisogi.github.io/bloggy/">Blog</a>
+			
+				<a href="https://godotmisogi.github.io/bloggy/tutorial/">Tutorials</a>
+			
+		</div>
+	</div>
+</div>
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1>Dubby Pendy - A Double Pendulum Simulator</h1>
+	</header>
+
+	<article>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<p>Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&rsquo;d read about this topic was in <a href="http://www.feynmanlectures.caltech.edu/II_19.html">The Principle of Least Action</a> chapter in <a href="http://www.feynmanlectures.caltech.edu/II_toc.html">Vol. 2 of The Feynman Lectures on Physics</a>. I was introduced to a different perspective other than Newton&rsquo;s three axioms to view the physical world, perhaps a more general one.</p>
+
+<p>A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum. I saw a <a href="http://scienceworld.wolfram.com/physics/DoublePendulum.html">Wolfram Science animation</a> of the system, but it didn&rsquo;t have the right <code>a e s t h e t i c</code> for me, and I wanted to write one of my own to investigate the system for various initial conditions and its chaotic behaviour.</p>
+
+<p>The following shows the double pendulum system:</p>
+
+<div style="text-align:center"><img src="../DubbyPendy.svg" width="80%"></div>
+
+<p>The Lagrangian of the system is:</p>
+
+<p>$$ \mathcal{L} = T - V $$<br />
+$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$<br />
+$$ V = -(m_1 + m_2)gl_1\cos \theta_1 - m_2gl_2\cos\theta_2 $$</p>
+
+<p>After a very long <a href="http://scienceworld.wolfram.com/physics/DoublePendulum.html">derivation</a>, Hamilton&rsquo;s equations can be obtained:</p>
+
+<p>$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
+$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
+$$ \dot{p_{\theta_1}} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$<br />
+$$ \dot{p_{\theta_2}} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$<br />
+$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
+$$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l_2 m_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}{2l_1^2 l_2^2[m_1 + m_2\sin^2(\theta_1-\theta_2)]^2}\sin[2(\theta_1 - \theta_2)] $$</p>
+
+<p>These are very formidable-looking equations, and it is almost impossible to determine the particle trajectories by solving these equations analytically! So how does one solve it for practical purposes? Numerical methods and programming. I used Lua to program the simulator, including the <a href=" https://love2d.org">LÖVE</a> framework for the graphics.</p>
+
+<p>Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:</p>
+
+<pre><code class="language-lua">function directSum(a, b)
+	local c = {}
+	for i,v in pairs(a) do
+		c[i] = a[i] + b[i]
+	end
+	return c
+end
+
+function scalarMultiply(scalar, table)
+	local output = {}
+	for i,v in pairs(table) do
+		output[i] = scalar*table[i]
+	end
+	return output
+end
+</code></pre>
+
+<div style="text-align:center"><img src="../DubbyPendy.gif" width="100%"></div>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://godotmisogi.github.io/bloggy/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'godotmisogi';
+    var disqus_identifier = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/dubby-pendy\/';
+    var disqus_title = 'Dubby Pendy - A Double Pendulum Simulator';
+    var disqus_url = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/dubby-pendy\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'code-here', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/godotmisogi.github.io\/bloggy\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  
+  <script src="https://godotmisogi.github.io/bloggy//js/App.js"></script>
+  
+</body>
+</html>
