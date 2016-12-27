@@ -136,7 +136,7 @@ function love.update()
     Solver(dt)
 end&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;After setting up the graphics end, I obtain this nice animations like this:&lt;br /&gt;
+&lt;p&gt;After setting up the graphics end, I obtain nice animations like this:&lt;br /&gt;
 &lt;pre&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../DubbyPendy.gif&#34; width=&#34;100%&#34;&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.&lt;/p&gt;
