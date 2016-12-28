@@ -136,6 +136,7 @@ $$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l
 <p>Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:</p>
 
 <pre><code class="lua">function directSum(a, b)
+
     local c = {}
     for i,v in pairs(a) do
         c[i] = a[i] + b[i]
