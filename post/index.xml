@@ -149,7 +149,7 @@ end&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
       
       <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
-      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I saw a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
+      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
 
 &lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
 
