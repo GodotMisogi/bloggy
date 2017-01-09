@@ -124,8 +124,7 @@ end
 	local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
 	local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
 	
-	local R = scalarMultiply(1/6 * dt, 
-	
+	local R = scalarMultiply(1/6 * dt, 	
 	directSum(directSum(k1, scalarMultiply(2.0, k2)), 
 	directSum(scalarMultiply(2.0, k3), k4)))
 	
