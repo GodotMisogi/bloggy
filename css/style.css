@@ -6695,9 +6695,10 @@ a:active {
     margin-bottom: 15PX
 }
 #profile-pic {
-    width: 70%;
-    border: 5px solid #083256;
-    box-shadow: 0 0 10px black
+    width: 75%;
+    /*border: 5px solid #083256;
+    box-shadow: 0 0 10px black;*/
+    margin: 30px 40px;
 }
 #social,
 #links {
