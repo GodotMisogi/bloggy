@@ -35,7 +35,7 @@
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/exfGQpWcaSE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/7YS66RPyq4A&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 
@@ -55,10 +55,10 @@ K:CLoc
 |:CDEFGAB:|
 &lt;/p&gt;
 
-&lt;p&gt;The fundamental structure of a raga is based on the ascending and descending order of notes, referred to as &lt;em&gt;&amp;ldquo;Aaroh-Avroh&amp;rdquo;&lt;/em&gt;. The ornamentation in the instruments is also different: &lt;em&gt;&amp;ldquo;gamaks&amp;rdquo;&lt;/em&gt;, a quick slide between notes; permutations and repetition of the notes are important in the definition of a raga. &lt;em&gt;Vyn&lt;/em&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt; provided me with a few ragas and their respective interval structures, so I tried correlating some of them with the Gregorian modes:&lt;/p&gt;
+&lt;p&gt;The fundamental structure of a raga is based on the ascending and descending order of notes, referred to as &lt;em&gt;&amp;ldquo;Aaroh-Avroh&amp;rdquo;&lt;/em&gt;. The ornamentation in the instruments is also different: &lt;em&gt;&amp;ldquo;gamaks&amp;rdquo;&lt;/em&gt;, a quick slide between notes; permutations and repetition of the notes are important in the definition of a raga. &lt;em&gt;Vyn&lt;/em&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt; provided me with a few ragas and their respective interval structures, so I tried correlating some of them with the Gregorian modes. The following are two examples:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Example - B Phrygian: &lt;code&gt;B C D E F# G A&lt;/code&gt; = Raga Bhairavi&lt;/p&gt;
+&lt;p&gt;B Phrygian: &lt;code&gt;B C D E F# G A&lt;/code&gt; = Raga Bhairavi&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;
@@ -68,6 +68,19 @@ M:
 C:
 K:BPhr
 |:B,CDEFGA:|
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A Dorian &lt;code&gt;A B C D E F# G&lt;/code&gt; = Raga Kafi&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+X:1
+T:
+M:
+C:
+K:ADor
+|:A,B,CDEFG:|
 &lt;/p&gt;
 
 &lt;p&gt;The rhythms in Indian classical music are called &lt;em&gt;&amp;ldquo;Taals&amp;rdquo;&lt;/em&gt;, and have fixed structures in terms of accents and beats. The concept of odd-time signatures and their implementation is much more natural in the compositions as compared to the fairly rare usage in contemporary Western musical genres such as rock and pop.&lt;/p&gt;
@@ -114,22 +127,26 @@ K:BPhr
 
 &lt;p&gt;The Alaap is similar to an opening instrumental solo or jam session that evolves into the main composition. I&amp;rsquo;ve personally not heard any analogs to the Swara/Sur or Akaar, but I&amp;rsquo;m sure at least one or two examples exist out there. The percussion improvisation can be correlated with a drum solo in the middle or after the performance of a composition.&lt;/p&gt;
 
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/exfGQpWcaSE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
 &lt;hr /&gt;
 
-&lt;p&gt;The concerts also follow a different philosophy. For example, there is no underlying concept in a concert performance. In Carnatic music, the following format is usually followed:&lt;/p&gt;
+&lt;p&gt;The concerts also follow a different philosophy. For example, there is no underlying concept in a concert performance. There is also no dependence on sheet music, unlike in jazz and classical music performances. In constrast, some Western artists, such as Steven Wilson, create concept albums and perform concerts in the listening order of the album. So far, I&amp;rsquo;ve not seen any concerts that are similar to the Carnatic style in structure. In Carnatic music, the following format is usually followed:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Varna: No improvisation, almost only composition.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Kritis: Following structure of song performance.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main: Either structure of song performance - complete, or &lt;em&gt;ragam tanam pallavi&lt;/em&gt; - refrain, complex rhythmic variations.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Tukdas (Pieces): Small, quick compositions (usually fast-paced and consists of singing with no syllables/lyrics) with different structures. Example: Thillanas&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Kritis: Following the structure of song performance.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Main: Either the complete structure of song performance, or &lt;em&gt;ragam tanam pallavi&lt;/em&gt; - focused on the refrain with complex rhythmic variations.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Tukdas (Pieces): Small, quick compositions (usually fast-paced and consists of singing with no syllables/lyrics) with different structures.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;In constrast, some Western artists, such as Steven Wilson, create concept albums and perform concerts in the listening order of the album. So far, I&amp;rsquo;ve not seen any concerts that are similar to the Carnatic style in structure. There is also no dependence on sheet music, unlike in jazz and classical music performances.&lt;/p&gt;
-
-&lt;p&gt;Practice/Rehearsal: The musicians usually do not rehearse together before a show more than once or twice; they&amp;rsquo;re either aware of the composition or they just follow the lead performer(s). Seasoned performers usually do not even engage in rehearsals. So a minimal structure is present in the performance, but there&amp;rsquo;s no formal orchestration. This allows for highly dynamic performances without the need for a group practice. This is more like having jam sessions on stage in Western music, mostly seen in impromptu jazz.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Practice/Rehearsal&lt;/strong&gt;: The musicians usually do not rehearse together before a show more than once or twice; they&amp;rsquo;re either aware of the composition or they just follow the lead performer(s). Seasoned performers usually do not even engage in rehearsals. So a minimal structure is present in the performance, but there&amp;rsquo;s no formal orchestration. This allows for highly dynamic performances without the need for a group practice. This is more like having jam sessions on stage in Western music, mostly seen in impromptu jazz.&lt;/p&gt;
 
 &lt;hr /&gt;
 
