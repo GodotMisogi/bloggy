@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://godotmisogi.github.io/bloggy/post/indian-classical/</loc>
+    <lastmod>2017-01-17T22:55:27+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</loc>
     <lastmod>2016-12-27T16:54:58+05:30</lastmod>
   </url>
@@ -23,13 +28,13 @@
   
   <url>
     <loc>https://godotmisogi.github.io/bloggy/</loc>
-    <lastmod>2016-12-27T16:54:58+05:30</lastmod>
+    <lastmod>2017-01-17T22:55:27+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://godotmisogi.github.io/bloggy/post/</loc>
-    <lastmod>2016-12-27T16:54:58+05:30</lastmod>
+    <lastmod>2017-01-17T22:55:27+05:30</lastmod>
     <priority>0</priority>
   </url>
   
