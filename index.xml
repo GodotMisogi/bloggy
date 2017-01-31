@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GOOD VIBRATIONS</title>
-    <link>https://godotmisogi.github.io/bloggy/index.xml</link>
-    <description>Recent content on GOOD VIBRATIONS</description>
+    <title>Arjit Seth</title>
+    <link>https://godotmisogi.github.io/bloggy/</link>
+    <description>Recent content on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Jan 2017 22:55:27 +0530</lastBuildDate>
@@ -389,8 +389,7 @@ I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging f
 &lt;li&gt;Implementing flight dynamics control systems in multirotors and R/C aircraft.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Learning Group Theory, Topology and Graph Theory.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Programming physics and aerodynamics simulations in various languages.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Developing music production skills for various genres.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Developing music production skills for various genres.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;A more comprehensive overview is available in my &lt;a href=&#34;../Arjit Resume.pdf&#34; target=&#34;_blank&#34;&gt;résumé&lt;/a&gt;.&lt;/p&gt;
@@ -411,8 +410,7 @@ I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging f
 &lt;li&gt;Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Plot these solutions on the Argand plane.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Investigate the exercise, devise a conjecture and prove it.&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Investigate the exercise, devise a conjecture and prove it.&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;When I first read through this exercise, I didn&amp;rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&amp;rsquo;ll start by solving the above points sequentially -&lt;/p&gt;
