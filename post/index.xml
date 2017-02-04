@@ -6,8 +6,56 @@
     <description>Recent content in Posts on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jan 2017 22:55:27 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 04 Feb 2017 23:03:06 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Derivation - Geodesic Equation</title>
+      <link>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
+      <pubDate>Sat, 04 Feb 2017 23:03:06 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
+      <description>&lt;p&gt;Bernard F. Schutz&amp;rsquo;s &lt;a href=&#34;http://www.cambridge.org/us/academic/subjects/physics/cosmology-relativity-and-gravitation/first-course-general-relativity-2nd-edition?format=HB&amp;amp;isbn=9780521887052&#34;&gt;A First Course in General Relativity&lt;/a&gt; provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:&lt;/p&gt;
+
+&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.&lt;/p&gt;
+
+&lt;p&gt;The functional that must be minimised is:&lt;/p&gt;
+
+&lt;p&gt;$$ \mathrm{d}s = \int_{\lambda_0}^{\lambda_1} \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$&lt;/p&gt;
+
+&lt;p&gt;Where $\lambda$ is a parameter for the curve (usually the proper time). So the Lagrangian is:&lt;/p&gt;
+
+&lt;p&gt;$$ \mathcal{L} = \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$&lt;/p&gt;
+
+&lt;p&gt;The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:&lt;/p&gt;
+
+&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g_{\alpha\mu}\dot{x}^{\alpha} + g_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$&lt;/p&gt;
+
+&lt;p&gt;Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:&lt;/p&gt;
+
+&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g_{\alpha\mu}\ddot{x}^{\alpha} + g_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$&lt;/p&gt;
+
+&lt;p&gt;Changing the last term&amp;rsquo;s dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:&lt;/p&gt;
+
+&lt;p&gt;$$ -2g^{\mu\gamma}g_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g_{\alpha\beta,\mu} - g_{\mu\beta,\alpha} - g_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
+
+&lt;p&gt;Using the Christoffel symbol of the second kind with the following definition:&lt;/p&gt;
+
+&lt;p&gt;$$ \Gamma^{\gamma}_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$&lt;/p&gt;
+
+&lt;p&gt;and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{\;\alpha}$:&lt;/p&gt;
+
+&lt;p&gt;$$ -2\delta^{\gamma}_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
+
+&lt;p&gt;The expression simplifies to the geodesic equation:&lt;/p&gt;
+
+&lt;p&gt;$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
+
+&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&amp;width=580&#34; width=&#34;580&#34; height=&#34;660&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
     
     <item>
       <title>Observation - Indian Classical Music</title>
