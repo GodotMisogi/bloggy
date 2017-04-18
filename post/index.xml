@@ -6,13 +6,13 @@
     <description>Recent content in Posts on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Feb 2017 23:03:06 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 19 Apr 2017 21:53:06 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Derivation - Geodesic Equation</title>
       <link>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
-      <pubDate>Sat, 04 Feb 2017 23:03:06 +0530</pubDate>
+      <pubDate>Wed, 19 Apr 2017 21:53:06 +0530</pubDate>
       
       <guid>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
       <description>&lt;p&gt;Bernard F. Schutz&amp;rsquo;s &lt;a href=&#34;http://www.cambridge.org/us/academic/subjects/physics/cosmology-relativity-and-gravitation/first-course-general-relativity-2nd-edition?format=HB&amp;amp;isbn=9780521887052&#34;&gt;A First Course in General Relativity&lt;/a&gt; provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:&lt;/p&gt;
