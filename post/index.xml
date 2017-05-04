@@ -23,7 +23,7 @@
 
 &lt;p&gt;&lt;strong&gt;Motivation&lt;/strong&gt;: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:&lt;/p&gt;
 
-&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Parallel_transport.png&#34; width = &#34;60%&#34;&gt;&lt;/div&gt; Image Source: &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Geodesic Equation/Parallel_transport.png&#34; width = &#34;60%&#34;&gt;&lt;/div&gt; Image Source: &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.&lt;/p&gt;
 
@@ -236,7 +236,7 @@ K:ADor
 
 &lt;p&gt;The following shows the double pendulum system:&lt;/p&gt;
 
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../DubbyPendy.svg&#34; width=&#34;80%&#34;&gt;&lt;/div&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Dubby Pendy/DubbyPendy.svg&#34; width=&#34;80%&#34;&gt;&lt;/div&gt;
 
 &lt;p&gt;The Lagrangian of the system is:&lt;/p&gt;
 
@@ -356,7 +356,7 @@ end
 
 &lt;p&gt;After setting up the graphics end, I obtain nice animations like this:&lt;br /&gt;
 &lt;video width=&#34;100%&#34; autoplay loop&gt;&lt;br /&gt;
-  &lt;source src=&#34;../DubbyPendy.webm&#34; type=&#34;video/webm&#34;&gt;&lt;br /&gt;
+  &lt;source src=&#34;../Dubby Pendy/DubbyPendy.webm&#34; type=&#34;video/webm&#34;&gt;&lt;br /&gt;
   Your browser does not support the video tag.&lt;br /&gt;
 &lt;/video&gt;&lt;br /&gt;
 I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.&lt;/p&gt;
