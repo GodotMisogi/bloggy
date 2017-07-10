@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aerodynamics on Arjit Seth</title>
+    <link>https://godotmisogi.github.io/bloggy/tags/aerodynamics/</link>
+    <description>Recent content in Aerodynamics on Arjit Seth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 26 Dec 2016 01:55:24 +0530</lastBuildDate>
+    <atom:link href="https://godotmisogi.github.io/bloggy/tags/aerodynamics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Calculus of Variations - Induced Drag Over a Wing</title>
+      <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
+      <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
+      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
+
+&lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
+
+&lt;p&gt;$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
+
+&lt;p&gt;This effectively implies that the downwash can be expressed as a &lt;em&gt;functional&lt;/em&gt; of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:&lt;/p&gt;
+
+&lt;p&gt;$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(x)\;\mathrm{d}x = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&amp;rsquo;,x)\;\mathrm{d}x$$&lt;/p&gt;
+
+&lt;p&gt;The Euler-Lagrange equations thus take the following form:&lt;/p&gt;
+
+&lt;p&gt;$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&amp;rsquo;}}\right) + \lambda\left[\frac{\partial{\mathcal{G}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{G}}}{\partial{\Gamma&amp;rsquo;}}\right)\right]= 0 $$&lt;/p&gt;
+
+&lt;p&gt;Substituting the expressions:&lt;/p&gt;
+
+&lt;p&gt;$$ \frac{1}{4\pi(y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$&lt;/p&gt;
+
+&lt;p&gt;This doesn&amp;rsquo;t contain any useful information about the downwash. Let&amp;rsquo;s try something else.&lt;/p&gt;
+
+&lt;p&gt;Trying to minimise the induced drag formula directly as given by Anderson:&lt;/p&gt;
+
+&lt;p&gt;$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
+
+&lt;p&gt;Performing a variation on the coefficient of induced drag, we get:&lt;/p&gt;
+
+&lt;p&gt;$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y} + \delta\Gamma&amp;rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
+
+&lt;p&gt;Performing integration by parts on the second expression, keeping in mind that the first term of the evaluation disappears because the circulation at the endpoints (the boundary conditions of this problem) is zero:&lt;/p&gt;
+
+&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right)\;\mathrm{d}y\;\mathrm{d}x$$&lt;/p&gt;
+
+&lt;p&gt;A little rearranging provides the more useful form:&lt;/p&gt;
+
+&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x\;\mathrm{d}y$$&lt;/p&gt;
+
+&lt;p&gt;A change of variables $y-x = q$ is required to evaluate the last integral:&lt;/p&gt;
+
+&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q$$&lt;/p&gt;
+
+&lt;p&gt;Feynman&amp;rsquo;s favourite trick, differentiating under the integral sign:&lt;/p&gt;
+
+&lt;p&gt;$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q $$&lt;/p&gt;
+
+&lt;p&gt;Mapping the variables back:&lt;/p&gt;
+
+&lt;p&gt;$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(x)}{y-x}\;\mathrm{d}x$$&lt;/p&gt;
+
+&lt;p&gt;Solving the original integral:&lt;/p&gt;
+
+&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&amp;rsquo;(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$&lt;/p&gt;
+
+&lt;p&gt;Switching the variables of integration in the second expression, we get:&lt;/p&gt;
+
+&lt;p&gt;$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
+
+&lt;p&gt;Combining this with the constrant, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:&lt;/p&gt;
+
+&lt;p&gt;$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda\right] = 0 $$&lt;/p&gt;
+
+&lt;p&gt;Using the constraint on the lift across the wing, this results in:&lt;/p&gt;
+
+&lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda = 0 $$&lt;/p&gt;
+
+&lt;p&gt;The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
+
+&lt;p&gt;$$ w = \frac{\lambda}{8\pi} = w_0 $$&lt;/p&gt;
+
+&lt;p&gt;The same result as seen in Anderson, more rigorously!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
