@@ -1,31 +1,33 @@
-
-baseurl = "https://godotmisogi.github.io/bloggy/public/"
+baseurl = "https://godotmisogi.github.io/bloggy/"
 relativeURLs = false
-languageCode = "en-us"
-title = "Bloggy"
+languageCode = "en-uk"
+title = "Arjit Seth"
 paginate = 5
+disqusShortname = "godotmisogi"
 
 [taxonomies]
 	tag = "tags"
-	tutorial = "tutorials"
+	tutorial = "projects"
 
 [params]
 	showglobe = true
-	
-	analytics = "code-here"
 
+	# Google Analytics
+    analytics = "UA-89998292-1"
+
+    favicon = "favicon.ico"
+    
 	github = "https://github.com/GodotMisogi"
 	twitter = "https://twitter.com/ArjitSeth"
-	linkedin = "https://www.linkedin.com/view?id=549011114"
+	linkedin = "https://www.linkedin.com/in/arjit-seth"
 	email = "arjitseth@gmail.com"
 	
-	header = "What's Going On"
+	header = "Thinking Out Loud"
 	profilepic = "img/Logo.png"
 	
 	title = "GOOD VIBRATIONS"
 	subtitle = "ARJIT SETH"
 	author = "Arjit Seth"
-	disqusShortname = "godotmisogi"
 	
 	[[params.navlinks]]
 	name = "About"
@@ -36,7 +38,7 @@ paginate = 5
 	url = ""
 	
 	[[params.navlinks]]
-	name = "Tutorials"
+	name = "Projects"
 	url = "tutorial/"
 
 [blackfriday]
