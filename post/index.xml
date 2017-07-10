@@ -125,7 +125,7 @@ K:CLoc
 |:CDEFGAB:|
 &lt;/p&gt;
 
-&lt;p&gt;The fundamental structure of a raga is based on the ascending and descending order of notes, referred to as &lt;em&gt;&amp;ldquo;Aaroh-Avroh&amp;rdquo;&lt;/em&gt;. The ornamentation in the instruments is also different: &lt;em&gt;&amp;ldquo;gamaks&amp;rdquo;&lt;/em&gt;, a quick slide between notes; permutations and repetition of the notes are important in the definition of a raga. &lt;em&gt;Vyn&lt;/em&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt; provided me with a few ragas and their respective interval structures, so I tried correlating some of them with the Gregorian modes. The following are two examples:&lt;/p&gt;
+&lt;p&gt;The fundamental structure of a raga is based on the ascending and descending order of notes, referred to as &lt;em&gt;&amp;ldquo;Aaroh-Avroh&amp;rdquo;&lt;/em&gt;. The ornamentation in the instruments is also different: &lt;em&gt;&amp;ldquo;gamaks&amp;rdquo;&lt;/em&gt;, a quick slide between notes; permutations, abseneces and repetition of the notes are important in the definition of a raga. &lt;em&gt;Vyn&lt;/em&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt; provided me with a few ragas and their respective interval structures, so I tried correlating some of them with the Gregorian modes. The following are two examples:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;B Phrygian: &lt;code&gt;B C D E F# G A&lt;/code&gt; = Raga Bhairavi&lt;/p&gt;
@@ -144,14 +144,26 @@ K:BPhr
 &lt;p&gt;A Dorian: &lt;code&gt;A B C D E F# G&lt;/code&gt; = Raga Kafi&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;
-X:1
-T:
-M:
-C:
-K:ADor
-|:A,B,CDEFG:|
-&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;br /&gt;
+X:1&lt;br /&gt;
+T:&lt;br /&gt;
+M:&lt;br /&gt;
+C:&lt;br /&gt;
+K:ADor&lt;br /&gt;
+|:A,B,CDEFG:|&lt;br /&gt;
+&lt;/p&gt;&lt;br /&gt;
+&amp;lt;!&amp;ndash;&lt;br /&gt;
+&amp;gt; D Mixotonic: &lt;code&gt;D F# G A C&lt;/code&gt; = Raga Jog&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;br /&gt;
+X:1&lt;br /&gt;
+T:&lt;br /&gt;
+M:&lt;br /&gt;
+C:&lt;br /&gt;
+K:DMix&lt;br /&gt;
+|:DF#GA,C:|&lt;br /&gt;
+&lt;/p&gt;&lt;br /&gt;
+ &amp;ndash;&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;The rhythms in Indian classical music are called &lt;em&gt;&amp;ldquo;Taals&amp;rdquo;&lt;/em&gt;, and have fixed structures in terms of accents and beats. The concept of odd-time signatures and their implementation is much more natural in the compositions as compared to the fairly rare usage in contemporary Western musical genres such as rock and pop.&lt;/p&gt;
 
