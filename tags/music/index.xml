@@ -88,26 +88,14 @@ K:BPhr
 &lt;p&gt;A Dorian: &lt;code&gt;A B C D E F# G&lt;/code&gt; = Raga Kafi&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;br /&gt;
-X:1&lt;br /&gt;
-T:&lt;br /&gt;
-M:&lt;br /&gt;
-C:&lt;br /&gt;
-K:ADor&lt;br /&gt;
-|:A,B,CDEFG:|&lt;br /&gt;
-&lt;/p&gt;&lt;br /&gt;
-&amp;lt;!&amp;ndash;&lt;br /&gt;
-&amp;gt; D Mixotonic: &lt;code&gt;D F# G A C&lt;/code&gt; = Raga Jog&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;br /&gt;
-X:1&lt;br /&gt;
-T:&lt;br /&gt;
-M:&lt;br /&gt;
-C:&lt;br /&gt;
-K:DMix&lt;br /&gt;
-|:DF#GA,C:|&lt;br /&gt;
-&lt;/p&gt;&lt;br /&gt;
- &amp;ndash;&amp;gt;&lt;/p&gt;
+&lt;p&gt;
+X:1
+T:
+M:
+C:
+K:ADor
+|:A,B,CDEFG:|
+&lt;/p&gt;
 
 &lt;p&gt;The rhythms in Indian classical music are called &lt;em&gt;&amp;ldquo;Taals&amp;rdquo;&lt;/em&gt;, and have fixed structures in terms of accents and beats. The concept of odd-time signatures and their implementation is much more natural in the compositions as compared to the fairly rare usage in contemporary Western musical genres such as rock and pop.&lt;/p&gt;
 
