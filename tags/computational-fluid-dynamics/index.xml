@@ -23,14 +23,16 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Meshing Software:&lt;/strong&gt; I&amp;rsquo;ll be using ANSYS ICEM CFD and its blocking features to generate 2D meshes.&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Meshing Software:&lt;/strong&gt; I&amp;rsquo;ll be using ANSYS ICEM CFD and its convenient blocking features with its powerful sizing capabilities to generate 2D meshes.&lt;br /&gt;
 The two types of meshes I&amp;rsquo;ll be trying to generate are an O-grid and a C-grid. An O-grid setup is when the body of analysis is enclosed within a curvilinear grid in which completely closed contours are created at offsets from the body. A C-grid setup, by example for an airfoil, is when the surrounding grid forms a &amp;lsquo;C&amp;rsquo; till the trailing edge.  Forums recommend that a C-grid mesh provides better results for airfoils with sharp trailing edges; this is because the grid alignment is along the airfoil shape (hence along the flow streamlines) to capture the flow results more accurately.&lt;/p&gt;
 
-&lt;p&gt;The blocking process in ICEM CFD used the same ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}\; m $ to resolve the boundary layer.&lt;/p&gt;
+&lt;p&gt;The blocking process in ICEM CFD used the same aspect ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}\; m $ to resolve the boundary layer.&lt;/p&gt;
 
 &lt;hr /&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;C-Grid:&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
 &lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
@@ -38,7 +40,9 @@ The two types of meshes I&amp;rsquo;ll be trying to generate are an O-grid and a
 
 &lt;hr /&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;O-Grid:&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
 &lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
