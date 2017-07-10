@@ -6,13 +6,13 @@
     <description>Recent content in Computational Fluid Dynamics on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Fri, 05 May 2017 22:55:50 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/tags/computational-fluid-dynamics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Meshing Techniques - Cambered Airfoil</title>
       <link>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</link>
-      <pubDate>Fri, 05 May 2017 22:55:50 +0530</pubDate>
+      <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
       
       <guid>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</guid>
       <description>&lt;p&gt;Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the &lt;em&gt;beloved&lt;/em&gt; NACA 0012. I&amp;rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&amp;rsquo;ve been able to perform flow analyses with accurate results.&lt;/p&gt;
