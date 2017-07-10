@@ -17,23 +17,20 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="">
-    <meta property="og:title" content="Investigation - The Roots of Unity">
+    <meta property="og:title" content="Computational Fluid Dynamics">
     
-    <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2016-12-25">
+    <meta property="og:type" content="website">
     
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://godotmisogi.github.io/bloggy/post/roots-of-unity/">
+    <meta property="og:url" content="https://godotmisogi.github.io/bloggy/tags/computational-fluid-dynamics/">
     <meta property="og:site_name" content="Arjit Seth">
     
-    <meta property="og:tags" content="Mathematics">
-    
     <meta name="generator" content="Hugo 0.16-DEV" />
-    <title>Investigation - The Roots of Unity</title>
+    <title>Computational Fluid Dynamics</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://godotmisogi.github.io/bloggy/css/style.css">
-    <link href="" rel="alternate" type="application/rss+xml" title="Arjit Seth" />
+    <link href="https://godotmisogi.github.io/bloggy/tags/computational-fluid-dynamics/index.xml" rel="alternate" type="application/rss+xml" title="Arjit Seth" />
     <link href="https://godotmisogi.github.io/bloggy/css/prism.css" rel="stylesheet" />
 
     
@@ -122,74 +119,16 @@
 			<div class="row">
 				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
 
-<main>
+<article>
 	<header>
-		<h1>Investigation - The Roots of Unity</h1>
+		<h1>Computational Fluid Dynamics</a></h1>
 	</header>
-
-	<article>
-		<p>During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&rsquo;t have the problem statement anymore, I&rsquo;ll outline the major points of the task:</p>
-
 <ul>
-<li>Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.<br /></li>
-<li>Plot these solutions on the Argand plane.<br /></li>
-<li>Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.<br /></li>
-<li>Investigate the exercise, devise a conjecture and prove it.<br /></li>
+	
+	<li><a href="https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/">Meshing Techniques - Cambered Airfoil</a></li>
+	
 </ul>
-
-<p>When I first read through this exercise, I didn&rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&rsquo;ll start by solving the above points sequentially -</p>
-
-<ul>
-<li><p>The solutions to $z^n - 1 = 0$ are obtained most easily through Euler&rsquo;s form:<br />
-$$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&hellip;,n-1 $$</p></li>
-
-<li><p>As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions and tree diagram:</p></li>
-</ul>
-
-<p><div style="text-align:center"><img src="../Roots2.svg" width = "80%"></div><br />
-<br></br></p>
-
-<ul>
-<li>The easiest observation is:<br />
-$$ \sum^{n-1}_{k = 0} z_k = 0 $$<br />
-The roots of unity can be factorised into the following irreducible form over the field of real numbers:<br />
-$$ z^n - 1 = (z-1)\sum^{n-1}_{i = 0} z^i $$<br />
-And can be factorised over the complex field as:<br />
-$$ z^n - 1 = \prod_{k=0}^{n-1}(z-z_k) = (z-1)\prod_{k=1}^{n-1}(z-z_k) $$<br />
-A conjecture based on trial and error is:<br />
-$$ \prod_{k=1}^{n-1}|z_k - z_0| = \prod_{k=1}^{n-1}|1-z_k| = n$$<br />
-This states that the product of the distances between each root from a selected root is equal to the number of roots. To prove this, notice that:<br />
-$$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$<br />
-For the equalities to be sensible at $z=1$, one must perform analytic continuation:<br />
-$$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$<br />
-The first equality proves the conjecture. The last equality is evaluated using L&rsquo;Hôpital&rsquo;s rule, also proving the conjecture:<br />
-$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$<br /></li>
-</ul>
-
-	</article>
-</main>
-
-<div id="bottom-nav" class="text-center center-block">
-	<a href=" https://godotmisogi.github.io/bloggy/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
-</div>
-
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'godotmisogi';
-    var disqus_identifier = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/roots-of-unity\/';
-    var disqus_title = 'Investigation - The Roots of Unity';
-    var disqus_url = 'https:\/\/godotmisogi.github.io\/bloggy\/post\/roots-of-unity\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+</article>
 
 						</div>
 					</div>

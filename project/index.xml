@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Arjit Seth</title>
+    <link>https://godotmisogi.github.io/bloggy/project/</link>
+    <description>Recent content in Projects on Arjit Seth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Tue, 11 Jul 2017 01:26:50 +0530</lastBuildDate>
+    <atom:link href="https://godotmisogi.github.io/bloggy/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solution Manuals for Textbooks (WIP)</title>
+      <link>https://godotmisogi.github.io/bloggy/project/solution-manuals/</link>
+      <pubDate>Tue, 11 Jul 2017 01:26:50 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/project/solution-manuals/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been studying some physics for a while and decided to write solution manuals for reference in case I forget the approach to a problem later. I&amp;rsquo;ve been pretty lazy in writing them, so it&amp;rsquo;s very sloppy and some solutions might be incomplete, incorrect or have illogical statements here and there. Here&amp;rsquo;s what I&amp;rsquo;ve compiled so far:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../Solution Manuals/Lancaster Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Tom Lancaster et. al. - Quantum Field Theory for the Gifted Amateur&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;../Solution Manuals/Schutz Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Bernard F. Schutz - A First Course in General Relativity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;../Solution Manuals/Shankar Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Ramamurti Shankar - Principles of Quantum Mechanics&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
