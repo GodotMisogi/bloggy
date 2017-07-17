@@ -136,61 +136,60 @@
 
 <p><strong>Motivation</strong>: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:</p>
 
-<div style="text-align:center"><img src="../Geodesic Equation/Parallel_transport.png" width = "60%"></div> Image Source: https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png
+<p><center><img src="../Geodesic Equation/Parallel_transport.png" width = "60%"></center><br />
+Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png">https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png</a></p>
 
-If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.
+<p>If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.</p>
 
-This can be easily visualised as walking to the North pole from A with your arm outstretched forward (representing the tangent vector), which is perpendicular to the equator. Once you reach, you need to go to point B, so your body rotates, but your arm is fixed because of parallel transport, so you're now walking with your arm outstretched to the left. Once you reach point B, you realise that your arm is along the equatorial line. Therefore parallel transport isn't preserved because of the curvature of the sphere.
+<p>This can be easily visualised as walking to the North pole from A with your arm outstretched forward (representing the tangent vector), which is perpendicular to the equator. Once you reach, you need to go to point B, so your body rotates, but your arm is fixed because of parallel transport, so you&rsquo;re now walking with your arm outstretched to the left. Once you reach point B, you realise that your arm is along the equatorial line. Therefore parallel transport isn&rsquo;t preserved because of the curvature of the sphere.</p>
 
-Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields. 
+<p>Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields.</p>
 
-A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it's the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport.
+<p>A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it&rsquo;s the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport.</p>
 
-In relativity, the definition of distance (or interval between points) is a little different. Since we deal with space-time rather than space, the metric of space-time (in one convention) must be used, as described below:
+<p>In relativity, the definition of distance (or interval between points) is a little different. Since we deal with space-time rather than space, the metric of space-time (in one convention) must be used, as described below:</p>
 
-$$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$ 
+<p>$$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$</p>
 
-There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:
+<p>There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:</p>
 
-$$ \vec{U}\cdot\vec{V} = g\_{\alpha\beta}U^{\alpha}V^{\beta} = g\_{00}U^{0}V^{0} + g\_{10}U^{1}V^{0} + g\_{01}U^{0}V^{1} + ...$$
+<p>$$ \vec{U}\cdot\vec{V} = g_{\alpha\beta}U^{\alpha}V^{\beta} = g_{00}U^{0}V^{0} + g_{10}U^{1}V^{0} + g_{01}U^{0}V^{1} + &hellip;$$</p>
 
-With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g\_{\alpha\beta} $ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g\_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention.
+<p>With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g_{\alpha\beta} $ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention.</p>
 
-The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:
+<p>The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:</p>
 
-$$ \mathrm{d}s = \int\_{\lambda\_0}^{\lambda\_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda\_0}^{\lambda\_1} \left|g\_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$
+<p>$$ \mathrm{d}s = \int_{\lambda_0}^{\lambda_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda_0}^{\lambda_1} \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$</p>
 
-Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time must be a minimum. So the Lagrangian is:
+<p>Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time must be a minimum. So the Lagrangian is:</p>
 
-$$ \mathcal{L} = \left|g\_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$
+<p>$$ \mathcal{L} = \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$</p>
 
-The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:
+<p>The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:</p>
 
-$$ g\_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g\_{\alpha\mu}\dot{x}^{\alpha} + g\_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$
+<p>$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g_{\alpha\mu}\dot{x}^{\alpha} + g_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$</p>
 
-Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:
+<p>Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:</p>
 
-$$ g\_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g\_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g\_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g\_{\alpha\mu}\ddot{x}^{\alpha} + g\_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$
+<p>$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g_{\alpha\mu}\ddot{x}^{\alpha} + g_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$</p>
 
-Changing the last term's dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:
+<p>Changing the last term&rsquo;s dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:</p>
 
-$$ -2g^{\mu\gamma}g\_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g\_{\alpha\beta,\mu} - g\_{\mu\beta,\alpha} - g\_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$
+<p>$$ -2g^{\mu\gamma}g_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g_{\alpha\beta,\mu} - g_{\mu\beta,\alpha} - g_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
 
-Using the Christoffel symbol of the second kind with the following definition:
+<p>Using the Christoffel symbol of the second kind with the following definition:</p>
 
-$$ \Gamma^{\gamma}\_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g\_{\mu\beta,\alpha} + g\_{\mu\alpha,\beta} - g\_{\alpha\beta,\mu}\right)$$
+<p>$$ \Gamma^{\gamma}_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$</p>
 
-and using $g^{\mu\gamma}g\_{\alpha\mu} = \delta^{\gamma}\_{\;\alpha}$:
+<p>and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{\;\alpha}$:</p>
 
-$$ -2\delta^{\gamma}\_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}\_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$
+<p>$$ -2\delta^{\gamma}_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
 
-The expression simplifies to the geodesic equation:
+<p>The expression simplifies to the geodesic equation:</p>
 
-$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}\_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$
+<p>$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
 
-<div style="text-align:center">
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&width=580" width="580" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-</div>
+<p><center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&width=580" width="580" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></center></p>
 
 	</article>
 </main>
