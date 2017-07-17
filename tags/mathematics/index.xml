@@ -111,7 +111,7 @@ $$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&amp;hellip;,n-1 $$&lt;/p&
 &lt;li&gt;&lt;p&gt;As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions and tree diagram:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Roots2.svg&#34; width = &#34;80%&#34;&gt;&lt;/div&gt;&lt;br /&gt;
+&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Roots of Unity/Roots2.svg&#34; width = &#34;80%&#34;&gt;&lt;/div&gt;&lt;br /&gt;
 &lt;br&gt;&lt;/br&gt;&lt;/p&gt;
 
 &lt;ul&gt;
