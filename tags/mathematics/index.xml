@@ -6,8 +6,27 @@
     <description>Recent content in Mathematics on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Mon, 26 Dec 2016 01:55:24 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 27 Aug 2017 01:26:50 +0530</lastBuildDate>
     <atom:link href="https://godotmisogi.github.io/bloggy/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Academics - Physics and Mathematics</title>
+      <link>https://godotmisogi.github.io/bloggy/project/academics/</link>
+      <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
+      
+      <guid>https://godotmisogi.github.io/bloggy/project/academics/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been studying some physics for a while and decided to write solution manuals for reference in case I forget the approach to a problem later. I&amp;rsquo;ve been pretty lazy in writing them, so it&amp;rsquo;s very sloppy and some solutions might be incomplete, incorrect or have illogical statements here and there. Here&amp;rsquo;s what I&amp;rsquo;ve compiled so far:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Quantum%20Field%20Theory%20for%20the%20Gifted%20Amateur%20-%20Lancaster%20et%20al/Lancaster%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Tom Lancaster et. al. - Quantum Field Theory for the Gifted Amateur&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/A%20First%20Course%20in%20General%20Relativity%20-%20B.%20F.%20Schutz/Schutz%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Bernard F. Schutz - A First Course in General Relativity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Principles%20of%20Quantum%20Mechanics%20-%20R.%20Shankar/Shankar%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Ramamurti Shankar - Principles of Quantum Mechanics&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Gravitation%2C%20Foundations%20and%20Frontiers%20-%20T.%20Padmanabhan/Gravitation.pdf&#34; target=&#34;_blank&#34;&gt;T. Padmanabhan - Gravitation: Foundations and Frontiers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve also been studying a course on &lt;em&gt;Hopf Algebras and Combinatorics&lt;/em&gt; and writing down notes with &lt;code&gt;Vyn&lt;/code&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GodotMisogi/math-notes/blob/master/Hopf%20Algebra%20and%20Combinatorics/Hopf%20Algebra%20and%20Combinatorics.pdf&#34; target=&#34;_blank&#34;&gt;Hopf Algebras and Combinatorics Lecture Notes&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Calculus of Variations - Induced Drag Over a Wing</title>
