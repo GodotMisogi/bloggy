@@ -511,11 +511,11 @@ I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging f
 
 &lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
 
-&lt;p&gt;$$w(y_0) = \frac{1}{4\pi}\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
+&lt;p&gt;$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
 
 &lt;p&gt;This effectively implies that the downwash can be expressed as a &lt;em&gt;functional&lt;/em&gt; of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:&lt;/p&gt;
 
-&lt;p&gt;$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(x)\;\mathrm{d}x = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&amp;rsquo;,x)\;\mathrm{d}x$$&lt;/p&gt;
+&lt;p&gt;$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(y)\;\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
 
 &lt;p&gt;The Euler-Lagrange equations thus take the following form:&lt;/p&gt;
 
@@ -523,15 +523,15 @@ I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging f
 
 &lt;p&gt;Substituting the expressions:&lt;/p&gt;
 
-&lt;p&gt;$$ \frac{1}{4\pi(y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$&lt;/p&gt;
+&lt;p&gt;$$ -\frac{1}{4\pi  (y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$&lt;/p&gt;
 
 &lt;p&gt;This doesn&amp;rsquo;t contain any useful information about the downwash. Let&amp;rsquo;s try something else.&lt;/p&gt;
 
 &lt;p&gt;Trying to minimise the induced drag formula directly as given by Anderson:&lt;/p&gt;
 
-&lt;p&gt;$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
+&lt;p&gt;$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{1}{2\pi V_{\infty}^2 S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
 
-&lt;p&gt;Performing a variation on the coefficient of induced drag, we get:&lt;/p&gt;
+&lt;p&gt;Getting rid of the constants and performing a variation on the coefficient of induced drag, we get:&lt;/p&gt;
 
 &lt;p&gt;$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y} + \delta\Gamma&amp;rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
 
@@ -563,17 +563,17 @@ I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging f
 
 &lt;p&gt;$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
 
-&lt;p&gt;Combining this with the constrant, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:&lt;/p&gt;
+&lt;p&gt;Reintroducing the constants and combining this with the constraint, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:&lt;/p&gt;
 
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda\right] = 0 $$&lt;/p&gt;
+&lt;p&gt;$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$&lt;/p&gt;
 
 &lt;p&gt;Using the constraint on the lift across the wing, this results in:&lt;/p&gt;
 
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - \lambda = 0 $$&lt;/p&gt;
+&lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ = \pi\lambda $$&lt;/p&gt;
 
 &lt;p&gt;The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
 
-&lt;p&gt;$$ w = \frac{\lambda}{8\pi} = w_0 $$&lt;/p&gt;
+&lt;p&gt;$$ w = -\frac{\lambda}{4} = w_0 $$&lt;/p&gt;
 
 &lt;p&gt;The same result as seen in Anderson, more rigorously!&lt;/p&gt;
 </description>
