@@ -1,548 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Arjit Seth</title>
-    <link>https://godotmisogi.github.io/bloggy/post/</link>
-    <description>Recent content in Posts on Arjit Seth</description>
+    <title>Posts on GOOD VIBRATIONS</title>
+    <link>http://godotmisogi.github.io/bloggy/post/</link>
+    <description>Recent content in Posts on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
-    <atom:link href="https://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://godotmisogi.github.io/bloggy/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Meshing Techniques - Cambered Airfoil</title>
-      <link>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</link>
       <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</guid>
-      <description>&lt;p&gt;Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the &lt;em&gt;beloved&lt;/em&gt; NACA 0012. I&amp;rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&amp;rsquo;ve been able to perform flow analyses with accurate results.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Airfoil Selection:&lt;/strong&gt; A new airfoil I&amp;rsquo;ve been researching is the Selig S7075 for its good gliding/soaring characteristics and high efficiency at low Reynolds numbers. It&amp;rsquo;s a cambered airfoil with sharp trailing edge, and a maximum thickness-to-chord ratio of 9%  with the implementation of a boundary layer trip at 57.5% of the chord length. XFOIL analyses predict accurate results in agreement with Dr. Selig&amp;rsquo;s &lt;a href=&#34;http://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V3.pdf&#34;&gt;A Summary of Low-Speed Airfoil Data, Vol. 3&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Meshing Software:&lt;/strong&gt; I&amp;rsquo;ll be using ANSYS ICEM CFD and its convenient blocking features with its powerful sizing capabilities to generate 2D meshes.&lt;br /&gt;
-The two types of meshes I&amp;rsquo;ll be trying to generate are an O-grid and a C-grid. An O-grid setup is when the body of analysis is enclosed within a curvilinear grid in which completely closed contours are created at offsets from the body. A C-grid setup, by example for an airfoil, is when the surrounding grid forms a &amp;lsquo;C&amp;rsquo; till the trailing edge.  Forums recommend that a C-grid mesh provides better results for airfoils with sharp trailing edges; this is because the grid alignment is along the airfoil shape (hence along the flow streamlines) to capture the flow results more accurately.&lt;/p&gt;
-
-&lt;p&gt;The blocking process in ICEM CFD used the same aspect ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}\; m $ to resolve the boundary layer.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;C-Grid:&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-GridLE.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;O-Grid:&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-GridLE.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Bonus:&lt;/strong&gt; I was able to devise a blocking technique to generate a 3D C-grid about an SD6045 wing as well.&lt;/p&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD1.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD2.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD3.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD4.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;These meshes will require refinement before they&amp;rsquo;re ready to be analysed and produce accurate results, which I&amp;rsquo;ll be working on as a project. Hopefully I&amp;rsquo;ll be able to complete it soon and post it with all the details regarding the meshing procedure.&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</guid>
+      <description>Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the beloved NACA 0012. I&amp;rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&amp;rsquo;ve been able to perform flow analyses with accurate results.</description>
     </item>
     
     <item>
       <title>Derivation - Geodesic Equation</title>
-      <link>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
       <pubDate>Wed, 19 Apr 2017 21:53:06 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
-      <description>&lt;p&gt;Bernard F. Schutz&amp;rsquo;s &lt;a href=&#34;http://www.cambridge.org/us/academic/subjects/physics/cosmology-relativity-and-gravitation/first-course-general-relativity-2nd-edition?format=HB&amp;amp;isbn=9780521887052&#34;&gt;A First Course in General Relativity&lt;/a&gt; provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Motivation&lt;/strong&gt;: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;../Geodesic Equation/Parallel_transport.png&#34; width = &#34;60%&#34;&gt;&lt;/center&gt;&lt;br /&gt;
-Image Source: &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.&lt;/p&gt;
-
-&lt;p&gt;This can be easily visualised as walking to the North pole from A with your arm outstretched forward (representing the tangent vector), which is perpendicular to the equator. Once you reach, you need to go to point B, so your body rotates, but your arm is fixed because of parallel transport, so you&amp;rsquo;re now walking with your arm outstretched to the left. Once you reach point B, you realise that your arm is along the equatorial line. Therefore parallel transport isn&amp;rsquo;t preserved because of the curvature of the sphere.&lt;/p&gt;
-
-&lt;p&gt;Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields.&lt;/p&gt;
-
-&lt;p&gt;A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it&amp;rsquo;s the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport.&lt;/p&gt;
-
-&lt;p&gt;In relativity, the definition of distance (or interval between points) is a little different. Since we deal with space-time rather than space, the metric of space-time (in one convention) must be used, as described below:&lt;/p&gt;
-
-&lt;p&gt;$$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$&lt;/p&gt;
-
-&lt;p&gt;There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:&lt;/p&gt;
-
-&lt;p&gt;$$ \vec{U}\cdot\vec{V} = g_{\alpha\beta}U^{\alpha}V^{\beta} = g_{00}U^{0}V^{0} + g_{10}U^{1}V^{0} + g_{01}U^{0}V^{1} + &amp;hellip;$$&lt;/p&gt;
-
-&lt;p&gt;With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g_{\alpha\beta} $ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention.&lt;/p&gt;
-
-&lt;p&gt;The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathrm{d}s = \int_{\lambda_0}^{\lambda_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda_0}^{\lambda_1} \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$&lt;/p&gt;
-
-&lt;p&gt;Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time must be a minimum. So the Lagrangian is:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathcal{L} = \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$&lt;/p&gt;
-
-&lt;p&gt;The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:&lt;/p&gt;
-
-&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g_{\alpha\mu}\dot{x}^{\alpha} + g_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:&lt;/p&gt;
-
-&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g_{\alpha\mu}\ddot{x}^{\alpha} + g_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$&lt;/p&gt;
-
-&lt;p&gt;Changing the last term&amp;rsquo;s dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:&lt;/p&gt;
-
-&lt;p&gt;$$ -2g^{\mu\gamma}g_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g_{\alpha\beta,\mu} - g_{\mu\beta,\alpha} - g_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Using the Christoffel symbol of the second kind with the following definition:&lt;/p&gt;
-
-&lt;p&gt;$$ \Gamma^{\gamma}_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$&lt;/p&gt;
-
-&lt;p&gt;and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{\;\alpha}$:&lt;/p&gt;
-
-&lt;p&gt;$$ -2\delta^{\gamma}_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;The expression simplifies to the geodesic equation:&lt;/p&gt;
-
-&lt;p&gt;$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&amp;width=580&#34; width=&#34;580&#34; height=&#34;660&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34;&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
+      <description>Bernard F. Schutz&amp;rsquo;s A First Course in General Relativity provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:
+$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
+Note: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.</description>
     </item>
     
     <item>
       <title>Observation - Indian Classical Music</title>
-      <link>https://godotmisogi.github.io/bloggy/post/indian-classical/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/indian-classical/</link>
       <pubDate>Tue, 17 Jan 2017 22:55:27 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/indian-classical/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been a rock/metal guitarist for the past 9 or 10 years, mostly concentrating on Western music and its theory; I am by no means an expert, but I&amp;rsquo;m curious about music theory and like to learn its different applications/interpretations in various styles.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I had attended a Remember Shakti concert in 2012 which was my first real introduction to Indian classical musical elements. I know that it&amp;rsquo;s a fusion band, but I learnt the basic rhythmic elements during the concert thanks to my school&amp;rsquo;s guitar teacher, with whom I went to the concert. For someone who&amp;rsquo;s mostly concentrated on Western music such as rock, metal, classical and jazz, the structure of the music seemed somewhat alien; a lot of it seemed to be improvised, but one could decipher an underlying theme to each composition. This is similar to jazz in its musical philosophy, such as inclusion of odd-time signatures and modal changes, but they&amp;rsquo;re melodically very different.&lt;/p&gt;
-
-&lt;p&gt;While I won&amp;rsquo;t cover the basics of Indian or Western classical music theory here, I will mainly talk about the differences I noticed between the two, providing the relevant introductory terms as the passage moves forward. There are much better sources for the basics, such as: &lt;a href=&#34;http://raag-hindustani.com/&#34;&gt;Indian Classical Music Theory&lt;/a&gt; and &lt;a href=&#34;https://www.8notes.com/school/theory/staff_clefs_ledger_lines.asp?pageno=3&#34;&gt;Western Music Theory&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;There are two distinct streams of Indian classical music: Hindustani (northern) and Carnatic (southern). They share a lot of theory, but are considerably different in practice.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The most obvious difference between Western and Indian classical music is in the taxonomy: &lt;code&gt;Do Re Mi Fa So La Ti Do&lt;/code&gt; becomes &lt;code&gt;Sa Re Ga Ma Pa Dha Ni Sa&lt;/code&gt; with the same tonal differences or &amp;lsquo;intervals&amp;rsquo;. A huge advantage of this shift in terminology is that Indian classical singers can make beautiful, fluent melodies simply by singing those syllables; the fluidity is not prevalent in the Western syllables if various combinations of them are sung. An example:&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/7YS66RPyq4A&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;hr /&gt;
-
-&lt;p&gt;&amp;ldquo;Modes&amp;rdquo; are called &lt;em&gt;&amp;ldquo;Ragas&amp;rdquo;&lt;/em&gt; and they do not share the same database in translation, for example: There is no raga directly corresponding to the Locrian mode of the major scale, only ones that come close to it.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Example - C Locrian: &lt;code&gt;C C# D# F F# G# A#&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;X:1
-T:
-M:
-C:
-K:CLoc
-|:CDEFGAB:|
-&lt;/p&gt;
-
-&lt;p&gt;The fundamental structure of a raga is based on the ascending and descending order of notes, referred to as &lt;em&gt;&amp;ldquo;Aaroh-Avroh&amp;rdquo;&lt;/em&gt;. The ornamentation in the instruments is also different: &lt;em&gt;&amp;ldquo;gamaks&amp;rdquo;&lt;/em&gt;, a quick slide between notes; permutations, abseneces and repetition of the notes are important in the definition of a raga. &lt;em&gt;Vyn&lt;/em&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt; provided me with a few ragas and their respective interval structures, so I tried correlating some of them with the Gregorian modes. The following are two examples:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;B Phrygian: &lt;code&gt;B C D E F# G A&lt;/code&gt; = Raga Bhairavi&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-X:1
-T:
-M:
-C:
-K:BPhr
-|:B,CDEFGA:|
-&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;A Dorian: &lt;code&gt;A B C D E F# G&lt;/code&gt; = Raga Kafi&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-X:1
-T:
-M:
-C:
-K:ADor
-|:A,B,CDEFG:|
-&lt;/p&gt;
-
-&lt;p&gt;The rhythms in Indian classical music are called &lt;em&gt;&amp;ldquo;Taals&amp;rdquo;&lt;/em&gt;, and have fixed structures in terms of accents and beats. The concept of odd-time signatures and their implementation is much more natural in the compositions as compared to the fairly rare usage in contemporary Western musical genres such as rock and pop.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Ragas&lt;/em&gt; have stronger definitions than modes, such as dependence on phrasing, repetition and permutation of notes. &lt;em&gt;Taals&lt;/em&gt; also have stronger definitions than rhythms, such as dependence on accents.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;A very strange aspect is that Indian classical music has no formalism of chords! This is a huge contrast from the teachings in Western music, which mostly begins with the formulation of chords using combinations of various notes. I&amp;rsquo;d imagine that a lot of &amp;lsquo;flavours&amp;rsquo; in composition are lost due to the inability to implement modal progressions.&lt;/p&gt;
-
-&lt;p&gt;Another aspect of modern Indian classical music is that there is no concept of absolute pitch or tempo. The key centre and tempo are defined by the musician who initiates the piece, i.e. the lead performer(s), and the rest of the musicians follow accordingly. An example of multiple lead performers is the &lt;em&gt;jugalbandi&lt;/em&gt;, which consists of two leads. This brings up another important point in the differences between the styles:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Accompaniment in Indian classical music follows or imitates the lead without chord progressions, whereas in Western music the arrangement, mostly rooted in chord progressions, does not completely follow or imitate the lead.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/4w0Z4nPCVqo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;hr /&gt;
-
-&lt;p&gt;While not seen often, a very minor similarity is present in the song structures during live performances.&lt;/p&gt;
-
-&lt;p&gt;The general structure of compositions in Indian classical music are:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Alaap (improvised piece, optional)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main Composition&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Swara/Sur (singing with syllables - coming back to the refrain)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Aakaar (before or after Sur, singing patterns without syllables - coming back to the refrain)&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Percussion Improvisation (normally present in Carnatic Indian classical music).&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Alaap is similar to an opening instrumental solo or jam session that evolves into the main composition. I&amp;rsquo;ve personally not heard any analogs to the Swara/Sur or Akaar, but I&amp;rsquo;m sure at least one or two examples exist out there. The percussion improvisation can be correlated with a drum solo in the middle or after the performance of a composition.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/exfGQpWcaSE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;hr /&gt;
-
-&lt;p&gt;The concerts also follow a different philosophy. For example, there is no underlying concept in a concert performance. There is also no dependence on sheet music, unlike in jazz and classical music performances. In constrast, some Western artists, such as Steven Wilson, create concept albums and perform concerts in the listening order of the album to evoke certain moods and ideas. So far, I&amp;rsquo;ve not seen any concerts that are similar to the Carnatic style in structure. In Carnatic music, the following format is usually followed:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Varna: No improvisation, almost only composition.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Kritis: Following the structure of song performance.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Main: Either the complete structure of song performance, or &lt;em&gt;ragam tanam pallavi&lt;/em&gt; - focused on the refrain with complex rhythmic variations.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Tukdas (Pieces): Small, quick compositions (usually fast-paced and consists of singing with no syllables/lyrics) with different structures.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Practice/Rehearsal&lt;/strong&gt;: The musicians usually do not rehearse together before a show more than once or twice; they&amp;rsquo;re either aware of the composition or they just follow the lead performer(s). Seasoned performers usually do not even engage in rehearsals. So a minimal structure is present in the performance, but there&amp;rsquo;s no formal orchestration. This allows for highly dynamic performances without the need for a group practice. This is more like having jam sessions on stage in Western music, mostly seen in impromptu jazz.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Indian classical music has been like a breath of fresh air, and learning about all these subtleties certainly makes me want to deepen my understanding about it even more. It should be a very useful tool in a musician&amp;rsquo;s pocket, especially for fusion compositions.&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/indian-classical/</guid>
+      <description>I&amp;rsquo;ve been a rock/metal guitarist for the past 9 or 10 years, mostly concentrating on Western music and its theory; I am by no means an expert, but I&amp;rsquo;m curious about music theory and like to learn its different applications/interpretations in various styles.
+I had attended a Remember Shakti concert in 2012 which was my first real introduction to Indian classical musical elements. I know that it&amp;rsquo;s a fusion band, but I learnt the basic rhythmic elements during the concert thanks to my school&amp;rsquo;s guitar teacher, with whom I went to the concert.</description>
     </item>
     
     <item>
       <title>Dubby Pendy - A Double Pendulum Simulator</title>
-      <link>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
       <pubDate>Tue, 27 Dec 2016 16:54:58 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
-      <description>&lt;p&gt;Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_19.html&#34;&gt;The Principle of Least Action&lt;/a&gt; chapter in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_toc.html&#34;&gt;Vol. 2 of The Feynman Lectures on Physics&lt;/a&gt;. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&amp;rsquo;s laws.&lt;/p&gt;
-
-&lt;p&gt;A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum. I saw a &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;Wolfram Science animation&lt;/a&gt; of the system, but it didn&amp;rsquo;t have the right &lt;code&gt;a e s t h e t i c&lt;/code&gt; for me, and I wanted to write one of my own to investigate the system for various initial conditions and its chaotic behaviour.&lt;/p&gt;
-
-&lt;p&gt;The following shows the double pendulum system:&lt;/p&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Dubby Pendy/DubbyPendy.svg&#34; width=&#34;80%&#34;&gt;&lt;/div&gt;
-
-&lt;p&gt;The Lagrangian of the system is:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathcal{L} = T - V $$&lt;br /&gt;
-$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$&lt;br /&gt;
-$$ V = -(m_1 + m_2)gl_1\cos \theta_1 - m_2gl_2\cos\theta_2 $$&lt;/p&gt;
-
-&lt;p&gt;After a &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;very long derivation&lt;/a&gt;, Hamilton&amp;rsquo;s equations can be obtained:&lt;/p&gt;
-
-&lt;p&gt;$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{p}_{\theta_1} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$&lt;br /&gt;
-$$ \dot{p}_{\theta_2} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$&lt;br /&gt;
-$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l_2 m_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}{2l_1^2 l_2^2[m_1 + m_2\sin^2(\theta_1-\theta_2)]^2}\sin[2(\theta_1 - \theta_2)] $$&lt;/p&gt;
-
-&lt;p&gt;These are very formidable-looking equations, and it is almost impossible to determine the particle trajectories by solving these equations analytically! So how does one solve it for practical purposes? Numerical methods and programming. I used Lua to program the simulator, including the &lt;a href=&#34;https://love2d.org&#34;&gt;LÖVE&lt;/a&gt; framework for the graphics.&lt;/p&gt;
-
-&lt;p&gt;Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&amp;rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function directSum(a, b)
-	local c = {}
-	for i,v in pairs(a) do
-		c[i] = a[i] + b[i]
-	end
-	return c
-end
-
-function scalarMultiply(scalar, table)
-	local output = {}
-	for i,v in pairs(table) do
-		output[i] = scalar*table[i]
-	end
-	return output
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So now I can store values, such as the initial conditions and parameters of the system in a table and perform basic arithmetic operations between tables to change values. Now to implement the physics of the problem.&lt;/p&gt;
-
-&lt;p&gt;First, I defined a generator that randomly generates initial values (within a given range) of the masses of the bobs, the lengths of the rods, their angles with respect to the vertical, their initial angular velocities and calculated the momenta of the bobs. This is fed into a table called &lt;code&gt;data&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Generator()
-	
-	local self = {}
-	
-	self.m1 = love.math.random( 3, 10 )
-	self.m2 = love.math.random( 3, 10 )
-	self.l1 = love.math.random( 3, 10 )
-	self.l2 = love.math.random( 1, 10 )
-	self.t1 = love.math.random( -6.28, 6.28 )
-	self.t2 = love.math.random( -6.28, 6.28 )
-	self.o1 = love.math.random( -4, 4 )
-	self.o2 = love.math.random( -2, 2 )
-	self.p1 = (self.m1+self.m2)*(math.pow(self.l1, 2))*self.o1 
-	+ self.m2*self.l1*self.l2*self.o2*math.cos(self.t1-self.t2)
-	self.p2 = self.m2*(math.pow(self.l2, 2))*self.o2 
-	+ self.m2*self.l1*self.l2*self.o1*math.cos(self.t1-self.t2)
-	
-	return self
-end
-
-data = Generator()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we set up the equations of motion using a function called &lt;code&gt;Hamiltonian&lt;/code&gt;. It takes the initial values from &lt;code&gt;data&lt;/code&gt; to perform calculations, and a new table called &lt;code&gt;phase&lt;/code&gt; which consists of the phase space variables to update the angles and momenta over time:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Hamiltonian(phase, data)
-
-	local update = {}
-	
-	t1 = phase[1]
-	t2 = phase[2]
-	p1 = phase[3]
-	p2 = phase[4]
-	
-	C0 = data.l1*data.l2*(data.m1+data.m2*math.pow(math.sin(t1-t2),2))
-	C1 = (p1*p2*math.sin(t1-t2))/C0
-	C2 = (data.m2*(math.pow(data.l2*p1,2))+(data.m1+data.m2)*
-	(math.pow(data.l1*p2, 2))-2*data.l1*data.l2*data.m2*p1*p2*
-	math.cos(t1-t2))*math.sin(2*(t1-t2))/(2*(math.pow(C0,2)))
-	
-	update[1] = (data.l2*p1 - data.l1*p2*math.cos(t1-t2)) / (data.l1*C0)
-	update[2] = (data.l1*(data.m1+data.m2)*p2 - data.l2*data.m2*p1*
-				math.cos(t1-t2)) / (data.l2*data.m2*C0)
-	update[3] = -(data.m1 + data.m2)*g*data.l1*math.sin(t1) - C1 + C2
-	update[4] = -data.m2*g*data.l2*math.sin(t2) + C1 - C2
-	
-	return update
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All the required information with regard to the physics is now processed. To solve the differential equations, I implemented the Runge-Kutta method of order 4, performing operations on the tables using &lt;code&gt;directSum&lt;/code&gt; and &lt;code&gt;scalarMultiply&lt;/code&gt;. These operations take place in &lt;code&gt;Solver&lt;/code&gt;, which takes the time input &lt;code&gt;dt&lt;/code&gt; from LÖVE in &lt;code&gt;love.update()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Solver(dt)
-
-	local phase = {data.t1, data.t2, data.p1, data.p2}
-
-	local k1 = Hamiltonian(phase, data)
-	local k2 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k1)), data)
-	local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
-	local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
-	
-	local R = scalarMultiply(1/6 * dt, 	
-	directSum(directSum(k1, scalarMultiply(2.0, k2)), 
-	directSum(scalarMultiply(2.0, k3), k4)))
-	
-	data.t1 = data.t1 + R[1]
-	data.t2 = data.t2 + R[2]
-	data.p1 = data.p1 + R[3]
-	data.p2 = data.p2 + R[4]
-end
-
-function love.update()
-	Solver(dt)
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After setting up the graphics end, I obtain nice animations like this:&lt;br /&gt;
-&lt;video width=&#34;100%&#34; autoplay loop&gt;&lt;br /&gt;
-  &lt;source src=&#34;../Dubby Pendy/DubbyPendy.webm&#34; type=&#34;video/webm&#34;&gt;&lt;br /&gt;
-  Your browser does not support the video tag.&lt;br /&gt;
-&lt;/video&gt;&lt;br /&gt;
-I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
+      <description>Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in The Principle of Least Action chapter in Vol. 2 of The Feynman Lectures on Physics. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&amp;rsquo;s laws.
+A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum.</description>
     </item>
     
     <item>
       <title>Calculus of Variations - Induced Drag Over a Wing</title>
-      <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
       <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
-      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
-
-&lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
-
-&lt;p&gt;$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;This effectively implies that the downwash can be expressed as a &lt;em&gt;functional&lt;/em&gt; of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:&lt;/p&gt;
-
-&lt;p&gt;$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(y)\;\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;The Euler-Lagrange equations thus take the following form:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&amp;rsquo;}}\right) + \lambda\left[\frac{\partial{\mathcal{G}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{G}}}{\partial{\Gamma&amp;rsquo;}}\right)\right]= 0 $$&lt;/p&gt;
-
-&lt;p&gt;Substituting the expressions:&lt;/p&gt;
-
-&lt;p&gt;$$ -\frac{1}{4\pi  (y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$&lt;/p&gt;
-
-&lt;p&gt;This doesn&amp;rsquo;t contain any useful information about the downwash. Let&amp;rsquo;s try something else.&lt;/p&gt;
-
-&lt;p&gt;Trying to minimise the induced drag formula directly as given by Anderson:&lt;/p&gt;
-
-&lt;p&gt;$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{1}{2\pi V_{\infty}^2 S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Getting rid of the constants and performing a variation on the coefficient of induced drag, we get:&lt;/p&gt;
-
-&lt;p&gt;$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y} + \delta\Gamma&amp;rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Performing integration by parts on the second expression, keeping in mind that the first term of the evaluation disappears because the circulation at the endpoints (the boundary conditions of this problem) is zero:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right)\;\mathrm{d}y\;\mathrm{d}x$$&lt;/p&gt;
-
-&lt;p&gt;A little rearranging provides the more useful form:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;A change of variables $y-x = q$ is required to evaluate the last integral:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q$$&lt;/p&gt;
-
-&lt;p&gt;Feynman&amp;rsquo;s favourite trick, differentiating under the integral sign:&lt;/p&gt;
-
-&lt;p&gt;$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q $$&lt;/p&gt;
-
-&lt;p&gt;Mapping the variables back:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(x)}{y-x}\;\mathrm{d}x$$&lt;/p&gt;
-
-&lt;p&gt;Solving the original integral:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&amp;rsquo;(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$&lt;/p&gt;
-
-&lt;p&gt;Switching the variables of integration in the second expression, we get:&lt;/p&gt;
-
-&lt;p&gt;$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Reintroducing the constants and combining this with the constraint, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Using the constraint on the lift across the wing, this results in:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ = \pi\lambda $$&lt;/p&gt;
-
-&lt;p&gt;The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
-
-&lt;p&gt;$$ w = -\frac{\lambda}{4} = w_0 $$&lt;/p&gt;
-
-&lt;p&gt;The same result as seen in Anderson, more rigorously!&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
+      <description>While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.
+The equation that determines the downwash at a point is:
+$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$
+This effectively implies that the downwash can be expressed as a functional of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point.</description>
     </item>
     
     <item>
       <title>Investigation - The Roots of Unity</title>
-      <link>https://godotmisogi.github.io/bloggy/post/roots-of-unity/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/roots-of-unity/</link>
       <pubDate>Sun, 25 Dec 2016 02:43:36 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/roots-of-unity/</guid>
-      <description>&lt;p&gt;During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&amp;rsquo;t have the problem statement anymore, I&amp;rsquo;ll outline the major points of the task:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Plot these solutions on the Argand plane.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Investigate the exercise, devise a conjecture and prove it.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When I first read through this exercise, I didn&amp;rsquo;t really expect anything interesting to show up. Well, I was horribly wrong; something really cool showed up which made me learn about a lot of little things in complex analysis as a result. I&amp;rsquo;ll start by solving the above points sequentially -&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The solutions to $z^n - 1 = 0$ are obtained most easily through Euler&amp;rsquo;s form:&lt;br /&gt;
-$$ z_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,&amp;hellip;,n-1 $$&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions and tree diagram:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Roots of Unity/Roots2.svg&#34; width = &#34;80%&#34;&gt;&lt;/div&gt;&lt;br /&gt;
-&lt;br&gt;&lt;/br&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The easiest observation is:&lt;br /&gt;
-$$ \sum^{n-1}_{k = 0} z_k = 0 $$&lt;br /&gt;
-The roots of unity can be factorised into the following irreducible form over the field of real numbers:&lt;br /&gt;
-$$ z^n - 1 = (z-1)\sum^{n-1}_{i = 0} z^i $$&lt;br /&gt;
-And can be factorised over the complex field as:&lt;br /&gt;
-$$ z^n - 1 = \prod_{k=0}^{n-1}(z-z_k) = (z-1)\prod_{k=1}^{n-1}(z-z_k) $$&lt;br /&gt;
-A conjecture based on trial and error is:&lt;br /&gt;
-$$ \prod_{k=1}^{n-1}|z_k - z_0| = \prod_{k=1}^{n-1}|1-z_k| = n$$&lt;br /&gt;
-This states that the product of the distances between each root from a selected root is equal to the number of roots. To prove this, notice that:&lt;br /&gt;
-$$\sum^{n-1}_{i = 0} z^i = \prod_{k=1}^{n-1}(z-z_k) = \frac{z^n - 1}{z-1}$$&lt;br /&gt;
-For the equalities to be sensible at $z=1$, one must perform analytic continuation:&lt;br /&gt;
-$$\sum^{n-1}_{i = 0} 1^i = \prod_{k=1}^{n-1}|1-z_k| = \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1}$$&lt;br /&gt;
-The first equality proves the conjecture. The last equality is evaluated using L&amp;rsquo;Hôpital&amp;rsquo;s rule, also proving the conjecture:&lt;br /&gt;
-$$ \lim_{z\rightarrow 1} \frac{z^n - 1}{z-1} = \lim_{z\rightarrow 1} nz^{n-1} = n $$&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/roots-of-unity/</guid>
+      <description>During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&amp;rsquo;t have the problem statement anymore, I&amp;rsquo;ll outline the major points of the task:
+ Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.
+ Plot these solutions on the Argand plane.
+ Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.</description>
     </item>
     
   </channel>

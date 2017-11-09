@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on GOOD VIBRATIONS</title>
+    <link>http://godotmisogi.github.io/bloggy/tags/</link>
+    <description>Recent content in Tags on GOOD VIBRATIONS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
+    
+	<atom:link href="http://godotmisogi.github.io/bloggy/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aerodynamics</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/aerodynamics/</link>
+      <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/aerodynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computational Fluid Dynamics</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/computational-fluid-dynamics/</link>
+      <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/computational-fluid-dynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/design/</link>
+      <pubDate>Tue, 11 Jul 2017 01:26:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/mathematics/</link>
+      <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/music/</link>
+      <pubDate>Tue, 11 Jul 2017 03:00:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Physics</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/physics/</link>
+      <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://godotmisogi.github.io/bloggy/tags/programming/</link>
+      <pubDate>Tue, 27 Dec 2016 16:54:58 +0530</pubDate>
+      
+      <guid>http://godotmisogi.github.io/bloggy/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

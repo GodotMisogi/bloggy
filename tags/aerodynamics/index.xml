@@ -1,147 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aerodynamics on Arjit Seth</title>
-    <link>https://godotmisogi.github.io/bloggy/tags/aerodynamics/</link>
-    <description>Recent content in Aerodynamics on Arjit Seth</description>
+    <title>Aerodynamics on GOOD VIBRATIONS</title>
+    <link>http://godotmisogi.github.io/bloggy/tags/aerodynamics/</link>
+    <description>Recent content in Aerodynamics on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
-    <atom:link href="https://godotmisogi.github.io/bloggy/tags/aerodynamics/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://godotmisogi.github.io/bloggy/tags/aerodynamics/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Meshing Techniques - Cambered Airfoil</title>
-      <link>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</link>
       <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</guid>
-      <description>&lt;p&gt;Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the &lt;em&gt;beloved&lt;/em&gt; NACA 0012. I&amp;rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&amp;rsquo;ve been able to perform flow analyses with accurate results.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Airfoil Selection:&lt;/strong&gt; A new airfoil I&amp;rsquo;ve been researching is the Selig S7075 for its good gliding/soaring characteristics and high efficiency at low Reynolds numbers. It&amp;rsquo;s a cambered airfoil with sharp trailing edge, and a maximum thickness-to-chord ratio of 9%  with the implementation of a boundary layer trip at 57.5% of the chord length. XFOIL analyses predict accurate results in agreement with Dr. Selig&amp;rsquo;s &lt;a href=&#34;http://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V3.pdf&#34;&gt;A Summary of Low-Speed Airfoil Data, Vol. 3&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Meshing Software:&lt;/strong&gt; I&amp;rsquo;ll be using ANSYS ICEM CFD and its convenient blocking features with its powerful sizing capabilities to generate 2D meshes.&lt;br /&gt;
-The two types of meshes I&amp;rsquo;ll be trying to generate are an O-grid and a C-grid. An O-grid setup is when the body of analysis is enclosed within a curvilinear grid in which completely closed contours are created at offsets from the body. A C-grid setup, by example for an airfoil, is when the surrounding grid forms a &amp;lsquo;C&amp;rsquo; till the trailing edge.  Forums recommend that a C-grid mesh provides better results for airfoils with sharp trailing edges; this is because the grid alignment is along the airfoil shape (hence along the flow streamlines) to capture the flow results more accurately.&lt;/p&gt;
-
-&lt;p&gt;The blocking process in ICEM CFD used the same aspect ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}\; m $ to resolve the boundary layer.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;C-Grid:&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/C-GridLE.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;O-Grid:&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-Grid.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-GridBound.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/O-GridLE.png&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Bonus:&lt;/strong&gt; I was able to devise a blocking technique to generate a 3D C-grid about an SD6045 wing as well.&lt;/p&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD1.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD2.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD3.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Meshing Techniques - Cambered Airfoil/CFD4.jpg&#34; width=&#34;95%&#34;&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;These meshes will require refinement before they&amp;rsquo;re ready to be analysed and produce accurate results, which I&amp;rsquo;ll be working on as a project. Hopefully I&amp;rsquo;ll be able to complete it soon and post it with all the details regarding the meshing procedure.&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/o-grid-c-grid-comparison/</guid>
+      <description>Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the beloved NACA 0012. I&amp;rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&amp;rsquo;ve been able to perform flow analyses with accurate results.</description>
     </item>
     
     <item>
       <title>Calculus of Variations - Induced Drag Over a Wing</title>
-      <link>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</link>
       <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
-      <description>&lt;p&gt;While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.&lt;/p&gt;
-
-&lt;p&gt;The equation that determines the downwash at a point is:&lt;/p&gt;
-
-&lt;p&gt;$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;This effectively implies that the downwash can be expressed as a &lt;em&gt;functional&lt;/em&gt; of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:&lt;/p&gt;
-
-&lt;p&gt;$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(y)\;\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;The Euler-Lagrange equations thus take the following form:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&amp;rsquo;}}\right) + \lambda\left[\frac{\partial{\mathcal{G}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{G}}}{\partial{\Gamma&amp;rsquo;}}\right)\right]= 0 $$&lt;/p&gt;
-
-&lt;p&gt;Substituting the expressions:&lt;/p&gt;
-
-&lt;p&gt;$$ -\frac{1}{4\pi  (y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$&lt;/p&gt;
-
-&lt;p&gt;This doesn&amp;rsquo;t contain any useful information about the downwash. Let&amp;rsquo;s try something else.&lt;/p&gt;
-
-&lt;p&gt;Trying to minimise the induced drag formula directly as given by Anderson:&lt;/p&gt;
-
-&lt;p&gt;$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{1}{2\pi V_{\infty}^2 S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Getting rid of the constants and performing a variation on the coefficient of induced drag, we get:&lt;/p&gt;
-
-&lt;p&gt;$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y} + \delta\Gamma&amp;rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Performing integration by parts on the second expression, keeping in mind that the first term of the evaluation disappears because the circulation at the endpoints (the boundary conditions of this problem) is zero:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right)\;\mathrm{d}y\;\mathrm{d}x$$&lt;/p&gt;
-
-&lt;p&gt;A little rearranging provides the more useful form:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x\;\mathrm{d}y$$&lt;/p&gt;
-
-&lt;p&gt;A change of variables $y-x = q$ is required to evaluate the last integral:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q$$&lt;/p&gt;
-
-&lt;p&gt;Feynman&amp;rsquo;s favourite trick, differentiating under the integral sign:&lt;/p&gt;
-
-&lt;p&gt;$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q $$&lt;/p&gt;
-
-&lt;p&gt;Mapping the variables back:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(x)}{y-x}\;\mathrm{d}x$$&lt;/p&gt;
-
-&lt;p&gt;Solving the original integral:&lt;/p&gt;
-
-&lt;p&gt;$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&amp;rsquo;(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$&lt;/p&gt;
-
-&lt;p&gt;Switching the variables of integration in the second expression, we get:&lt;/p&gt;
-
-&lt;p&gt;$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$&lt;/p&gt;
-
-&lt;p&gt;Reintroducing the constants and combining this with the constraint, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Using the constraint on the lift across the wing, this results in:&lt;/p&gt;
-
-&lt;p&gt;$$ \int^{b/2}_{-b/2}\frac{\Gamma&amp;rsquo;(y)}{x - y}\;\mathrm{d}y\ = \pi\lambda $$&lt;/p&gt;
-
-&lt;p&gt;The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:&lt;/p&gt;
-
-&lt;p&gt;$$ w = -\frac{\lambda}{4} = w_0 $$&lt;/p&gt;
-
-&lt;p&gt;The same result as seen in Anderson, more rigorously!&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/calculus-of-variations-induced-drag/</guid>
+      <description>While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.
+The equation that determines the downwash at a point is:
+$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$
+This effectively implies that the downwash can be expressed as a functional of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point.</description>
     </item>
     
   </channel>

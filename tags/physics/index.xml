@@ -1,241 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Physics on Arjit Seth</title>
-    <link>https://godotmisogi.github.io/bloggy/tags/physics/</link>
-    <description>Recent content in Physics on Arjit Seth</description>
+    <title>Physics on GOOD VIBRATIONS</title>
+    <link>http://godotmisogi.github.io/bloggy/tags/physics/</link>
+    <description>Recent content in Physics on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Sun, 27 Aug 2017 01:26:50 +0530</lastBuildDate>
-    <atom:link href="https://godotmisogi.github.io/bloggy/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://godotmisogi.github.io/bloggy/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Academics - Physics and Mathematics</title>
-      <link>https://godotmisogi.github.io/bloggy/project/academics/</link>
+      <link>http://godotmisogi.github.io/bloggy/project/academics/</link>
       <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/project/academics/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been studying some physics for a while and decided to write solution manuals for reference in case I forget the approach to a problem later. I&amp;rsquo;ve been pretty lazy in writing them, so it&amp;rsquo;s very sloppy and some solutions might be incomplete, incorrect or have illogical statements here and there. Here&amp;rsquo;s what I&amp;rsquo;ve compiled so far:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Quantum%20Field%20Theory%20for%20the%20Gifted%20Amateur%20-%20Lancaster%20et%20al/Lancaster%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Tom Lancaster et. al. - Quantum Field Theory for the Gifted Amateur&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/A%20First%20Course%20in%20General%20Relativity%20-%20B.%20F.%20Schutz/Schutz%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Bernard F. Schutz - A First Course in General Relativity&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Principles%20of%20Quantum%20Mechanics%20-%20R.%20Shankar/Shankar%20Solutions.pdf&#34; target=&#34;_blank&#34;&gt;Ramamurti Shankar - Principles of Quantum Mechanics&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://github.com/GodotMisogi/physics-notes/blob/master/Gravitation%2C%20Foundations%20and%20Frontiers%20-%20T.%20Padmanabhan/Gravitation.pdf&#34; target=&#34;_blank&#34;&gt;T. Padmanabhan - Gravitation: Foundations and Frontiers&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve also been studying a course on &lt;em&gt;Hopf Algebras and Combinatorics&lt;/em&gt; and writing down notes with &lt;code&gt;Vyn&lt;/code&gt; from freenode&amp;rsquo;s &lt;code&gt;##math&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/GodotMisogi/math-notes/blob/master/Hopf%20Algebra%20and%20Combinatorics/Hopf%20Algebra%20and%20Combinatorics.pdf&#34; target=&#34;_blank&#34;&gt;Hopf Algebras and Combinatorics Lecture Notes&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/project/academics/</guid>
+      <description>I&amp;rsquo;ve been studying some physics for a while and decided to write solution manuals for reference in case I forget the approach to a problem later. I&amp;rsquo;ve been pretty lazy in writing them, so it&amp;rsquo;s very sloppy and some solutions might be incomplete, incorrect or have illogical statements here and there. Here&amp;rsquo;s what I&amp;rsquo;ve compiled so far:
+Tom Lancaster et. al. - Quantum Field Theory for the Gifted Amateur
+Bernard F.</description>
     </item>
     
     <item>
       <title>Derivation - Geodesic Equation</title>
-      <link>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/geodesic-equation/</link>
       <pubDate>Wed, 19 Apr 2017 21:53:06 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
-      <description>&lt;p&gt;Bernard F. Schutz&amp;rsquo;s &lt;a href=&#34;http://www.cambridge.org/us/academic/subjects/physics/cosmology-relativity-and-gravitation/first-course-general-relativity-2nd-edition?format=HB&amp;amp;isbn=9780521887052&#34;&gt;A First Course in General Relativity&lt;/a&gt; provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:&lt;/p&gt;
-
-&lt;p&gt;$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Motivation&lt;/strong&gt;: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img src=&#34;../Geodesic Equation/Parallel_transport.png&#34; width = &#34;60%&#34;&gt;&lt;/center&gt;&lt;br /&gt;
-Image Source: &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.&lt;/p&gt;
-
-&lt;p&gt;This can be easily visualised as walking to the North pole from A with your arm outstretched forward (representing the tangent vector), which is perpendicular to the equator. Once you reach, you need to go to point B, so your body rotates, but your arm is fixed because of parallel transport, so you&amp;rsquo;re now walking with your arm outstretched to the left. Once you reach point B, you realise that your arm is along the equatorial line. Therefore parallel transport isn&amp;rsquo;t preserved because of the curvature of the sphere.&lt;/p&gt;
-
-&lt;p&gt;Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields.&lt;/p&gt;
-
-&lt;p&gt;A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it&amp;rsquo;s the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport.&lt;/p&gt;
-
-&lt;p&gt;In relativity, the definition of distance (or interval between points) is a little different. Since we deal with space-time rather than space, the metric of space-time (in one convention) must be used, as described below:&lt;/p&gt;
-
-&lt;p&gt;$$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$&lt;/p&gt;
-
-&lt;p&gt;There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:&lt;/p&gt;
-
-&lt;p&gt;$$ \vec{U}\cdot\vec{V} = g_{\alpha\beta}U^{\alpha}V^{\beta} = g_{00}U^{0}V^{0} + g_{10}U^{1}V^{0} + g_{01}U^{0}V^{1} + &amp;hellip;$$&lt;/p&gt;
-
-&lt;p&gt;With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g_{\alpha\beta} $ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention.&lt;/p&gt;
-
-&lt;p&gt;The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathrm{d}s = \int_{\lambda_0}^{\lambda_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda_0}^{\lambda_1} \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$&lt;/p&gt;
-
-&lt;p&gt;Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time must be a minimum. So the Lagrangian is:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathcal{L} = \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$&lt;/p&gt;
-
-&lt;p&gt;The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:&lt;/p&gt;
-
-&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g_{\alpha\mu}\dot{x}^{\alpha} + g_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:&lt;/p&gt;
-
-&lt;p&gt;$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g_{\alpha\mu}\ddot{x}^{\alpha} + g_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$&lt;/p&gt;
-
-&lt;p&gt;Changing the last term&amp;rsquo;s dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:&lt;/p&gt;
-
-&lt;p&gt;$$ -2g^{\mu\gamma}g_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g_{\alpha\beta,\mu} - g_{\mu\beta,\alpha} - g_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;Using the Christoffel symbol of the second kind with the following definition:&lt;/p&gt;
-
-&lt;p&gt;$$ \Gamma^{\gamma}_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$&lt;/p&gt;
-
-&lt;p&gt;and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{\;\alpha}$:&lt;/p&gt;
-
-&lt;p&gt;$$ -2\delta^{\gamma}_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;The expression simplifies to the geodesic equation:&lt;/p&gt;
-
-&lt;p&gt;$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&amp;width=580&#34; width=&#34;580&#34; height=&#34;660&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34;&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/geodesic-equation/</guid>
+      <description>Bernard F. Schutz&amp;rsquo;s A First Course in General Relativity provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:
+$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
+Note: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.</description>
     </item>
     
     <item>
       <title>Dubby Pendy - A Double Pendulum Simulator</title>
-      <link>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
       <pubDate>Tue, 27 Dec 2016 16:54:58 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
-      <description>&lt;p&gt;Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_19.html&#34;&gt;The Principle of Least Action&lt;/a&gt; chapter in &lt;a href=&#34;http://www.feynmanlectures.caltech.edu/II_toc.html&#34;&gt;Vol. 2 of The Feynman Lectures on Physics&lt;/a&gt;. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&amp;rsquo;s laws.&lt;/p&gt;
-
-&lt;p&gt;A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum. I saw a &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;Wolfram Science animation&lt;/a&gt; of the system, but it didn&amp;rsquo;t have the right &lt;code&gt;a e s t h e t i c&lt;/code&gt; for me, and I wanted to write one of my own to investigate the system for various initial conditions and its chaotic behaviour.&lt;/p&gt;
-
-&lt;p&gt;The following shows the double pendulum system:&lt;/p&gt;
-
-&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;../Dubby Pendy/DubbyPendy.svg&#34; width=&#34;80%&#34;&gt;&lt;/div&gt;
-
-&lt;p&gt;The Lagrangian of the system is:&lt;/p&gt;
-
-&lt;p&gt;$$ \mathcal{L} = T - V $$&lt;br /&gt;
-$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$&lt;br /&gt;
-$$ V = -(m_1 + m_2)gl_1\cos \theta_1 - m_2gl_2\cos\theta_2 $$&lt;/p&gt;
-
-&lt;p&gt;After a &lt;a href=&#34;http://scienceworld.wolfram.com/physics/DoublePendulum.html&#34;&gt;very long derivation&lt;/a&gt;, Hamilton&amp;rsquo;s equations can be obtained:&lt;/p&gt;
-
-&lt;p&gt;$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ \dot{p}_{\theta_1} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$&lt;br /&gt;
-$$ \dot{p}_{\theta_2} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$&lt;br /&gt;
-$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$&lt;br /&gt;
-$$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l_2 m_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}{2l_1^2 l_2^2[m_1 + m_2\sin^2(\theta_1-\theta_2)]^2}\sin[2(\theta_1 - \theta_2)] $$&lt;/p&gt;
-
-&lt;p&gt;These are very formidable-looking equations, and it is almost impossible to determine the particle trajectories by solving these equations analytically! So how does one solve it for practical purposes? Numerical methods and programming. I used Lua to program the simulator, including the &lt;a href=&#34;https://love2d.org&#34;&gt;LÖVE&lt;/a&gt; framework for the graphics.&lt;/p&gt;
-
-&lt;p&gt;Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&amp;rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function directSum(a, b)
-	local c = {}
-	for i,v in pairs(a) do
-		c[i] = a[i] + b[i]
-	end
-	return c
-end
-
-function scalarMultiply(scalar, table)
-	local output = {}
-	for i,v in pairs(table) do
-		output[i] = scalar*table[i]
-	end
-	return output
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So now I can store values, such as the initial conditions and parameters of the system in a table and perform basic arithmetic operations between tables to change values. Now to implement the physics of the problem.&lt;/p&gt;
-
-&lt;p&gt;First, I defined a generator that randomly generates initial values (within a given range) of the masses of the bobs, the lengths of the rods, their angles with respect to the vertical, their initial angular velocities and calculated the momenta of the bobs. This is fed into a table called &lt;code&gt;data&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Generator()
-	
-	local self = {}
-	
-	self.m1 = love.math.random( 3, 10 )
-	self.m2 = love.math.random( 3, 10 )
-	self.l1 = love.math.random( 3, 10 )
-	self.l2 = love.math.random( 1, 10 )
-	self.t1 = love.math.random( -6.28, 6.28 )
-	self.t2 = love.math.random( -6.28, 6.28 )
-	self.o1 = love.math.random( -4, 4 )
-	self.o2 = love.math.random( -2, 2 )
-	self.p1 = (self.m1+self.m2)*(math.pow(self.l1, 2))*self.o1 
-	+ self.m2*self.l1*self.l2*self.o2*math.cos(self.t1-self.t2)
-	self.p2 = self.m2*(math.pow(self.l2, 2))*self.o2 
-	+ self.m2*self.l1*self.l2*self.o1*math.cos(self.t1-self.t2)
-	
-	return self
-end
-
-data = Generator()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we set up the equations of motion using a function called &lt;code&gt;Hamiltonian&lt;/code&gt;. It takes the initial values from &lt;code&gt;data&lt;/code&gt; to perform calculations, and a new table called &lt;code&gt;phase&lt;/code&gt; which consists of the phase space variables to update the angles and momenta over time:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Hamiltonian(phase, data)
-
-	local update = {}
-	
-	t1 = phase[1]
-	t2 = phase[2]
-	p1 = phase[3]
-	p2 = phase[4]
-	
-	C0 = data.l1*data.l2*(data.m1+data.m2*math.pow(math.sin(t1-t2),2))
-	C1 = (p1*p2*math.sin(t1-t2))/C0
-	C2 = (data.m2*(math.pow(data.l2*p1,2))+(data.m1+data.m2)*
-	(math.pow(data.l1*p2, 2))-2*data.l1*data.l2*data.m2*p1*p2*
-	math.cos(t1-t2))*math.sin(2*(t1-t2))/(2*(math.pow(C0,2)))
-	
-	update[1] = (data.l2*p1 - data.l1*p2*math.cos(t1-t2)) / (data.l1*C0)
-	update[2] = (data.l1*(data.m1+data.m2)*p2 - data.l2*data.m2*p1*
-				math.cos(t1-t2)) / (data.l2*data.m2*C0)
-	update[3] = -(data.m1 + data.m2)*g*data.l1*math.sin(t1) - C1 + C2
-	update[4] = -data.m2*g*data.l2*math.sin(t2) + C1 - C2
-	
-	return update
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All the required information with regard to the physics is now processed. To solve the differential equations, I implemented the Runge-Kutta method of order 4, performing operations on the tables using &lt;code&gt;directSum&lt;/code&gt; and &lt;code&gt;scalarMultiply&lt;/code&gt;. These operations take place in &lt;code&gt;Solver&lt;/code&gt;, which takes the time input &lt;code&gt;dt&lt;/code&gt; from LÖVE in &lt;code&gt;love.update()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-lua&#34;&gt;function Solver(dt)
-
-	local phase = {data.t1, data.t2, data.p1, data.p2}
-
-	local k1 = Hamiltonian(phase, data)
-	local k2 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k1)), data)
-	local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
-	local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
-	
-	local R = scalarMultiply(1/6 * dt, 	
-	directSum(directSum(k1, scalarMultiply(2.0, k2)), 
-	directSum(scalarMultiply(2.0, k3), k4)))
-	
-	data.t1 = data.t1 + R[1]
-	data.t2 = data.t2 + R[2]
-	data.p1 = data.p1 + R[3]
-	data.p2 = data.p2 + R[4]
-end
-
-function love.update()
-	Solver(dt)
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After setting up the graphics end, I obtain nice animations like this:&lt;br /&gt;
-&lt;video width=&#34;100%&#34; autoplay loop&gt;&lt;br /&gt;
-  &lt;source src=&#34;../Dubby Pendy/DubbyPendy.webm&#34; type=&#34;video/webm&#34;&gt;&lt;br /&gt;
-  Your browser does not support the video tag.&lt;br /&gt;
-&lt;/video&gt;&lt;br /&gt;
-I&amp;rsquo;ll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.&lt;/p&gt;
-</description>
+      <guid>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
+      <description>Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in The Principle of Least Action chapter in Vol. 2 of The Feynman Lectures on Physics. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&amp;rsquo;s laws.
+A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum.</description>
     </item>
     
   </channel>
