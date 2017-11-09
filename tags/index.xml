@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on GOOD VIBRATIONS</title>
-    <link>godot-bloggy.me/tags/</link>
+    <link>http://godot-bloggy.me/tags/</link>
     <description>Recent content in Tags on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
     
-	<atom:link href="godot-bloggy.me/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://godot-bloggy.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aerodynamics</title>
-      <link>godot-bloggy.me/tags/aerodynamics/</link>
+      <link>http://godot-bloggy.me/tags/aerodynamics/</link>
       <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/aerodynamics/</guid>
+      <guid>http://godot-bloggy.me/tags/aerodynamics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Computational Fluid Dynamics</title>
-      <link>godot-bloggy.me/tags/computational-fluid-dynamics/</link>
+      <link>http://godot-bloggy.me/tags/computational-fluid-dynamics/</link>
       <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/computational-fluid-dynamics/</guid>
+      <guid>http://godot-bloggy.me/tags/computational-fluid-dynamics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>godot-bloggy.me/tags/design/</link>
+      <link>http://godot-bloggy.me/tags/design/</link>
       <pubDate>Tue, 11 Jul 2017 01:26:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/design/</guid>
+      <guid>http://godot-bloggy.me/tags/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematics</title>
-      <link>godot-bloggy.me/tags/mathematics/</link>
+      <link>http://godot-bloggy.me/tags/mathematics/</link>
       <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/mathematics/</guid>
+      <guid>http://godot-bloggy.me/tags/mathematics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Music</title>
-      <link>godot-bloggy.me/tags/music/</link>
+      <link>http://godot-bloggy.me/tags/music/</link>
       <pubDate>Tue, 11 Jul 2017 03:00:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/music/</guid>
+      <guid>http://godot-bloggy.me/tags/music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Physics</title>
-      <link>godot-bloggy.me/tags/physics/</link>
+      <link>http://godot-bloggy.me/tags/physics/</link>
       <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/physics/</guid>
+      <guid>http://godot-bloggy.me/tags/physics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
-      <link>godot-bloggy.me/tags/programming/</link>
+      <link>http://godot-bloggy.me/tags/programming/</link>
       <pubDate>Tue, 27 Dec 2016 16:54:58 +0530</pubDate>
       
-      <guid>godot-bloggy.me/tags/programming/</guid>
+      <guid>http://godot-bloggy.me/tags/programming/</guid>
       <description></description>
     </item>
     
