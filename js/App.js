@@ -13,7 +13,7 @@ if (!window.location.origin) {
 $(document).ready(function() {
 	
 	// Change all href links that go out of the origin to open in a new window
-	$("a").not("[href*='" + window.location.origin + "']").attr("target", "new");
+	// $("a").not("[href*='" + window.location.origin + "']").attr("target", "new");
 	
 	// Highlight all on load if highlighting
 	if (typeof hljs !== "undefined") {
