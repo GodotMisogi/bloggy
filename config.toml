@@ -1,13 +1,14 @@
-baseurl = "https://godotmisogi.github.io/bloggy/"
-relativeURLs = false
+baseurl = "http://godotmisogi.github.io/bloggy/"
+relativeURLs = true
 languageCode = "en-uk"
 title = "Arjit Seth"
-paginate = 5
+paginate = 20
 disqusShortname = "godotmisogi"
+theme = "hugo-geo"
 
 [taxonomies]
 	tag = "tags"
-	tutorial = "projects"
+	project = "projects"
 
 [params]
 	showglobe = true
@@ -39,7 +40,7 @@ disqusShortname = "godotmisogi"
 	
 	[[params.navlinks]]
 	name = "Projects"
-	url = "tutorial/"
+	url = "project/"
 
 [blackfriday]
 	extensions = ["hardLineBreak"]

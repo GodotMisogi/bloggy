@@ -17,7 +17,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="{{ .Description }}">
-    <!-- <meta property="og:title" content="{{ .Title }}"> -->
+    <meta property="og:title" content="{{ .Title }}">
     {{ if .IsPage }}
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
@@ -37,7 +37,7 @@
     {{ end }}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .Site.BaseURL }}css/prism.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

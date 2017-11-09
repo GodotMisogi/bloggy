@@ -9,11 +9,11 @@ While reading through John D. Anderson Jr.'s derivation of minimum induced drag,
 
 The equation that determines the downwash at a point is:
 
-$$w(y\_0) = \frac{1}{4\pi}\int^{b/2}\_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y\_0 - y}\mathrm{d}y = \int^{b/2}\_{-b/2} \mathcal{L}(\Gamma,\Gamma',y)\;\mathrm{d}y$$ 
+$$w(y\_0) = -\frac{1}{4\pi }\int^{b/2}\_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y\_0 - y}\mathrm{d}y = \int^{b/2}\_{-b/2} \mathcal{L}(\Gamma,\Gamma',y)\;\mathrm{d}y$$ 
 
 This effectively implies that the downwash can be expressed as a *functional* of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:
 
-$$ L = \rho\_{\infty} V\_{\infty}\int^{b/2}\_{-b/2} \Gamma(x)\;\mathrm{d}x = \int^{b/2}\_{-b/2} \mathcal{G}(\Gamma,\Gamma',x)\;\mathrm{d}x$$
+$$ L = \rho\_{\infty} V\_{\infty}\int^{b/2}\_{-b/2} \Gamma(y)\;\mathrm{d}y = \int^{b/2}\_{-b/2} \mathcal{G}(\Gamma,\Gamma',y)\;\mathrm{d}y$$
 
 The Euler-Lagrange equations thus take the following form:
 
@@ -21,15 +21,15 @@ $$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}
 
 Substituting the expressions:
 
-$$ \frac{1}{4\pi(y\_0 - y)^2} + \rho\_{\infty}V\_{\infty}\lambda = 0$$
+$$ -\frac{1}{4\pi  (y\_0 - y)^2} + \rho\_{\infty}V\_{\infty}\lambda = 0$$
 
 This doesn't contain any useful information about the downwash. Let's try something else.
 
 Trying to minimise the induced drag formula directly as given by Anderson:
 
-$$ C\_{D,i} = \frac{2}{V\_{\infty}S}\int^{b/2}\_{-b/2} \Gamma(x)\alpha\_{i}(x)\;\mathrm{d}x = \frac{2}{V\_{\infty}S}\int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\frac{\Gamma(x)\Gamma'(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$
+$$ C\_{D,i} = \frac{2}{V\_{\infty}S}\int^{b/2}\_{-b/2} \Gamma(x)\alpha\_{i}(x)\;\mathrm{d}x = \frac{1}{2\pi V\_{\infty}^2 S}\int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\frac{\Gamma(x)\Gamma'(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$
 
-Performing a variation on the coefficient of induced drag, we get:
+Getting rid of the constants and performing a variation on the coefficient of induced drag, we get:
 
 $$ \delta C\_{D,i} = \int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma'(y)}{x - y} + \delta\Gamma'(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$
 
@@ -61,16 +61,16 @@ Switching the variables of integration in the second expression, we get:
 
 $$\delta C\_{D,i} = 2\int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\delta\Gamma(x)\frac{\Gamma'(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$
 
-Combining this with the constrant, $\delta C\_{D,i} - \lambda\delta L = 0 $ becomes:
+Reintroducing the constants and combining this with the constraint, $\delta C\_{D,i} - \lambda\delta L = 0 $ becomes:
 
-$$ \int^{b/2}\_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}\_{-b/2}\frac{2\Gamma'(y)}{x - y}\;\mathrm{d}y\ - \lambda\right] = 0 $$
+$$ \int^{b/2}\_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}\_{-b/2}\frac{2\Gamma'(y)}{x - y}\;\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$
 
 Using the constraint on the lift across the wing, this results in:
 
-$$ \int^{b/2}\_{-b/2}\frac{2\Gamma'(y)}{x - y}\;\mathrm{d}y\ - \lambda = 0 $$
+$$ \int^{b/2}\_{-b/2}\frac{\Gamma'(y)}{x - y}\;\mathrm{d}y\ = \pi\lambda $$
 
 The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:
 
-$$ w = \frac{\lambda}{8\pi} = w\_0 $$
+$$ w = -\frac{\lambda}{4} = w\_0 $$
 
 The same result as seen in Anderson, more rigorously!

@@ -60,18 +60,7 @@ C:
 K:ADor
 |:A,B,CDEFG:|
 </p>
-<!-- 
-> D Mixotonic: `D F# G A C` = Raga Jog
 
-<p>
-X:1
-T:
-M:
-C:
-K:DMix
-|:DF#GA,C:|
-</p>
- -->
 
 The rhythms in Indian classical music are called *"Taals"*, and have fixed structures in terms of accents and beats. The concept of odd-time signatures and their implementation is much more natural in the compositions as compared to the fairly rare usage in contemporary Western musical genres such as rock and pop.
 

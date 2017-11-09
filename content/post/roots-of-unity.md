@@ -19,7 +19,7 @@ $$ z\_k = \exp\left(\frac{2k\pi i}{n}\right),\;\;k = 0,...,n-1 $$
 
 + As they are the roots of unity, they appear as points on the unit circle in the Argand plane. For example, $z^5 - 1 = 0$ has the following solutions and tree diagram:
 
-<div style="text-align:center"><img src="../Roots2.svg" width = "80%"></div>
+<div style="text-align:center"><img src="../Roots of Unity/Roots2.svg" width = "80%"></div>
 <br></br>
 
 + The easiest observation is:

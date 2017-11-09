@@ -13,7 +13,8 @@ $$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm
 
 **Motivation**: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:
 
-<div style="text-align:center"><img src="../Geodesic Equation/Parallel_transport.png" width = "60%"></div> Image Source: https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png
+<center><img src="../Geodesic Equation/Parallel_transport.png" width = "60%"></center>
+Image Source: https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png
 
 If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.
 
@@ -65,4 +66,4 @@ The expression simplifies to the geodesic equation:
 
 $$ \ddot{x}^{\gamma} + \Gamma^{\gamma}\_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&width=580" width="580" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&width=580" width="580" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></center>
