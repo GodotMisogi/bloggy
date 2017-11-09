@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on GOOD VIBRATIONS</title>
-    <link>https://godotmisogi.github.io/bloggy/tags/programming/</link>
+    <link>http://godotmisogi.github.io/bloggy/tags/programming/</link>
     <description>Recent content in Programming on GOOD VIBRATIONS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <lastBuildDate>Tue, 27 Dec 2016 16:54:58 +0530</lastBuildDate>
     
-	<atom:link href="https://godotmisogi.github.io/bloggy/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://godotmisogi.github.io/bloggy/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dubby Pendy - A Double Pendulum Simulator</title>
-      <link>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
+      <link>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</link>
       <pubDate>Tue, 27 Dec 2016 16:54:58 +0530</pubDate>
       
-      <guid>https://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
+      <guid>http://godotmisogi.github.io/bloggy/post/dubby-pendy/</guid>
       <description>Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&amp;rsquo;d read about this topic was in The Principle of Least Action chapter in Vol. 2 of The Feynman Lectures on Physics. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&amp;rsquo;s laws.
 A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum.</description>
     </item>
