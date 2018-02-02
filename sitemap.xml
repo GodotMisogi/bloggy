@@ -59,6 +59,12 @@
   </url>
   
   <url>
+    <loc>http://godot-bloggy.me/</loc>
+    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://godot-bloggy.me/tags/computational-fluid-dynamics/</loc>
     <lastmod>2017-07-10T22:55:50+05:30</lastmod>
     <priority>0</priority>
@@ -67,12 +73,6 @@
   <url>
     <loc>http://godot-bloggy.me/tags/design/</loc>
     <lastmod>2017-07-11T01:26:50+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://godot-bloggy.me/</loc>
-    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
