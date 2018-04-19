@@ -5,9 +5,9 @@ draft = false
 
 +++
 
-Hello! I'm Arjit Seth, a student currently in my third year of Aeronautical Engineering at Manipal Institute of Technology in India.
+Hello! I'm Arjit Seth, a student currently in my final year of Aeronautical Engineering at Manipal Institute of Technology in India.
 
-My major interests (which inspired me to start this blog) are physics, mathematics, aerodynamics and music. I enjoy writing music, solving puzzles, chatting on ```##math``` and ```##physics``` on IRC, figuring out odd time signatures in music, reading manga/watching anime, attempting amateur design and a lot more!
+My major interests (which inspired me to start this blog) are physics, mathematics, aerodynamics and music. I enjoy writing music, solving puzzles, chatting on `##math` and `##physics` on IRC, figuring out odd time signatures in music, reading manga/watching anime, attempting amateur design and a lot more!
 
 My current exploits which I'm probably going to blog about:
 

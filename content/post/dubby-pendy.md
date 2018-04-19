@@ -131,4 +131,5 @@ After setting up the graphics end, I obtain nice animations like this:
   <source src="../Dubby Pendy/DubbyPendy.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
+
 I'll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.
