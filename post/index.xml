@@ -75,5 +75,14 @@ This effectively implies that the downwash can be expressed as a functional of $
  Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://godot-bloggy.me/post/dubby-pendy/release-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://godot-bloggy.me/post/dubby-pendy/release-performance/</guid>
+      <description>Game Title     Game Title     var loadingContext = document.getElementById(&#39;loadingCanvas&#39;).getContext(&#39;2d&#39;); function drawLoadingText(text) { var canvas = loadingContext.canvas; loadingContext.fillStyle = &#34;rgb(142, 195, 227)&#34;; loadingContext.fillRect(0, 0, canvas.scrollWidth, canvas.scrollHeight); loadingContext.font = &#39;2em arial&#39;; loadingContext.textAlign = &#39;center&#39; loadingContext.fillStyle = &#34;rgb( 11, 86, 117 )&#34;; loadingContext.fillText(text, canvas.scrollWidth / 2, canvas.scrollHeight / 2); loadingContext.fillText(&#34;Powered By Emscripten.&#34;, canvas.scrollWidth / 2, canvas.scrollHeight / 4); loadingContext.fillText(&#34;Powered By LÖVE.&#34;, canvas.scrollWidth / 2, canvas.scrollHeight / 4 * 3); } window.</description>
+    </item>
+    
   </channel>
 </rss>
