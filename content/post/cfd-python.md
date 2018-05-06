@@ -1,15 +1,15 @@
 +++
 date = "2018-05-05T16:54:58+05:30"
 title = "Computational Fluid Dynamics - CFDPython"
-draft = true
+draft = false
 highlight = true
 tags = ["Computational Fluid Dynamics", "Programming", "Mathematics"]
 +++
 
-This 'notebook' consists of my run-through of Prof. Lorena Barba's "12 steps to Navier-Stokes" course, because I admit I have a problem with fluids. It is set in a "professor first, student next" fashion, with the student developing the stock functions with his/her own ideas. The development is chronologically presented. 
+This 'notebook' consists of my run-through of Prof. Lorena Barba's "12 steps to Navier-Stokes" course, because I admit I have a problem with fluids. It is set in a "professor first, student next" fashion, with the student developing the stock functions with his/her own ideas. The development is chronologically presented. Most of the partial differential equations here are numerically solved using forward difference methods in time and backward difference methods in space.
 Programming CFD methods is crucial in understanding how fluid solvers work because it allows one to learn about all possible points of error when running analyses through industrial software/packages, reducing debugging time in the long run.
 
-#### Python libraries
+#### Python Libraries
 
 
 ```python
