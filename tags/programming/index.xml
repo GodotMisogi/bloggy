@@ -17,8 +17,7 @@
       <pubDate>Sat, 05 May 2018 16:54:58 +0530</pubDate>
       
       <guid>http://godot-bloggy.me/post/cfd-python/</guid>
-      <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. It is set in a &amp;ldquo;professor first, student next&amp;rdquo; fashion, with the student developing the stock functions with his/her own ideas. The development is chronologically presented.
-Programming CFD methods is crucial in understanding how fluid solvers work because it allows one to learn about all possible points of error when running analyses through industrial software/packages, reducing debugging time in the long run.</description>
+      <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. It is set in a &amp;ldquo;professor first, student next&amp;rdquo; fashion, with the student developing the stock functions with his/her own ideas. The development is chronologically presented. Most of the partial differential equations here are numerically solved using forward difference methods in time and backward difference methods in space.</description>
     </item>
     
     <item>
