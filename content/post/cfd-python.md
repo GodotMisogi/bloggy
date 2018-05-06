@@ -26,7 +26,7 @@ rc('font',**{'family':'serif'})
 rc('text', usetex=True)
 ```
 
-### **Step 1: 1-D Linear Convection**
+### **Step 1: 1D Linear Convection**
 
 #### Professor
 
@@ -109,7 +109,7 @@ linearConvection(40)
 ![png](../CFDPython_files/CFDPython_10_0.png)
 
 
-### **Step 2: 1-D Nonlinear Convection**
+### **Step 2: 1D Nonlinear Convection**
 
 #### Professor
 
@@ -263,7 +263,7 @@ pyplot.show()
 ![png](../CFDPython_files/CFDPython_23_1.png)
 
 
-### **Step 3: Diffusion Equation in 1-D**
+### **Step 3: Diffusion Equation in 1D**
 
 #### Professor
 
@@ -538,13 +538,13 @@ This is the KPZ equation in one dimension, which seemingly generalises to:
 
 $$ \frac{\partial \psi}{\partial t} + \frac{\lambda}{2}\left(\nabla \psi\right)^2 = \nu\nabla^2 \psi $$
 
-Whatever "$(\nabla \psi)^2$" means. Let $\lambda = 2$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode's `##math`!), which allows it to be written in the form of the 1-D diffusion equation:
+Whatever "$(\nabla \psi)^2$" means. Let $\lambda = 2$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode's `##math`!), which allows it to be written in the form of the 1D diffusion equation:
 
 $$ \frac{\partial}{\partial t}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] = \nu\frac{\partial^2}{\partial x^2}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] $$ 
 
 TODO: Add solution.
 
-### **Step 5: 2-D Linear Convection**
+### **Step 5: 2D Linear Convection**
 
 #### Professor
 
