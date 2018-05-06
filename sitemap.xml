@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://godot-bloggy.me/post/cfd-python/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://godot-bloggy.me/project/academics/</loc>
     <lastmod>2017-08-27T01:26:50+05:30</lastmod>
   </url>
@@ -60,13 +65,13 @@
   
   <url>
     <loc>http://godot-bloggy.me/</loc>
-    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://godot-bloggy.me/tags/computational-fluid-dynamics/</loc>
-    <lastmod>2017-07-10T22:55:50+05:30</lastmod>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,7 +83,7 @@
   
   <url>
     <loc>http://godot-bloggy.me/tags/mathematics/</loc>
-    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -96,13 +101,13 @@
   
   <url>
     <loc>http://godot-bloggy.me/post/</loc>
-    <lastmod>2017-07-10T22:55:50+05:30</lastmod>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://godot-bloggy.me/tags/programming/</loc>
-    <lastmod>2016-12-27T16:54:58+05:30</lastmod>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
     <priority>0</priority>
   </url>
   

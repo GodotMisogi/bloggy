@@ -6,10 +6,20 @@
     <description>Recent content in Mathematics on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Sun, 27 Aug 2017 01:26:50 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 05 May 2018 16:54:58 +0530</lastBuildDate>
     
 	<atom:link href="http://godot-bloggy.me/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computational Fluid Dynamics - CFDPython</title>
+      <link>http://godot-bloggy.me/post/cfd-python/</link>
+      <pubDate>Sat, 05 May 2018 16:54:58 +0530</pubDate>
+      
+      <guid>http://godot-bloggy.me/post/cfd-python/</guid>
+      <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. It is set in a &amp;ldquo;professor first, student next&amp;rdquo; fashion, with the student developing the stock functions with his/her own ideas. The development is chronologically presented.
+Programming CFD methods is crucial in understanding how fluid solvers work because it allows one to learn about all possible points of error when running analyses through industrial software/packages, reducing debugging time in the long run.</description>
+    </item>
     
     <item>
       <title>Academics - Physics and Mathematics</title>
