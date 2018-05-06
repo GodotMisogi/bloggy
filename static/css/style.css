@@ -1525,7 +1525,7 @@ kbd kbd {
 }
 pre {
     display: block;
-    padding: 0px;
+    padding: 8px;
     margin: 0 0 12.5px;
     font-size: 17px;
     line-height: 1.42857143;
