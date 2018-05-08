@@ -333,7 +333,7 @@ $$ u(x,t) = \frac{1}{\sqrt{4\pi\nu t}}\int\_{-\infty}^{\infty} u(y,0)\exp\left[-
 
 __Note:__ This looks strangely similar to a Green's function with the kernel:
 
-$$ G(x,t;y) = \frac{1}{\sqrt{4\pi\nu t}}\exp\left[-\frac{(x-y)^2}{4\nu t}\right] $$
+$$ G(x,t;y,t) = \frac{1}{\sqrt{4\pi\nu t}}\exp\left[-\frac{(x-y)^2}{4\nu t}\right] $$
 
 Let's apply this solution to the current initial condition:
 
