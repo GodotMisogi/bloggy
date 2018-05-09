@@ -732,7 +732,7 @@ $$ u, v = \begin{cases} 2, & x,y \in [0.5,1] \times [0.5,1] \\\\ 1, & \mathrm{ev
 
 Boundary conditions:
 
-$$ u = 1, v = 1 \;\mathrm{for} \begin{cases} x = 0,2 \\ y = 0,2 \end{cases} $$
+$$ u = 1, v = 1 \;\mathrm{for} \begin{cases} x = 0,2 \\\\ y = 0,2 \end{cases} $$
 
 
 
