@@ -722,13 +722,13 @@ $$ \frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\part
 
 (I think there's a factor $c$ missing in them.) Discretised:
 
-$$ \frac{u^{n+1}_\{i,j} - u^n_\{i,j}}{\Delta t} + u^n_\{i,j}\left(\frac{u^n_\{i,j} - u^n_\{i-1,j}}{\Delta x}\right) + v^n_\{i,j}\left(\frac{u^n\_{i,j} - u^n_\{i,j-1}}{\Delta y}\right) = 0 $$
+$$ \frac{u^{n+1}\_{i,j} - u^n\_{i,j}}{\Delta t} + u^n\_{i,j}\left(\frac{u^n\_{i,j} - u^n\_{i-1,j}}{\Delta x}\right) + v^n\_{i,j}\left(\frac{u^n\_{i,j} - u^n\_{i,j-1}}{\Delta y}\right) = 0 $$
 
-$$ \frac{v^{n+1}_\{i,j} - v^n_\{i,j}}{\Delta t} + u^n_\{i,j}\left(\frac{v^n_\{i,j} - v^n_\{i-1,j}}{\Delta x}\right) + v^n_\{i,j}\left(\frac{v^n\_{i,j} - v^n_\{i,j-1}}{\Delta y}\right) = 0 $$
+$$ \frac{v^{n+1}\_{i,j} - v^n\_{i,j}}{\Delta t} + u^n\_{i,j}\left(\frac{v^n\_{i,j} - v^n\_{i-1,j}}{\Delta x}\right) + v^n\_{i,j}\left(\frac{v^n\_{i,j} - v^n\_{i,j-1}}{\Delta y}\right) = 0 $$
 
 Initial conditions:
 
-$$ u, v = \begin{cases} 2, & x,y \in [0.5,1] \times [0.5,1] \\ 1, & \mathrm{everywhere\;else} \end{cases}$$
+$$ u, v = \begin{cases} 2, & x,y \in [0.5,1] \times [0.5,1] \\\\ 1, & \mathrm{everywhere\;else} \end{cases}$$
 
 Boundary conditions:
 
@@ -790,11 +790,11 @@ pyplot.show()
 ```
 
 
-![png](CFDPython_files/CFDPython_56_0.png)
+![png](../CFDPython_files/CFDPython_56_0.png)
 
 
 
-![png](CFDPython_files/CFDPython_56_1.png)
+![png](../CFDPython_files/CFDPython_56_1.png)
 
 
 #### Student
