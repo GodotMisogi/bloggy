@@ -793,13 +793,13 @@ pyplot.show()
 
 <p>(I think there&rsquo;s a factor $c$ missing in them.) Discretised:</p>
 
-<p>$$ \frac{u^{n+1}<em>{i,j} - u^n</em>{i,j}}{\Delta t} + u^n<em>{i,j}\left(\frac{u^n</em>{i,j} - u^n<em>{i-1,j}}{\Delta x}\right) + v^n</em>{i,j}\left(\frac{u^n_{i,j} - u^n_{i,j-1}}{\Delta y}\right) = 0 $$</p>
+<p>$$ \frac{u^{n+1}_{i,j} - u^n_{i,j}}{\Delta t} + u^n_{i,j}\left(\frac{u^n_{i,j} - u^n_{i-1,j}}{\Delta x}\right) + v^n_{i,j}\left(\frac{u^n_{i,j} - u^n_{i,j-1}}{\Delta y}\right) = 0 $$</p>
 
-<p>$$ \frac{v^{n+1}<em>{i,j} - v^n</em>{i,j}}{\Delta t} + u^n<em>{i,j}\left(\frac{v^n</em>{i,j} - v^n<em>{i-1,j}}{\Delta x}\right) + v^n</em>{i,j}\left(\frac{v^n_{i,j} - v^n_{i,j-1}}{\Delta y}\right) = 0 $$</p>
+<p>$$ \frac{v^{n+1}_{i,j} - v^n_{i,j}}{\Delta t} + u^n_{i,j}\left(\frac{v^n_{i,j} - v^n_{i-1,j}}{\Delta x}\right) + v^n_{i,j}\left(\frac{v^n_{i,j} - v^n_{i,j-1}}{\Delta y}\right) = 0 $$</p>
 
 <p>Initial conditions:</p>
 
-<p>$$ u, v = \begin{cases} 2, &amp; x,y \in [0.5,1] \times [0.5,1] \ 1, &amp; \mathrm{everywhere\;else} \end{cases}$$</p>
+<p>$$ u, v = \begin{cases} 2, &amp; x,y \in [0.5,1] \times [0.5,1] \\ 1, &amp; \mathrm{everywhere\;else} \end{cases}$$</p>
 
 <p>Boundary conditions:</p>
 
@@ -857,9 +857,9 @@ ax.set_ylabel('$y$')
 pyplot.show()
 </code></pre>
 
-<p><img src="CFDPython_files/CFDPython_56_0.png" alt="png" /></p>
+<p><img src="../CFDPython_files/CFDPython_56_0.png" alt="png" /></p>
 
-<p><img src="CFDPython_files/CFDPython_56_1.png" alt="png" /></p>
+<p><img src="../CFDPython_files/CFDPython_56_1.png" alt="png" /></p>
 
 <h4 id="student-7">Student</h4>
 
