@@ -22,31 +22,31 @@ This can be easily visualised as walking to the North pole from A with your arm 
 
 Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields. 
 
-A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it's the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport.
+A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it's the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport. In the case of a sphere, a geodesic lies on a great circle, defined as the circle on the surface of a sphere which lies in a plane passing through the sphere's centre.
 
-In relativity, the definition of distance (or interval between points) is a little different. Since we deal with space-time rather than space, the metric of space-time (in one convention) must be used, as described below:
+In relativity, the definition of distance (or interval between points) is a little different as compared to Euclidean geometry. Since we deal with space-time rather than space, the metric of space-time (called Minkowski space-time) must be used, as described below (in one convention):
 
 $$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$ 
 
-There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:
+There is a large historical development for this formulation with plenty of literature available. The foundation lies in Maxwell's equations and Einstein's postulates of special relativity. There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:
 
 $$ \vec{U}\cdot\vec{V} = g\_{\alpha\beta}U^{\alpha}V^{\beta} = g\_{00}U^{0}V^{0} + g\_{10}U^{1}V^{0} + g\_{01}U^{0}V^{1} + ...$$
 
-With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g\_{\alpha\beta} $ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g\_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention.
+With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g\_{\alpha\beta}(\vec x)$ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g\_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention, a flat space-time.
 
 The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:
 
 $$ \mathrm{d}s = \int\_{\lambda\_0}^{\lambda\_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda\_0}^{\lambda\_1} \left|g\_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$
 
-Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time must be a minimum. So the Lagrangian is:
+Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time should be a minimum. So the Lagrangian is:
 
 $$ \mathcal{L} = \left|g\_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$
 
-The neat trick here is taking $\mathcal{L}^2$ and solving the Euler-Lagrange equation:
+The neat trick here is taking $\mathcal{L}^2$ and substituting it into the Euler-Lagrange equation:
 
 $$ g\_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g\_{\alpha\mu}\dot{x}^{\alpha} + g\_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$
 
-Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. The second term is a total derivative, which results in:
+Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. Note that this equation just talks about extrema rather than maxima or minima explicitly. The second term is a total derivative, which results in:
 
 $$ g\_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g\_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g\_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g\_{\alpha\mu}\ddot{x}^{\alpha} + g\_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$
 
