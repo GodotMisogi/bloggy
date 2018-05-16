@@ -554,23 +554,23 @@ The KPZ equation is a generalisation of Burgers' equation to multiple dimensions
 
 $$ \frac{\partial u}{\partial t} + \frac{1}{2}\frac{\partial u^2}{\partial x} = \nu\frac{\partial^2 u}{\partial x^2} $$
 
-Let $ u = \psi_x $, then Burgers' equation becomes:
+Let $ u = \psi\_x $, then Burgers' equation becomes:
 
-$$ \psi\_{tx} + \psi_x\psi\_{xx} = \nu\psi\_{xxx} $$
+$$ \psi\_{tx} + \psi\_x\psi\_{xx} = \nu\psi\_{xxx} $$
 
-$$ \partial_x\left(\psi_t + \frac{\psi_x^2}{2} \right) = \nu\partial_x(\psi\_{xx}) $$ 
+$$ \partial_x\left(\psi\_t + \frac{\psi\_x^2}{2} \right) = \nu\partial_x(\psi\_{xx}) $$ 
 
-Integrating with respect to x gives the following equation:
+Integrating with respect to $x$ gives the following equation:
 
-$$ \frac{\partial \psi}{\partial t} + \frac{1}{2}\left(\frac{\partial \psi}{\partial x}\right)^2 = \nu\frac{\partial^2 \psi}{\partial x^2} $$
+$$ \frac{\partial \psi}{\partial t} + \frac{1}{2}\left(\frac{\partial \psi}{\partial x}\right)^2 = \nu\frac{\partial^2 \psi}{\partial x^2} + \alpha(t) $$
 
-This is the KPZ equation in one dimension, which seemingly generalises to:
+If $\alpha(t) = 0$, we obtain the KPZ equation in one dimension, which seemingly generalises to:
 
 $$ \frac{\partial \psi}{\partial t} + \frac{\lambda}{2}\left(\nabla \psi\right)^2 = \nu\nabla^2 \psi $$
 
-Whatever "$(\nabla \psi)^2$" means. Let $\lambda = 2$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode's `##math`!), which allows it to be written in the form of the 1D diffusion equation:
+Whatever "$(\nabla \psi)^2$" means. Let $\lambda = 1$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode's `##math`!), which allows it to be written in the form of the 1-D diffusion equation:
 
-$$ \frac{\partial}{\partial t}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] = \nu\frac{\partial^2}{\partial x^2}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] $$ 
+$$ \frac{\partial}{\partial t}\left[\exp\left(-\frac{\psi}{2\nu}\right)\right] = \nu\frac{\partial^2}{\partial x^2}\left[\exp\left(-\frac{\psi}{2\nu}\right)\right] $$
 
 TODO: Add solution.
 
