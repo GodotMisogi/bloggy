@@ -32,7 +32,7 @@
     
     <meta property="og:tags" content="Mathematics">
     
-    <meta name="generator" content="Hugo 0.40.2" />
+    <meta name="generator" content="Hugo 0.40.3" />
     <title>Computational Fluid Dynamics - CFDPython</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -643,17 +643,17 @@ pyplot.show()
 
 <p>$$ \partial_x\left(\psi_t + \frac{\psi_x^2}{2} \right) = \nu\partial_x(\psi_{xx}) $$</p>
 
-<p>Integrating with respect to x gives the following equation:</p>
+<p>Integrating with respect to $x$ gives the following equation:</p>
 
-<p>$$ \frac{\partial \psi}{\partial t} + \frac{1}{2}\left(\frac{\partial \psi}{\partial x}\right)^2 = \nu\frac{\partial^2 \psi}{\partial x^2} $$</p>
+<p>$$ \frac{\partial \psi}{\partial t} + \frac{1}{2}\left(\frac{\partial \psi}{\partial x}\right)^2 = \nu\frac{\partial^2 \psi}{\partial x^2} + \alpha(t) $$</p>
 
-<p>This is the KPZ equation in one dimension, which seemingly generalises to:</p>
+<p>If $\alpha(t) = 0$, we obtain the KPZ equation in one dimension, which seemingly generalises to:</p>
 
 <p>$$ \frac{\partial \psi}{\partial t} + \frac{\lambda}{2}\left(\nabla \psi\right)^2 = \nu\nabla^2 \psi $$</p>
 
-<p>Whatever &ldquo;$(\nabla \psi)^2$&rdquo; means. Let $\lambda = 2$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode&rsquo;s <code>##math</code>!), which allows it to be written in the form of the 1D diffusion equation:</p>
+<p>Whatever &ldquo;$(\nabla \psi)^2$&rdquo; means. Let $\lambda = 1$ and take the one-dimensional case, then the equation has an integrating factor (thanks to Vyn from freenode&rsquo;s <code>##math</code>!), which allows it to be written in the form of the 1-D diffusion equation:</p>
 
-<p>$$ \frac{\partial}{\partial t}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] = \nu\frac{\partial^2}{\partial x^2}\left[\exp\left(-\frac{\psi}{\nu}\right)\right] $$</p>
+<p>$$ \frac{\partial}{\partial t}\left[\exp\left(-\frac{\psi}{2\nu}\right)\right] = \nu\frac{\partial^2}{\partial x^2}\left[\exp\left(-\frac{\psi}{2\nu}\right)\right] $$</p>
 
 <p>TODO: Add solution.</p>
 
