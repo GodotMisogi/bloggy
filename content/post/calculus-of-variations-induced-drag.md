@@ -53,7 +53,7 @@ Mapping the variables back:
 
 $$ \int^{y-b/2}\_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}\_{-b/2}\frac{\Gamma'(x)}{y-x}\;\mathrm{d}x$$
 
-Solving the original integral:
+Substituting this into the original expression:
 
 $$ = \int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\delta\Gamma(x)\frac{\Gamma'(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}\_{-b/2}\int^{b/2}\_{-b/2}\delta\Gamma(y)\frac{\Gamma'(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$
 
