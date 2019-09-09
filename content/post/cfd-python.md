@@ -6,13 +6,16 @@ highlight = true
 tags = ["Computational Fluid Dynamics", "Programming", "Mathematics"]
 +++
 
-This 'notebook' consists of my run-through of Prof. Lorena Barba's "[12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/)" course, because I admit I have a problem with fluids. The [Navier-Stokes](https://www.grc.nasa.gov/www/k-12/airplane/nseqs.html) equations are:
+This 'notebook' consists of my run-through of Prof. Lorena Barba's "[12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/)" course, because I admit I have a problem with fluids. The [Navier-Stokes](https://www.grc.nasa.gov/www/k-12/airplane/nseqs.html) equations that will be solved in this notebook are the following in conservative form:
 
 $$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$ 
 
-$$ \rho\frac{\partial \vec V}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\vec I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$
+$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$
 
- The goal of this exercise to solve these equations numerically for some simple cases, starting from the ground-up. It is set in a "professor first, student next" fashion, with the student developing the stock functions with his/her own ideas. The development is presented in order of relevance to the corresponding steps rather than chronologically. Most of the partial differential equations here are numerically solved using forward difference methods in time and backward difference methods in space.
+where $\rho$ is the density of the fluid, $\vec V$ denotes the velocity, $p$ denotes the pressure, $\tau$ denotes the stresses, and $f$ denotes body forces. The flows in this tutorial are incompressible cases in which the density is considered constant, so the energy equation is not solved. 
+ 
+The goal of this exercise to solve these equations numerically for some simple cases, starting from the ground-up. It is set in a "professor first, student next" fashion, with the student developing the stock functions with his/her own ideas. The development is presented in order of relevance to the corresponding steps rather than chronologically. Most of the partial differential equations here are numerically solved using forward difference methods in time and backward difference methods in space.
+
 Programming CFD methods is crucial in understanding how fluid solvers work because it allows one to learn about all possible points of error when running analyses through industrial software/packages, reducing debugging time in the long run.
 
 #### Python Libraries
