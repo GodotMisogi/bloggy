@@ -18,8 +18,8 @@
       
       <guid>http://godot-bloggy.tech/post/cfd-python/</guid>
       <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. The Navier-Stokes equations are:
-$$ \rho\frac{\partial \vec V}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\vec I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$
-The goal of this exercise to solve these equations numerically for some simple cases, starting from the ground-up.</description>
+$$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$
+$$ \rho\frac{\partial \vec V}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\vec I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$</description>
     </item>
     
     <item>

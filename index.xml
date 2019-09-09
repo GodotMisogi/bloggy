@@ -18,8 +18,8 @@
       
       <guid>http://godot-bloggy.tech/post/cfd-python/</guid>
       <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. The Navier-Stokes equations are:
-$$ \rho\frac{\partial \vec V}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\vec I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$
-The goal of this exercise to solve these equations numerically for some simple cases, starting from the ground-up.</description>
+$$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$
+$$ \rho\frac{\partial \vec V}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\vec I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$</description>
     </item>
     
     <item>
@@ -124,6 +124,17 @@ My current exploits which I&amp;rsquo;m probably going to blog about:</descripti
  Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.
  Plot these solutions on the Argand plane.
  Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://godot-bloggy.tech/post/cfdpython/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://godot-bloggy.tech/post/cfdpython/</guid>
+      <description>CFDPyRun This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. The Navier-Stokes equations are:
+$$ \rho\left[\frac{\partial \vec V}{\partial t} + \left(\vec V \cdot \nabla\right) \vec V\right] = -\nabla p + \rho g + \mu \nabla^2 \vec V $$
+The goal of this exercise to solve these equations numerically for some simple cases, starting from the ground-up.</description>
     </item>
     
   </channel>
