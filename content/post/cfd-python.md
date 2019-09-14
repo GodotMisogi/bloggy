@@ -1164,7 +1164,7 @@ def burgers2D(mesh_size_x, mesh_size_y, time):
     for n in range(timesteps-1):
         u[n+1, 1:-1, 1:-1] = (u[n, 1:-1,1:-1]
                             - r_x*u[n, 1:-1, 1:-1]*(u[n, 1:-1, 1:-1] - u[n, :-2, 1:-1]) 
-                            + r_y*v[n, 1:-1, 1:-1]*(u[n, 1:-1, 1:-1] - u[n, 1:-1, :-2])
+                            - r_y*v[n, 1:-1, 1:-1]*(u[n, 1:-1, 1:-1] - u[n, 1:-1, :-2])
                             + lambda_x*(u[n, 2:, 1:-1] - 2*u[n, 1:-1, 1:-1] + u[n, :-2, 1:-1]) 
                             + lambda_y*(u[n, 1:-1, 2:] - 2*u[n, 1:-1, 1:-1] + u[n, 1:-1, :-2]))
         
@@ -1727,7 +1727,9 @@ pyplot.show()
 Partial differential equations:
 
 $$ \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)+F $$
+
 $$ \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right) $$
+
 $$ \frac{\partial^2 p}{\partial x^2}+\frac{\partial^2 p}{\partial y^2}=-\rho\left(\frac{\partial u}{\partial x}\frac{\partial u}{\partial x}+2\frac{\partial u}{\partial y}\frac{\partial v}{\partial x}+\frac{\partial v}{\partial y}\frac{\partial v}{\partial y}\right) $$
     
 Discretised:
@@ -1753,6 +1755,7 @@ Discretised:
 The initial condition is zero everywhere for all variables. Boundary conditions:
 
 $u,\, v$ and $p$ are periodic on $x = 0,2$
+
 $$ u(x,0) = u(x,2) = v(x,0) = v(x,2) = 0, \; \frac{\partial p}{\partial y}\bigg|\_{y=0,2} = 0, \; F(x,y) = 1,\, \forall (x,y) \in [0,2]\times[0,2]$$
 
 
