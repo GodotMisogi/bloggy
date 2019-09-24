@@ -10,7 +10,7 @@ This 'notebook' consists of my run-through of Prof. Lorena Barba's "[12 steps to
 
 $$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$ 
 
-$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \vec \tau + \vec f$$
+$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \hat \tau + \vec f$$
 
 where $\rho$ is the density of the fluid, $\vec V$ denotes the velocity, $p$ denotes the pressure, $\tau$ denotes the stresses, and $f$ denotes body forces. The flows in this tutorial are incompressible cases in which the density is considered constant, so the energy equation is not solved. 
  
@@ -1226,7 +1226,7 @@ $$ p(0,y) = 0, \; p(2,y) = y, \; \frac{\partial p}{\partial y}\bigg|\_{(x,0),\,(
 
 Analytical solution for this case:
 
-$$ p(x,y) = \frac{x}{4} - 4\sum\_{n=1, odd}^{\infty} \frac{\sin n\pi x \cos n\pi y}{(n\pi)^2\sinh n\pi x} $$
+$$ p(x,y) = \frac{x}{4} - 4\sum\_{n=0}^{\infty} \frac{\sin{[(2n+1)\pi x]} \cos{[(2n+1)\pi y]}}{[(2n+1)\pi]^2\sinh{[(2n+1)\pi x]} $$
 
 #### Student
 
