@@ -18,6 +18,13 @@ My current exploits which I'm probably going to blog about:
 * Programming physics and aerodynamics simulations in various languages.
 * Developing music production skills for various genres.
 
-A more comprehensive overview is available in my <a href="../Arjit Seth - Curriculum Vitae.pdf" target="_blank">CV</a>.
+A more comprehensive overview is available in my [CV](../Arjit Seth - Curriculum Vitae.pdf).
 
-A big thanks to L. Aditya Srishti Chitturu for the logo!
+---
+The following [eXtended Design Structure Matrix](https://github.com/mdolab/pyXDSM) outlines my learning process as an optimisation framework:
+
+![svg](../XDSM.svg)
+
+---
+
+P.S. A big thanks to L. Aditya Srishti Chitturu for the logo!

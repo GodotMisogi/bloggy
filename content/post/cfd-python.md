@@ -1226,7 +1226,7 @@ $$ p(0,y) = 0, \; p(2,y) = y, \; \frac{\partial p}{\partial y}\bigg|\_{(x,0),\,(
 
 Analytical solution for this case:
 
-$$ p(x,y) = \frac{x}{4} - 4\sum\_{n=0}^{\infty} \frac{\sin{[(2n+1)\pi x]} \cos{[(2n+1)\pi y]}}{[(2n+1)\pi]^2\sinh{[(2n+1)\pi x]} $$
+$$ p(x,y) = \frac{x}{4} - 4\sum\_{n=0}^{\infty} \frac{\sin{[(2n+1)\pi x]}\cos{[(2n+1)\pi y]}}{[(2n+1)\pi]^2\sinh{[(2n+1)\pi x]}} $$
 
 #### Student
 
