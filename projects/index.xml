@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Arjit Seth</title>
-    <link>http://godot-bloggy.tech/projects/</link>
+    <link>https://godot-bloggy.xyz/projects/</link>
     <description>Recent content in Projects on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     
-	<atom:link href="http://godot-bloggy.tech/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://godot-bloggy.xyz/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
