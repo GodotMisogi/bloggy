@@ -16,7 +16,7 @@ theme = "hugo-geo"
 	# Google Analytics
     analytics = "UA-89998292-1"
 
-    favicon = "img/pp.jpg"
+    favicon = "pp.jpg"
     
 	github = "https://github.com/GodotMisogi"
 	twitter = "https://twitter.com/ArjitSeth"
