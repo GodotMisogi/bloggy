@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/computational-fluid-dynamics/</loc>
-    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
-  </url>
   
   <url>
     <loc>https://godot-bloggy.xyz/post/cfd-python/</loc>
@@ -13,43 +8,8 @@
   </url>
   
   <url>
-    <loc>https://godot-bloggy.xyz/tags/mathematics/</loc>
-    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/post/</loc>
-    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/programming/</loc>
-    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/</loc>
-    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://godot-bloggy.xyz/project/academics/</loc>
     <lastmod>2017-08-27T01:26:50+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/physics/</loc>
-    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/project/</loc>
-    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/music/</loc>
-    <lastmod>2017-07-11T03:00:50+05:30</lastmod>
   </url>
   
   <url>
@@ -60,16 +20,6 @@
   <url>
     <loc>https://godot-bloggy.xyz/project/aeromit-graphics/</loc>
     <lastmod>2017-07-11T01:26:50+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/design/</loc>
-    <lastmod>2017-07-11T01:26:50+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://godot-bloggy.xyz/tags/aerodynamics/</loc>
-    <lastmod>2017-07-10T22:55:50+05:30</lastmod>
   </url>
   
   <url>
@@ -103,17 +53,79 @@
   </url>
   
   <url>
-    <loc>https://godot-bloggy.xyz/</loc>
-    <lastmod>2016-12-26T01:45:08+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://godot-bloggy.xyz/post/roots-of-unity/</loc>
     <lastmod>2016-12-25T02:43:36+05:30</lastmod>
   </url>
   
   <url>
+    <loc>https://godot-bloggy.xyz/tags/aerodynamics/</loc>
+    <lastmod>2017-07-10T22:55:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/computational-fluid-dynamics/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/design/</loc>
+    <lastmod>2017-07-11T01:26:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/mathematics/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/music/</loc>
+    <lastmod>2017-07-11T03:00:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/physics/</loc>
+    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/post/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/programming/</loc>
+    <lastmod>2018-05-05T16:54:58+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/project/</loc>
+    <lastmod>2017-08-27T01:26:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://godot-bloggy.xyz/projects/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://godot-bloggy.xyz/tags/</loc>
+    <lastmod>2017-07-10T22:55:50+05:30</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

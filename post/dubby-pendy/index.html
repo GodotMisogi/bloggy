@@ -30,7 +30,7 @@
     
     <meta property="og:tags" content="Programming">
     
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.48" />
     <title>Dubby Pendy - A Double Pendulum Simulator</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -96,7 +96,7 @@
 		
 		
 		
-			<small class="text-center center-block">ARJIT SETH</small>
+			<small class="text-center center-block">ARJIT Cuck</small>
 		
 		
 		
@@ -131,110 +131,135 @@
 
 	<article>
 		<p>Learning about Lagrangian and Hamiltonian mechanics introduced me to an entirely new way of solving physics problems. The first time I&rsquo;d read about this topic was in <a href="http://www.feynmanlectures.caltech.edu/II_19.html">The Principle of Least Action</a> chapter in <a href="http://www.feynmanlectures.caltech.edu/II_toc.html">Vol. 2 of The Feynman Lectures on Physics</a>. I was introduced to a different perspective of viewing the physical world, perhaps a more general one than Newton&rsquo;s laws.</p>
+
 <p>A famous example of a system whose equations of motion can be more easily attained using Lagrangian or Hamiltonian mechanics is the double pendulum. I saw a <a href="http://scienceworld.wolfram.com/physics/DoublePendulum.html">Wolfram Science animation</a> of the system, but it didn&rsquo;t have the right <code>a e s t h e t i c</code> for me, and I wanted to write one of my own to investigate the system for various initial conditions and its chaotic behaviour.</p>
+
 <p>The following shows the double pendulum system:</p>
-<!-- raw HTML omitted -->
+
+<div style="text-align:center"><img src="../Dubby Pendy/DubbyPendy.svg" width="80%"></div>
+
 <p>The Lagrangian of the system is:</p>
-<p>$$ \mathcal{L} = T - V $$
-$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$
+
+<p>$$ \mathcal{L} = T - V $$<br />
+$$ T = \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos(\theta_1 - \theta_2)\right]$$<br />
 $$ V = -(m_1 + m_2)gl_1\cos \theta_1 - m_2gl_2\cos\theta_2 $$</p>
+
 <p>After a <a href="http://scienceworld.wolfram.com/physics/DoublePendulum.html">very long derivation</a>, Hamilton&rsquo;s equations can be obtained:</p>
-<p>$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$
-$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$
-$$ \dot{p}_{\theta_1} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$
-$$ \dot{p}_{\theta_2} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$
-$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$
+
+<p>$$ \dot{\theta_1} = \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
+$$ \dot{\theta_2} = \frac{l_1 (m_1 + m_2)p_{\theta_1} - l_2 m_2 p_{\theta_1}\cos(\theta_1 - \theta_2)}{l_1^2 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
+$$ \dot{p}_{\theta_1} = -(m_1 + m_2)gl_1\sin\theta_1 - C_1 + C_2$$<br />
+$$ \dot{p}_{\theta_2} = -m_2gl_2\sin\theta_2 + C_1 - C_2$$<br />
+$$ C_1 = \frac{p_{\theta_1}p_{\theta_2}\sin(\theta_1-\theta_2)}{l_1 l_2[m_1 + m_2\sin^2(\theta_1-\theta_2)]} $$<br />
 $$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l_2 m_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}{2l_1^2 l_2^2[m_1 + m_2\sin^2(\theta_1-\theta_2)]^2}\sin[2(\theta_1 - \theta_2)] $$</p>
+
 <p>These are very formidable-looking equations, and it is almost impossible to determine the particle trajectories by solving these equations analytically! So how does one solve it for practical purposes? Numerical methods and programming. I used Lua to program the simulator, including the <a href="https://love2d.org">LÖVE</a> framework for the graphics.</p>
+
 <p>Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">directSum</span>(a, b)
-	<span style="color:#66d9ef">local</span> c <span style="color:#f92672">=</span> {}
-	<span style="color:#66d9ef">for</span> i,v <span style="color:#66d9ef">in</span> pairs(a) <span style="color:#66d9ef">do</span>
-		c[i] <span style="color:#f92672">=</span> a[i] <span style="color:#f92672">+</span> b[i]
-	<span style="color:#66d9ef">end</span>
-	<span style="color:#66d9ef">return</span> c
-<span style="color:#66d9ef">end</span>
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scalarMultiply</span>(scalar, table)
-	<span style="color:#66d9ef">local</span> output <span style="color:#f92672">=</span> {}
-	<span style="color:#66d9ef">for</span> i,v <span style="color:#66d9ef">in</span> pairs(table) <span style="color:#66d9ef">do</span>
-		output[i] <span style="color:#f92672">=</span> scalar<span style="color:#f92672">*</span>table[i]
-	<span style="color:#66d9ef">end</span>
-	<span style="color:#66d9ef">return</span> output
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>So now I can store values, such as the initial conditions and parameters of the system in a table and perform basic arithmetic operations between tables to change values. Now to implement the physics of the problem.</p>
+<pre><code class="language-lua">function directSum(a, b)
+	local c = {}
+	for i,v in pairs(a) do
+		c[i] = a[i] + b[i]
+	end
+	return c
+end
+
+function scalarMultiply(scalar, table)
+	local output = {}
+	for i,v in pairs(table) do
+		output[i] = scalar*table[i]
+	end
+	return output
+end
+</code></pre>
+
+<p>So now I can store values, such as the initial conditions and parameters of the system in a table and perform basic arithmetic operations between tables to change values. Now to implement the physics of the problem.</p>
+
 <p>First, I defined a generator that randomly generates initial values (within a given range) of the masses of the bobs, the lengths of the rods, their angles with respect to the vertical, their initial angular velocities and calculated the momenta of the bobs. This is fed into a table called <code>data</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Generator</span>()
-	
-	<span style="color:#66d9ef">local</span> self <span style="color:#f92672">=</span> {}
-	
-	self.m1 <span style="color:#f92672">=</span> love.math.random( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span> )
-	self.m2 <span style="color:#f92672">=</span> love.math.random( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span> )
-	self.l1 <span style="color:#f92672">=</span> love.math.random( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span> )
-	self.l2 <span style="color:#f92672">=</span> love.math.random( <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span> )
-	self.t1 <span style="color:#f92672">=</span> love.math.random( <span style="color:#f92672">-</span><span style="color:#ae81ff">6.28</span>, <span style="color:#ae81ff">6.28</span> )
-	self.t2 <span style="color:#f92672">=</span> love.math.random( <span style="color:#f92672">-</span><span style="color:#ae81ff">6.28</span>, <span style="color:#ae81ff">6.28</span> )
-	self.o1 <span style="color:#f92672">=</span> love.math.random( <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span> )
-	self.o2 <span style="color:#f92672">=</span> love.math.random( <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span> )
-	self.p1 <span style="color:#f92672">=</span> (self.m1<span style="color:#f92672">+</span>self.m2)<span style="color:#f92672">*</span>(math.pow(self.l1, <span style="color:#ae81ff">2</span>))<span style="color:#f92672">*</span>self.o1 
-	<span style="color:#f92672">+</span> self.m2<span style="color:#f92672">*</span>self.l1<span style="color:#f92672">*</span>self.l2<span style="color:#f92672">*</span>self.o2<span style="color:#f92672">*</span>math.cos(self.t1<span style="color:#f92672">-</span>self.t2)
-	self.p2 <span style="color:#f92672">=</span> self.m2<span style="color:#f92672">*</span>(math.pow(self.l2, <span style="color:#ae81ff">2</span>))<span style="color:#f92672">*</span>self.o2 
-	<span style="color:#f92672">+</span> self.m2<span style="color:#f92672">*</span>self.l1<span style="color:#f92672">*</span>self.l2<span style="color:#f92672">*</span>self.o1<span style="color:#f92672">*</span>math.cos(self.t1<span style="color:#f92672">-</span>self.t2)
-	
-	<span style="color:#66d9ef">return</span> self
-<span style="color:#66d9ef">end</span>
 
-data <span style="color:#f92672">=</span> Generator()
-</code></pre></div><p>Now we set up the equations of motion using a function called <code>Hamiltonian</code>. It takes the initial values from <code>data</code> to perform calculations, and a new table called <code>phase</code> which consists of the phase space variables to update the angles and momenta over time:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Hamiltonian</span>(phase, data)
+<pre><code class="language-lua">function Generator()
+	
+	local self = {}
+	
+	self.m1 = love.math.random( 3, 10 )
+	self.m2 = love.math.random( 3, 10 )
+	self.l1 = love.math.random( 3, 10 )
+	self.l2 = love.math.random( 1, 10 )
+	self.t1 = love.math.random( -6.28, 6.28 )
+	self.t2 = love.math.random( -6.28, 6.28 )
+	self.o1 = love.math.random( -4, 4 )
+	self.o2 = love.math.random( -2, 2 )
+	self.p1 = (self.m1+self.m2)*(math.pow(self.l1, 2))*self.o1 
+	+ self.m2*self.l1*self.l2*self.o2*math.cos(self.t1-self.t2)
+	self.p2 = self.m2*(math.pow(self.l2, 2))*self.o2 
+	+ self.m2*self.l1*self.l2*self.o1*math.cos(self.t1-self.t2)
+	
+	return self
+end
 
-	<span style="color:#66d9ef">local</span> update <span style="color:#f92672">=</span> {}
-	
-	t1 <span style="color:#f92672">=</span> phase[<span style="color:#ae81ff">1</span>]
-	t2 <span style="color:#f92672">=</span> phase[<span style="color:#ae81ff">2</span>]
-	p1 <span style="color:#f92672">=</span> phase[<span style="color:#ae81ff">3</span>]
-	p2 <span style="color:#f92672">=</span> phase[<span style="color:#ae81ff">4</span>]
-	
-	C0 <span style="color:#f92672">=</span> data.l1<span style="color:#f92672">*</span>data.l2<span style="color:#f92672">*</span>(data.m1<span style="color:#f92672">+</span>data.m2<span style="color:#f92672">*</span>math.pow(math.sin(t1<span style="color:#f92672">-</span>t2),<span style="color:#ae81ff">2</span>))
-	C1 <span style="color:#f92672">=</span> (p1<span style="color:#f92672">*</span>p2<span style="color:#f92672">*</span>math.sin(t1<span style="color:#f92672">-</span>t2))<span style="color:#f92672">/</span>C0
-	C2 <span style="color:#f92672">=</span> (data.m2<span style="color:#f92672">*</span>(math.pow(data.l2<span style="color:#f92672">*</span>p1,<span style="color:#ae81ff">2</span>))<span style="color:#f92672">+</span>(data.m1<span style="color:#f92672">+</span>data.m2)<span style="color:#f92672">*</span>
-	(math.pow(data.l1<span style="color:#f92672">*</span>p2, <span style="color:#ae81ff">2</span>))<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>data.l1<span style="color:#f92672">*</span>data.l2<span style="color:#f92672">*</span>data.m2<span style="color:#f92672">*</span>p1<span style="color:#f92672">*</span>p2<span style="color:#f92672">*</span>
-	math.cos(t1<span style="color:#f92672">-</span>t2))<span style="color:#f92672">*</span>math.sin(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(t1<span style="color:#f92672">-</span>t2))<span style="color:#f92672">/</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(math.pow(C0,<span style="color:#ae81ff">2</span>)))
-	
-	update[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> (data.l2<span style="color:#f92672">*</span>p1 <span style="color:#f92672">-</span> data.l1<span style="color:#f92672">*</span>p2<span style="color:#f92672">*</span>math.cos(t1<span style="color:#f92672">-</span>t2)) <span style="color:#f92672">/</span> (data.l1<span style="color:#f92672">*</span>C0)
-	update[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> (data.l1<span style="color:#f92672">*</span>(data.m1<span style="color:#f92672">+</span>data.m2)<span style="color:#f92672">*</span>p2 <span style="color:#f92672">-</span> data.l2<span style="color:#f92672">*</span>data.m2<span style="color:#f92672">*</span>p1<span style="color:#f92672">*</span>
-				math.cos(t1<span style="color:#f92672">-</span>t2)) <span style="color:#f92672">/</span> (data.l2<span style="color:#f92672">*</span>data.m2<span style="color:#f92672">*</span>C0)
-	update[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>(data.m1 <span style="color:#f92672">+</span> data.m2)<span style="color:#f92672">*</span>g<span style="color:#f92672">*</span>data.l1<span style="color:#f92672">*</span>math.sin(t1) <span style="color:#f92672">-</span> C1 <span style="color:#f92672">+</span> C2
-	update[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>data.m2<span style="color:#f92672">*</span>g<span style="color:#f92672">*</span>data.l2<span style="color:#f92672">*</span>math.sin(t2) <span style="color:#f92672">+</span> C1 <span style="color:#f92672">-</span> C2
-	
-	<span style="color:#66d9ef">return</span> update
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>All the required information with regard to the physics is now processed. To solve the differential equations, I implemented the Runge-Kutta method of order 4, performing operations on the tables using <code>directSum</code> and <code>scalarMultiply</code>. These operations take place in <code>Solver</code>, which takes the time input <code>dt</code> from LÖVE in <code>love.update()</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Solver</span>(dt)
+data = Generator()
+</code></pre>
 
-	<span style="color:#66d9ef">local</span> phase <span style="color:#f92672">=</span> {data.t1, data.t2, data.p1, data.p2}
+<p>Now we set up the equations of motion using a function called <code>Hamiltonian</code>. It takes the initial values from <code>data</code> to perform calculations, and a new table called <code>phase</code> which consists of the phase space variables to update the angles and momenta over time:</p>
 
-	<span style="color:#66d9ef">local</span> k1 <span style="color:#f92672">=</span> Hamiltonian(phase, data)
-	<span style="color:#66d9ef">local</span> k2 <span style="color:#f92672">=</span> Hamiltonian(directSum(phase, scalarMultiply(dt<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, k1)), data)
-	<span style="color:#66d9ef">local</span> k3 <span style="color:#f92672">=</span> Hamiltonian(directSum(phase, scalarMultiply(dt<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, k2)), data)
-	<span style="color:#66d9ef">local</span> k4 <span style="color:#f92672">=</span> Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
-	
-	<span style="color:#66d9ef">local</span> R <span style="color:#f92672">=</span> scalarMultiply(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">6</span> <span style="color:#f92672">*</span> dt, 	
-	directSum(directSum(k1, scalarMultiply(<span style="color:#ae81ff">2.0</span>, k2)), 
-	directSum(scalarMultiply(<span style="color:#ae81ff">2.0</span>, k3), k4)))
-	
-	data.t1 <span style="color:#f92672">=</span> data.t1 <span style="color:#f92672">+</span> R[<span style="color:#ae81ff">1</span>]
-	data.t2 <span style="color:#f92672">=</span> data.t2 <span style="color:#f92672">+</span> R[<span style="color:#ae81ff">2</span>]
-	data.p1 <span style="color:#f92672">=</span> data.p1 <span style="color:#f92672">+</span> R[<span style="color:#ae81ff">3</span>]
-	data.p2 <span style="color:#f92672">=</span> data.p2 <span style="color:#f92672">+</span> R[<span style="color:#ae81ff">4</span>]
-<span style="color:#66d9ef">end</span>
+<pre><code class="language-lua">function Hamiltonian(phase, data)
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">love</span>.<span style="color:#a6e22e">update</span>()
+	local update = {}
+	
+	t1 = phase[1]
+	t2 = phase[2]
+	p1 = phase[3]
+	p2 = phase[4]
+	
+	C0 = data.l1*data.l2*(data.m1+data.m2*math.pow(math.sin(t1-t2),2))
+	C1 = (p1*p2*math.sin(t1-t2))/C0
+	C2 = (data.m2*(math.pow(data.l2*p1,2))+(data.m1+data.m2)*
+	(math.pow(data.l1*p2, 2))-2*data.l1*data.l2*data.m2*p1*p2*
+	math.cos(t1-t2))*math.sin(2*(t1-t2))/(2*(math.pow(C0,2)))
+	
+	update[1] = (data.l2*p1 - data.l1*p2*math.cos(t1-t2)) / (data.l1*C0)
+	update[2] = (data.l1*(data.m1+data.m2)*p2 - data.l2*data.m2*p1*
+				math.cos(t1-t2)) / (data.l2*data.m2*C0)
+	update[3] = -(data.m1 + data.m2)*g*data.l1*math.sin(t1) - C1 + C2
+	update[4] = -data.m2*g*data.l2*math.sin(t2) + C1 - C2
+	
+	return update
+end
+</code></pre>
+
+<p>All the required information with regard to the physics is now processed. To solve the differential equations, I implemented the Runge-Kutta method of order 4, performing operations on the tables using <code>directSum</code> and <code>scalarMultiply</code>. These operations take place in <code>Solver</code>, which takes the time input <code>dt</code> from LÖVE in <code>love.update()</code>.</p>
+
+<pre><code class="language-lua">function Solver(dt)
+
+	local phase = {data.t1, data.t2, data.p1, data.p2}
+
+	local k1 = Hamiltonian(phase, data)
+	local k2 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k1)), data)
+	local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
+	local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
+	
+	local R = scalarMultiply(1/6 * dt, 	
+	directSum(directSum(k1, scalarMultiply(2.0, k2)), 
+	directSum(scalarMultiply(2.0, k3), k4)))
+	
+	data.t1 = data.t1 + R[1]
+	data.t2 = data.t2 + R[2]
+	data.p1 = data.p1 + R[3]
+	data.p2 = data.p2 + R[4]
+end
+
+function love.update()
 	Solver(dt)
-<span style="color:#66d9ef">end</span>
-</code></pre></div><p>After setting up the graphics end, I obtain nice animations like this:
-<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+end
+</code></pre>
+
+<p>After setting up the graphics end, I obtain nice animations like this:<br />
+<video width="100%" autoplay loop><br />
+  <source src="../Dubby Pendy/DubbyPendy.webm" type="video/webm"><br />
+  Your browser does not support the video tag.<br />
+</video></p>
+
 <p>I&rsquo;ll probably end up creating a new post with cool patterns emerging from this simulation, possibly checking for chaotic behaviour with initial conditions that are not so different from a previous state.</p>
 
 	</article>

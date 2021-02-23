@@ -30,7 +30,7 @@
     
     <meta property="og:tags" content="Computational Fluid Dynamics">
     
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.48" />
     <title>Meshing Techniques - Cambered Airfoil</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -96,7 +96,7 @@
 		
 		
 		
-			<small class="text-center center-block">ARJIT SETH</small>
+			<small class="text-center center-block">ARJIT Cuck</small>
 		
 		
 		
@@ -131,29 +131,52 @@
 
 	<article>
 		<p>Meshing is a crucial process in obtaining accurate results for various simulations across different fields. In computational fluid dynamics, various meshing techniques are used in grid generation for 2D analyses of airfoils. Some nice run-throughs exist on YouTube, but they mostly deal with symmetric airfoils such as the <em>beloved</em> NACA 0012. I&rsquo;ll attempt generating preliminary meshes over a cambered airfoil in this post and probably write a project once I&rsquo;ve been able to perform flow analyses with accurate results.</p>
-<hr>
+
+<hr />
+
 <p><strong>Airfoil Selection:</strong> A new airfoil I&rsquo;ve been researching is the Selig S7075 for its good gliding/soaring characteristics and high efficiency at low Reynolds numbers. It&rsquo;s a cambered airfoil with sharp trailing edge, and a maximum thickness-to-chord ratio of 9%  with the implementation of a boundary layer trip at 57.5% of the chord length. XFOIL analyses predict accurate results in agreement with Dr. Selig&rsquo;s <a href="http://m-selig.ae.illinois.edu/uiuc_lsat/Low-Speed-Airfoil-Data-V3.pdf">A Summary of Low-Speed Airfoil Data, Vol. 3</a>.</p>
-<hr>
-<p><strong>Meshing Software:</strong> I&rsquo;ll be using ANSYS ICEM CFD and its convenient blocking features with its powerful sizing capabilities to generate 2D meshes.
+
+<hr />
+
+<p><strong>Meshing Software:</strong> I&rsquo;ll be using ANSYS ICEM CFD and its convenient blocking features with its powerful sizing capabilities to generate 2D meshes.<br />
 The two types of meshes I&rsquo;ll be trying to generate are an O-grid and a C-grid. An O-grid setup is when the body of analysis is enclosed within a curvilinear grid in which completely closed contours are created at offsets from the body. A C-grid setup, by example for an airfoil, is when the surrounding grid forms a &lsquo;C&rsquo; till the trailing edge.  Forums recommend that a C-grid mesh provides better results for airfoils with sharp trailing edges; this is because the grid alignment is along the airfoil shape (hence along the flow streamlines) to capture the flow results more accurately.</p>
-<p>The blocking process in ICEM CFD used the same aspect ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}; m $ to resolve the boundary layer.</p>
-<hr>
+
+<p>The blocking process in ICEM CFD used the same aspect ratios for element sizing in both meshing techniques. The operating Reynolds number for the flow is $ Re = 310,000 $ at sea level conditions. The desired $ y^+ = 1.0 $ in accordance with the Spalart-Allmaras model, and the estimated wall distance $ = 2.0 \times 10^{-5}\; m $ to resolve the boundary layer.</p>
+
+<hr />
+
 <blockquote>
 <p><strong>C-Grid:</strong></p>
 </blockquote>
-<!-- raw HTML omitted -->
-<hr>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/C-Grid.png" width="95%"></div>
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/C-GridBound.png" width="95%"></div>
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/C-GridLE.png" width="95%"></div>
+
+<hr />
+
 <blockquote>
 <p><strong>O-Grid:</strong></p>
 </blockquote>
-<!-- raw HTML omitted -->
-<hr>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/O-Grid.png" width="95%"></div>
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/O-GridBound.png" width="95%"></div>
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/O-GridLE.png" width="95%"></div>
+
+<hr />
+
 <p><strong>Bonus:</strong> I was able to devise a blocking technique to generate a 3D C-grid about an SD6045 wing as well.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<hr>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/CFD1.jpg" width="95%"></div>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/CFD2.jpg" width="95%"></div>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/CFD3.jpg" width="95%"></div>
+
+<div style="text-align:center"><img src="../Meshing Techniques - Cambered Airfoil/CFD4.jpg" width="95%"></div>
+
+<hr />
+
 <p>These meshes will require refinement before they&rsquo;re ready to be analysed and produce accurate results, which I&rsquo;ll be working on as a project. Hopefully I&rsquo;ll be able to complete it soon and post it with all the details regarding the meshing procedure.</p>
 
 	</article>
