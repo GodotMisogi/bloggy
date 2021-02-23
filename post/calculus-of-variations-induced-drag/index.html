@@ -30,7 +30,7 @@
     
     <meta property="og:tags" content="Mathematics">
     
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <title>Calculus of Variations - Induced Drag Over a Wing</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -130,74 +130,40 @@
 	</header>
 
 	<article>
-		<p>While reading through John D. Anderson Jr.&rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.</p>
-
+		<p>While reading through John D. Anderson Jr.&lsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.</p>
 <p>The equation that determines the downwash at a point is:</p>
-
-<p>$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&rsquo;,y)\;\mathrm{d}y$$</p>
-
+<p>$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&rsquo;,y);\mathrm{d}y$$</p>
 <p>This effectively implies that the downwash can be expressed as a <em>functional</em> of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point. There also exists a constraint on this system, the total lift across the span must be constant:</p>
-
-<p>$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(y)\;\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&rsquo;,y)\;\mathrm{d}y$$</p>
-
+<p>$$ L = \rho_{\infty} V_{\infty}\int^{b/2}_{-b/2} \Gamma(y);\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{G}(\Gamma,\Gamma&rsquo;,y);\mathrm{d}y$$</p>
 <p>The Euler-Lagrange equations thus take the following form:</p>
-
 <p>$$ \frac{\partial{\mathcal{L}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{L}}}{\partial{\Gamma&rsquo;}}\right) + \lambda\left[\frac{\partial{\mathcal{G}}}{\partial{\Gamma}} - \frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial{\mathcal{G}}}{\partial{\Gamma&rsquo;}}\right)\right]= 0 $$</p>
-
 <p>Substituting the expressions:</p>
-
 <p>$$ -\frac{1}{4\pi  (y_0 - y)^2} + \rho_{\infty}V_{\infty}\lambda = 0$$</p>
-
 <p>This doesn&rsquo;t contain any useful information about the downwash. Let&rsquo;s try something else.</p>
-
 <p>Trying to minimise the induced drag formula directly as given by Anderson:</p>
-
-<p>$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x)\;\mathrm{d}x = \frac{1}{2\pi V_{\infty}^2 S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$</p>
-
+<p>$$ C_{D,i} = \frac{2}{V_{\infty}S}\int^{b/2}_{-b/2} \Gamma(x)\alpha_{i}(x);\mathrm{d}x = \frac{1}{2\pi V_{\infty}^2 S}\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\frac{\Gamma(x)\Gamma&rsquo;(y)}{x - y};\mathrm{d}y;\mathrm{d}x $$</p>
 <p>Getting rid of the constants and performing a variation on the coefficient of induced drag, we get:</p>
-
-<p>$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y} + \delta\Gamma&rsquo;(y)\frac{\Gamma(x)}{x - y}\right) \;\mathrm{d}y\;\mathrm{d}x $$</p>
-
+<p>$$ \delta C_{D,i} = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\left(\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y} + \delta\Gamma&rsquo;(y)\frac{\Gamma(x)}{x - y}\right) ;\mathrm{d}y;\mathrm{d}x $$</p>
 <p>Performing integration by parts on the second expression, keeping in mind that the first term of the evaluation disappears because the circulation at the endpoints (the boundary conditions of this problem) is zero:</p>
-
-<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right)\;\mathrm{d}y\;\mathrm{d}x$$</p>
-
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y};\mathrm{d}y;\mathrm{d}x - \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\Gamma(x)}{x-y}\right);\mathrm{d}y;\mathrm{d}x$$</p>
 <p>A little rearranging provides the more useful form:</p>
-
-<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x\;\mathrm{d}y$$</p>
-
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y};\mathrm{d}y;\mathrm{d}x + \int^{b/2}_{-b/2}\delta\Gamma(y)\cdot\frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x};\mathrm{d}x;\mathrm{d}y$$</p>
 <p>A change of variables $y-x = q$ is required to evaluate the last integral:</p>
-
-<p>$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x}\;\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q$$</p>
-
+<p>$$ \frac{\mathrm{d}}{\mathrm{d}y}\int^{b/2}_{-b/2}\frac{\Gamma(x)}{y-x};\mathrm{d}x = \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q};\mathrm{d}q$$</p>
 <p>Feynman&rsquo;s favourite trick, differentiating under the integral sign:</p>
-
-<p>$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q $$</p>
-
+<p>$$ \require{cancel} \frac{\mathrm{d}}{\mathrm{d}y}\int^{y-b/2}_{y+b/2}\frac{\Gamma(y-q)}{q};\mathrm{d}q = \cancel{\frac{\Gamma(b/2)}{y-b/2}} - \cancel{\frac{\Gamma(-b/2)}{y+b/2}} + \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q};\mathrm{d}q $$</p>
 <p>Mapping the variables back:</p>
-
-<p>$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q}\;\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(x)}{y-x}\;\mathrm{d}x$$</p>
-
+<p>$$ \int^{y-b/2}_{y+b/2}\frac{\partial}{\partial y}\frac{\Gamma(y-q)}{q};\mathrm{d}q = \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(x)}{y-x};\mathrm{d}x$$</p>
 <p>Substituting this into the original expression:</p>
-
-<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&rsquo;(x)}{y - x}\;\mathrm{d}x\;\mathrm{d}y $$</p>
-
+<p>$$ = \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y};\mathrm{d}y;\mathrm{d}x + \int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(y)\frac{\Gamma&rsquo;(x)}{y - x};\mathrm{d}x;\mathrm{d}y $$</p>
 <p>Switching the variables of integration in the second expression, we get:</p>
-
-<p>$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\;\mathrm{d}x $$</p>
-
+<p>$$\delta C_{D,i} = 2\int^{b/2}_{-b/2}\int^{b/2}_{-b/2}\delta\Gamma(x)\frac{\Gamma&rsquo;(y)}{x - y};\mathrm{d}y;\mathrm{d}x $$</p>
 <p>Reintroducing the constants and combining this with the constraint, $\delta C_{D,i} - \lambda\delta L = 0 $ becomes:</p>
-
-<p>$$ \int^{b/2}_{-b/2}\delta\Gamma(x)\;\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$</p>
-
+<p>$$ \int^{b/2}_{-b/2}\delta\Gamma(x);\mathrm{d}x \left[\int^{b/2}_{-b/2}\frac{2\Gamma&rsquo;(y)}{x - y};\mathrm{d}y\ - {2\pi\lambda}\right] = 0 $$</p>
 <p>Using the constraint on the lift across the wing, this results in:</p>
-
-<p>$$ \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(y)}{x - y}\;\mathrm{d}y\ = \pi\lambda $$</p>
-
+<p>$$ \int^{b/2}_{-b/2}\frac{\Gamma&rsquo;(y)}{x - y};\mathrm{d}y\ = \pi\lambda $$</p>
 <p>The first term is part of the integral from the downwash expression at the beginning of the post, indicating that the downwash across the lifting line for minimum induced drag is constant:</p>
-
 <p>$$ w = -\frac{\lambda}{4} = w_0 $$</p>
-
 <p>The same result as seen in Anderson, more rigorously!</p>
 
 	</article>
@@ -209,7 +175,7 @@
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

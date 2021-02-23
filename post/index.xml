@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Arjit Seth</title>
@@ -19,7 +19,7 @@
       <guid>https://godot-bloggy.xyz/post/cfd-python/</guid>
       <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. The Navier-Stokes equations that will be solved in this notebook are the following in conservative form:
 $$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$
-$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \hat \tau + \vec f$$</description>
+$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho ,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \hat \tau + \vec f$$</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ $$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \
       
       <guid>https://godot-bloggy.xyz/post/geodesic-equation/</guid>
       <description>Bernard F. Schutz&amp;rsquo;s A First Course in General Relativity provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:
-$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
+$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
 Note: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.</description>
     </item>
     
@@ -49,7 +49,7 @@ Note: At first I derived it from variational principles, but the Euler-Lagrange 
       
       <guid>https://godot-bloggy.xyz/post/indian-classical/</guid>
       <description>I&amp;rsquo;ve been a rock/metal guitarist for the past 9 or 10 years, mostly concentrating on Western music and its theory; I am by no means an expert, but I&amp;rsquo;m curious about music theory and like to learn its different applications/interpretations in various styles.
-I had attended a Remember Shakti concert in 2012 which was my first real introduction to Indian classical musical elements. I know that it&amp;rsquo;s a fusion band, but I learnt the basic rhythmic elements during the concert thanks to my school&amp;rsquo;s guitar teacher, with whom I went to the concert.</description>
+ I had attended a Remember Shakti concert in 2012 which was my first real introduction to Indian classical musical elements. I know that it&amp;rsquo;s a fusion band, but I learnt the basic rhythmic elements during the concert thanks to my school&amp;rsquo;s guitar teacher, with whom I went to the concert.</description>
     </item>
     
     <item>
@@ -68,9 +68,9 @@ A famous example of a system whose equations of motion can be more easily attain
       <pubDate>Mon, 26 Dec 2016 01:55:24 +0530</pubDate>
       
       <guid>https://godot-bloggy.xyz/post/calculus-of-variations-induced-drag/</guid>
-      <description>While reading through John D. Anderson Jr.&amp;rsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.
+      <description>While reading through John D. Anderson Jr.&amp;lsquo;s derivation of minimum induced drag, I thought of a cool application of the calculus of variations in one of the equations to deduce the required condition.
 The equation that determines the downwash at a point is:
-$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y)\;\mathrm{d}y$$
+$$w(y_0) = -\frac{1}{4\pi }\int^{b/2}_{-b/2} \frac{(\mathrm{d}\Gamma/\mathrm{d}y)}{y_0 - y}\mathrm{d}y = \int^{b/2}_{-b/2} \mathcal{L}(\Gamma,\Gamma&amp;rsquo;,y);\mathrm{d}y$$
 This effectively implies that the downwash can be expressed as a functional of $\Gamma$, i.e. $w\left[\Gamma(y)\right]$, and one can find the functional derivative to find the extremal point.</description>
     </item>
     
@@ -81,9 +81,7 @@ This effectively implies that the downwash can be expressed as a functional of $
       
       <guid>https://godot-bloggy.xyz/post/roots-of-unity/</guid>
       <description>During my second year of the International Baccalaureate: Diploma Programme, we were assigned the task of making a portfolio for a problem statement in Mathematics HL. While I don&amp;rsquo;t have the problem statement anymore, I&amp;rsquo;ll outline the major points of the task:
- Find the solutions to $z^n - 1 = 0,\; z \in \mathbb{C}$.
- Plot these solutions on the Argand plane.
- Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.</description>
+ Find the solutions to $z^n - 1 = 0,; z \in \mathbb{C}$. Plot these solutions on the Argand plane. Draw a tree diagram starting from the trivial solution $z = 1$ to every other root.</description>
     </item>
     
   </channel>

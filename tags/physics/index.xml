@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Physics on Arjit Seth</title>
@@ -18,8 +18,7 @@
       
       <guid>https://godot-bloggy.xyz/project/academics/</guid>
       <description>I&amp;rsquo;ve been studying some physics for a while and decided to write solution manuals for reference in case I forget the approach to a problem later. I&amp;rsquo;ve been pretty lazy in writing them, so it&amp;rsquo;s very sloppy and some solutions might be incomplete, incorrect or have illogical statements here and there. Here&amp;rsquo;s what I&amp;rsquo;ve compiled so far:
-Tom Lancaster et. al. - Quantum Field Theory for the Gifted Amateur
-Bernard F.</description>
+Tom Lancaster et. al. - Quantum Field Theory for the Gifted AmateurBernard F. Schutz - A First Course in General RelativityRamamurti Shankar - Principles of Quantum MechanicsT.</description>
     </item>
     
     <item>
@@ -29,7 +28,7 @@ Bernard F.</description>
       
       <guid>https://godot-bloggy.xyz/post/geodesic-equation/</guid>
       <description>Bernard F. Schutz&amp;rsquo;s A First Course in General Relativity provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&amp;rsquo;s trajectory, obtaining the geodesic equation:
-$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
+$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$
 Note: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.</description>
     </item>
     

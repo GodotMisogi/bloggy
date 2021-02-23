@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computational Fluid Dynamics on Arjit Seth</title>
@@ -19,7 +19,7 @@
       <guid>https://godot-bloggy.xyz/post/cfd-python/</guid>
       <description>This &amp;lsquo;notebook&amp;rsquo; consists of my run-through of Prof. Lorena Barba&amp;rsquo;s &amp;ldquo;12 steps to Navier-Stokes&amp;rdquo; course, because I admit I have a problem with fluids. The Navier-Stokes equations that will be solved in this notebook are the following in conservative form:
 $$ \frac{\partial \rho}{\partial t} + \nabla \cdot \left(\rho V\right) = 0 $$
-$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho \,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \hat \tau + \vec f$$</description>
+$$ \frac{\partial (\rho\vec V)}{\partial t} + \nabla \cdot \left(\rho ,\vec V \otimes \vec V + p\hat I \right) = \rho \vec g + \nabla \cdot \hat \tau + \vec f$$</description>
     </item>
     
     <item>

@@ -28,7 +28,7 @@
     
     <meta property="og:tags" content="Physics">
     
-    <meta name="generator" content="Hugo 0.40.1" />
+    <meta name="generator" content="Hugo 0.68.3" />
     <title>Derivation - Geodesic Equation</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -129,67 +129,36 @@
 
 	<article>
 		<p>Bernard F. Schutz&rsquo;s <a href="http://www.cambridge.org/us/academic/subjects/physics/cosmology-relativity-and-gravitation/first-course-general-relativity-2nd-edition?format=HB&amp;isbn=9780521887052">A First Course in General Relativity</a> provides a nice introduction to the difficult subject in my opinion. In Chapter 6, he mentions that one should derive the Euler-Lagrange equations to minimise the spacetime interval of a particle&rsquo;s trajectory, obtaining the geodesic equation:</p>
-
-<p>$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{\;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$</p>
-
+<p>$$ \frac{\mathrm{d}}{\mathrm{d}\lambda}\left(\frac{\mathrm{d}x^{\gamma}}{\mathrm{d}\lambda}\right) + \Gamma^{\gamma}_{;\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda} = 0 $$</p>
 <p><em>Note</em>: At first I derived it from variational principles, but the Euler-Lagrange equations provide a faster route via means of a neat trick.</p>
-
 <p><strong>Motivation</strong>: The main aim of this investigation is to find curves that parallel-transport tangent vectors. The following diagram should make this idea clearer:</p>
-
-<p><center><img src="../Geodesic Equation/Parallel_transport.png" width = "60%"></center><br />
-Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png">https://upload.wikimedia.org/wikipedia/commons/6/6d/Parallel_transport.png</a></p>
-
+<!-- raw HTML omitted -->
 <p>If one starts from point A on the equator of a sphere and moves to the North pole, the tangent vector along the curve will look like the one shown in the figure, perpendicular to the equatorial line. Continuing this path from the North pole, if one wishes to reach a different point B on the equator, the vector field described will have undergone a 90 degrees rotation, so the vector points along the equatorial line.</p>
-
 <p>This can be easily visualised as walking to the North pole from A with your arm outstretched forward (representing the tangent vector), which is perpendicular to the equator. Once you reach, you need to go to point B, so your body rotates, but your arm is fixed because of parallel transport, so you&rsquo;re now walking with your arm outstretched to the left. Once you reach point B, you realise that your arm is along the equatorial line. Therefore parallel transport isn&rsquo;t preserved because of the curvature of the sphere.</p>
-
 <p>Since this is a property that directly results from the intrinsic curvature of the sphere, one can deduce that there is no definition of globally parallel vector fields.</p>
-
 <p>A geodesic can be thought of as a curve which parallel transports its own tangent vector. Another way of saying this is that it&rsquo;s the curve of shortest distance between two points in a given space of any curvature, implying local parallel transport. In the case of a sphere, a geodesic lies on a great circle, defined as the circle on the surface of a sphere which lies in a plane passing through the sphere&rsquo;s centre.</p>
-
 <p>In relativity, the definition of distance (or interval between points) is a little different as compared to Euclidean geometry. Since we deal with space-time rather than space, the metric of space-time (called Minkowski space-time) must be used, as described below (in one convention):</p>
-
 <p>$$ (\Delta s)^2 = -(c\Delta t)^2 + (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 $$</p>
-
 <p>There is a large historical development for this formulation with plenty of literature available. The foundation lies in Maxwell&rsquo;s equations and Einstein&rsquo;s postulates of special relativity. There is a more general formulation for calculating magnitudes over arbitrary metrics by using the dot product:</p>
-
 <p>$$ \vec{U}\cdot\vec{V} = g_{\alpha\beta}U^{\alpha}V^{\beta} = g_{00}U^{0}V^{0} + g_{10}U^{1}V^{0} + g_{01}U^{0}V^{1} + &hellip;$$</p>
-
 <p>With summations over the set of values that the repeated indices $\alpha$ and $\beta$ take and $ g_{\alpha\beta}(\vec x)$ is the metric tensor defined by the space under evaluation. In the case of special relativity, the metric tensor is represented as the matrix $ g_{\alpha\beta} = \mathrm{diag}(-1,1,1,1) $ in one convention, a flat space-time.</p>
-
 <p>The length of the tangent vector between two points can be described by its magnitude. This functional that must be minimised is called the proper length, and can be expressed as follows:</p>
-
 <p>$$ \mathrm{d}s = \int_{\lambda_0}^{\lambda_l} \left|\vec{V}\cdot\vec{V}\right|^{\frac{1}{2}} \mathrm{d}\lambda = \int_{\lambda_0}^{\lambda_1} \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} \mathrm{d}\lambda $$</p>
-
 <p>Where $\lambda$ is a parameter for the curve, usually the proper time. This exercise essentially means that the magnitude of the four-velocity integrated over proper time should be a minimum. So the Lagrangian is:</p>
-
 <p>$$ \mathcal{L} = \left|g_{\alpha\beta}\frac{\mathrm{d}x^{\alpha}}{\mathrm{d}\lambda}\frac{\mathrm{d}x^{\beta}}{\mathrm{d}\lambda}\right|^{\frac{1}{2}} $$</p>
-
 <p>The neat trick here is taking $\mathcal{L}^2$ and substituting it into the Euler-Lagrange equation:</p>
-
 <p>$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \frac{\mathrm{d}}{\mathrm{d}\lambda}\left[g_{\alpha\mu}\dot{x}^{\alpha} + g_{\mu\beta}\dot{x}^{\beta}\right] = 0 $$</p>
-
 <p>Where $\dot{x} = \mathrm{d}x/\mathrm{d}\lambda$. Note that this equation just talks about extrema rather than maxima or minima explicitly. The second term is a total derivative, which results in:</p>
-
 <p>$$ g_{\alpha\beta,\mu}\dot{x}^{\alpha}\dot{x}^{\beta} - \left[g_{\alpha\mu,\beta}\dot{x}^{\beta}\dot{x}^{\alpha} + g_{\mu\beta,\alpha}\dot{x}^{\alpha}\dot{x}^{\beta} + g_{\alpha\mu}\ddot{x}^{\alpha} + g_{\mu\beta}\ddot{x}^{\beta} \right] = 0$$</p>
-
 <p>Changing the last term&rsquo;s dummy index $\beta\rightarrow\alpha$ and multiplying by $g^{\mu\gamma}$:</p>
-
 <p>$$ -2g^{\mu\gamma}g_{\alpha\mu}\ddot{x}^{\alpha} + g^{\mu\gamma}\left(g_{\alpha\beta,\mu} - g_{\mu\beta,\alpha} - g_{\mu\alpha,\beta}\right)\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
-
 <p>Using the Christoffel symbol of the second kind with the following definition:</p>
-
-<p>$$ \Gamma^{\gamma}_{\;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$</p>
-
-<p>and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{\;\alpha}$:</p>
-
-<p>$$ -2\delta^{\gamma}_{\;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
-
+<p>$$ \Gamma^{\gamma}_{;\alpha\beta} = \frac{1}{2}g^{\mu\gamma}\left(g_{\mu\beta,\alpha} + g_{\mu\alpha,\beta} - g_{\alpha\beta,\mu}\right)$$</p>
+<p>and using $g^{\mu\gamma}g_{\alpha\mu} = \delta^{\gamma}_{;\alpha}$:</p>
+<p>$$ -2\delta^{\gamma}_{;\alpha}\ddot{x}^{\alpha} - 2\Gamma^{\gamma}_{;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
 <p>The expression simplifies to the geodesic equation:</p>
-
-<p>$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{\;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
-
-<p><center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTheoreticalPhysicsMemes%2Fposts%2F1167606566653652%3A0&width=580" width="580" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></center></p>
+<p>$$ \ddot{x}^{\gamma} + \Gamma^{\gamma}_{;\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta} = 0 $$</p>
+<!-- raw HTML omitted -->
 
 	</article>
 </main>
@@ -200,7 +169,7 @@ Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Paral
 
 
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
