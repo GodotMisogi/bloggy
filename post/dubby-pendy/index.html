@@ -158,19 +158,19 @@ $$ C_2 = \frac{l_2^2 m_2 p_{\theta_1}^2 + l_1^2(m_1 + m_2)p_{\theta_2}^2 - l_1 l
 <p>Since the only data structure in Lua is a table, I decided to see how I could make use of that property for this program. Lua doesn&rsquo;t have functions to perform scalar multiplication or addition between tables, so I wrote some:</p>
 
 <pre><code class="language-lua">function directSum(a, b)
-	local c = {}
-	for i,v in pairs(a) do
-		c[i] = a[i] + b[i]
-	end
-	return c
+    local c = {}
+    for i,v in pairs(a) do
+        c[i] = a[i] + b[i]
+    end
+    return c
 end
 
 function scalarMultiply(scalar, table)
-	local output = {}
-	for i,v in pairs(table) do
-		output[i] = scalar*table[i]
-	end
-	return output
+    local output = {}
+    for i,v in pairs(table) do
+        output[i] = scalar*table[i]
+    end
+    return output
 end
 </code></pre>
 
@@ -179,23 +179,23 @@ end
 <p>First, I defined a generator that randomly generates initial values (within a given range) of the masses of the bobs, the lengths of the rods, their angles with respect to the vertical, their initial angular velocities and calculated the momenta of the bobs. This is fed into a table called <code>data</code>:</p>
 
 <pre><code class="language-lua">function Generator()
-	
-	local self = {}
-	
-	self.m1 = love.math.random( 3, 10 )
-	self.m2 = love.math.random( 3, 10 )
-	self.l1 = love.math.random( 3, 10 )
-	self.l2 = love.math.random( 1, 10 )
-	self.t1 = love.math.random( -6.28, 6.28 )
-	self.t2 = love.math.random( -6.28, 6.28 )
-	self.o1 = love.math.random( -4, 4 )
-	self.o2 = love.math.random( -2, 2 )
-	self.p1 = (self.m1+self.m2)*(math.pow(self.l1, 2))*self.o1 
-	+ self.m2*self.l1*self.l2*self.o2*math.cos(self.t1-self.t2)
-	self.p2 = self.m2*(math.pow(self.l2, 2))*self.o2 
-	+ self.m2*self.l1*self.l2*self.o1*math.cos(self.t1-self.t2)
-	
-	return self
+    
+    local self = {}
+    
+    self.m1 = love.math.random( 3, 10 )
+    self.m2 = love.math.random( 3, 10 )
+    self.l1 = love.math.random( 3, 10 )
+    self.l2 = love.math.random( 1, 10 )
+    self.t1 = love.math.random( -6.28, 6.28 )
+    self.t2 = love.math.random( -6.28, 6.28 )
+    self.o1 = love.math.random( -4, 4 )
+    self.o2 = love.math.random( -2, 2 )
+    self.p1 = (self.m1+self.m2)*(math.pow(self.l1, 2))*self.o1 
+    + self.m2*self.l1*self.l2*self.o2*math.cos(self.t1-self.t2)
+    self.p2 = self.m2*(math.pow(self.l2, 2))*self.o2 
+    + self.m2*self.l1*self.l2*self.o1*math.cos(self.t1-self.t2)
+    
+    return self
 end
 
 data = Generator()
@@ -205,26 +205,26 @@ data = Generator()
 
 <pre><code class="language-lua">function Hamiltonian(phase, data)
 
-	local update = {}
-	
-	t1 = phase[1]
-	t2 = phase[2]
-	p1 = phase[3]
-	p2 = phase[4]
-	
-	C0 = data.l1*data.l2*(data.m1+data.m2*math.pow(math.sin(t1-t2),2))
-	C1 = (p1*p2*math.sin(t1-t2))/C0
-	C2 = (data.m2*(math.pow(data.l2*p1,2))+(data.m1+data.m2)*
-	(math.pow(data.l1*p2, 2))-2*data.l1*data.l2*data.m2*p1*p2*
-	math.cos(t1-t2))*math.sin(2*(t1-t2))/(2*(math.pow(C0,2)))
-	
-	update[1] = (data.l2*p1 - data.l1*p2*math.cos(t1-t2)) / (data.l1*C0)
-	update[2] = (data.l1*(data.m1+data.m2)*p2 - data.l2*data.m2*p1*
-				math.cos(t1-t2)) / (data.l2*data.m2*C0)
-	update[3] = -(data.m1 + data.m2)*g*data.l1*math.sin(t1) - C1 + C2
-	update[4] = -data.m2*g*data.l2*math.sin(t2) + C1 - C2
-	
-	return update
+    local update = {}
+    
+    t1 = phase[1]
+    t2 = phase[2]
+    p1 = phase[3]
+    p2 = phase[4]
+    
+    C0 = data.l1*data.l2*(data.m1+data.m2*math.pow(math.sin(t1-t2),2))
+    C1 = (p1*p2*math.sin(t1-t2))/C0
+    C2 = (data.m2*(math.pow(data.l2*p1,2))+(data.m1+data.m2)*
+    (math.pow(data.l1*p2, 2))-2*data.l1*data.l2*data.m2*p1*p2*
+    math.cos(t1-t2))*math.sin(2*(t1-t2))/(2*(math.pow(C0,2)))
+    
+    update[1] = (data.l2*p1 - data.l1*p2*math.cos(t1-t2)) / (data.l1*C0)
+    update[2] = (data.l1*(data.m1+data.m2)*p2 - data.l2*data.m2*p1*
+                math.cos(t1-t2)) / (data.l2*data.m2*C0)
+    update[3] = -(data.m1 + data.m2)*g*data.l1*math.sin(t1) - C1 + C2
+    update[4] = -data.m2*g*data.l2*math.sin(t2) + C1 - C2
+    
+    return update
 end
 </code></pre>
 
@@ -232,25 +232,25 @@ end
 
 <pre><code class="language-lua">function Solver(dt)
 
-	local phase = {data.t1, data.t2, data.p1, data.p2}
+    local phase = {data.t1, data.t2, data.p1, data.p2}
 
-	local k1 = Hamiltonian(phase, data)
-	local k2 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k1)), data)
-	local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
-	local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
-	
-	local R = scalarMultiply(1/6 * dt, 	
-	directSum(directSum(k1, scalarMultiply(2.0, k2)), 
-	directSum(scalarMultiply(2.0, k3), k4)))
-	
-	data.t1 = data.t1 + R[1]
-	data.t2 = data.t2 + R[2]
-	data.p1 = data.p1 + R[3]
-	data.p2 = data.p2 + R[4]
+    local k1 = Hamiltonian(phase, data)
+    local k2 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k1)), data)
+    local k3 = Hamiltonian(directSum(phase, scalarMultiply(dt/2, k2)), data)
+    local k4 = Hamiltonian(directSum(phase, scalarMultiply(dt, k3)), data)
+    
+    local R = scalarMultiply(1/6 * dt,  
+    directSum(directSum(k1, scalarMultiply(2.0, k2)), 
+    directSum(scalarMultiply(2.0, k3), k4)))
+    
+    data.t1 = data.t1 + R[1]
+    data.t2 = data.t2 + R[2]
+    data.p1 = data.p1 + R[3]
+    data.p2 = data.p2 + R[4]
 end
 
 function love.update()
-	Solver(dt)
+    Solver(dt)
 end
 </code></pre>
 
