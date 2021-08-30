@@ -1,10 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ｢ALL FICTION｣</title>
+    <title>Tags on Arjit Seth</title>
     <link>https://godot-bloggy.xyz/tags/</link>
-    <description>Recent content in Tags on ｢ALL FICTION｣</description>
+    <description>Recent content in Tags on Arjit Seth</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language><atom:link href="https://godot-bloggy.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-uk</language>
+    <lastBuildDate>Mon, 10 Jul 2017 22:55:50 +0530</lastBuildDate>
+    
+	<atom:link href="https://godot-bloggy.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aerodynamics</title>
+      <link>https://godot-bloggy.xyz/tags/aerodynamics/</link>
+      <pubDate>Mon, 10 Jul 2017 22:55:50 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/aerodynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computational Fluid Dynamics</title>
+      <link>https://godot-bloggy.xyz/tags/computational-fluid-dynamics/</link>
+      <pubDate>Sat, 05 May 2018 16:54:58 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/computational-fluid-dynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://godot-bloggy.xyz/tags/design/</link>
+      <pubDate>Tue, 11 Jul 2017 01:26:50 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>https://godot-bloggy.xyz/tags/mathematics/</link>
+      <pubDate>Sat, 05 May 2018 16:54:58 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://godot-bloggy.xyz/tags/music/</link>
+      <pubDate>Tue, 11 Jul 2017 03:00:50 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Physics</title>
+      <link>https://godot-bloggy.xyz/tags/physics/</link>
+      <pubDate>Sun, 27 Aug 2017 01:26:50 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://godot-bloggy.xyz/tags/programming/</link>
+      <pubDate>Sat, 05 May 2018 16:54:58 +0530</pubDate>
+      
+      <guid>https://godot-bloggy.xyz/tags/programming/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
