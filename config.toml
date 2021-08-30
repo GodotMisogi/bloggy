@@ -1,0 +1,46 @@
+baseurl = "https://godot-bloggy.xyz/"
+relativeURLs = true
+languageCode = "en-uk"
+title = "Arjit Seth"
+paginate = 20
+disqusShortname = "godotmisogi"
+theme = "hugo-geo"
+
+[taxonomies]
+	tag = "tags"
+	project = "projects"
+
+[params]
+	showglobe = true
+
+	# Google Analytics
+    analytics = "UA-89998292-1"
+
+    favicon = "pp.jpg"
+    
+	github = "https://github.com/GodotMisogi"
+	twitter = "https://twitter.com/ArjitSeth"
+	linkedin = "https://www.linkedin.com/in/arjit-seth"
+	email = "arjitseth@gmail.com"
+	
+	header = "｢Book Maker｣"
+	profilepic = "img/Logo.png"
+	
+	title = "｢ALL FICTION｣"
+	subtitle = "ARJIT SETH"
+	author = "Arjit Seth"
+	
+	[[params.navlinks]]
+	name = "About"
+	url = "about"
+	
+	[[params.navlinks]]
+	name = "Blog"
+	url = ""
+	
+	[[params.navlinks]]
+	name = "Projects"
+	url = "project/"
+
+[blackfriday]
+	extensions = ["hardLineBreak"]
